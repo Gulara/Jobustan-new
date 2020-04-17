@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobustan</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl.theme.default.css">
+    <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
+    <link rel="stylesheet" href="libs/default.css?v1.1">
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="libs/toggle-switch/toggle-switch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body style="background-color: #fafafa;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto my-5">
+                <div class="resume">
+                    <div class="resume__title">Post a job</div>
+                    <h2 class="resume__h2">Create a Resume</h2>
+                    <h3 class="resume__h3 mt-1">Basics</h3>
+                    <div class="resume__job">
+                        <form>
+                            <!-- FIRST NAME -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-firstname">First Name</label>
+                                <input type="text" class="resume__input" id="resume-firstname">
+                            </div>
+                            <!-- LAST NAME -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-lastname">Last Name</label>
+                                <input type="text" class="resume__input" id="resume-lastname">
+                            </div>
+                            <!-- CITY -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-city">City<span> - United States (<a href="#">Change</a>)</span>
+                                </label>
+                                <div class="resume__dropdown resume-city-select">
+                                    <div class="caption caption-100">City<i class="zmdi zmdi-chevron-down"></i></div>
+                                    <div class="list">
+                                        <div class="item">Baku</div>
+                                        <div class="item">Lankaran</div>
+                                        <div class="item">Absheron</div>
+                                        <div class="item">Qabala</div>
+                                        <div class="item">May</div>
+                                    </div>
+                                </div>
+                                <input type="text" class="biginput resume__input" id="resume-city">
+                            </div>
+                            <!-- Employment Eligibility -->
+                            <div class="form-group resume__form-group">
+                                <label>Employment Eligibility</label>
+                                <div class="form-group resume__form-radio">
+                                    <input id="html" type="radio" name="custom-radio-btn">
+                                    <label class="custom-radio" for="html"></label>
+                                    <span class="label-text">Authorized to work in the US for any employer</span>
+                                </div>
+                                <div class="form-group  resume__form-radio">
+                                    <input id="css" type="radio" name="custom-radio-btn">
+                                    <label class="custom-radio" for="css"></label>
+                                    <span class="label-text">Sponsorship required to work in the US</span>
+                                </div>
+                                <div class="form-group  resume__form-radio">
+                                    <input id="js" type="radio" name="custom-radio-btn" checked>
+                                    <label class="custom-radio" for="js"></label>
+                                    <span class="label-text">Not specified</span>
+                                </div>
+                            </div>
+
+                            <h3 class="resume__h3">Contact Information</h3>
+                            <!-- PHONE NUMBER -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-phonenumber">Phone Number</label>
+                                <input type="text" class="resume__input" id="resume-phonenumber">
+                                <div class="form-group resume__form-check">
+                                    <input id="phone-check" type="checkbox" name="custom-radio-btn">
+                                    <label class="custom-checkbox" for="phone-check"><i
+                                            class="fas fa-check"></i></label>
+                                    <span class="label-text">Show my phone number on Jobustan</span>
+                                </div>
+                                <p>By checking this box, I confirm that I am the subscriber to the telephone number
+                                    entered and I hereby consent to receive calls and/or texts and/or WhatsApp messages
+                                    from Indeed and employers who use Indeed, including using automated call technology
+                                    or recorded calls, at the telephone number provided above, including if this number
+                                    is a wireless (cell phone) number.</p>
+                            </div>
+
+                            <h3 class="resume__h3">Education</h3>
+                            <!-- LEVEL OF EDUCATION -->
+                            <div class="form-group resume__form-group">
+                                <label>Level of Education</label>
+                                <div class="resume__dropdown resume-education-level">
+                                    <div class="caption caption-100">Level of Education<i
+                                            class="zmdi zmdi-chevron-down"></i></div>
+                                    <div class="list">
+                                        <div class="item">Bachelor's</div>
+                                        <div class="item">Master's</div>
+                                        <div class="item">Doctorate</div>
+                                        <div class="item">None</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SCHOOL -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-school">School</label>
+                                <input type="text" class="biginput resume__input" id="resume-school">
+                            </div>
+                            <!-- FIELD OF STUDY -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-fieldOfStudy">Field of Study</label>
+                                <span>e.g. Biology, Computer Science, Intellectual Property, Nursing, Psychology.</span>
+                                <input type="text" class="resume__input" id="resume-fieldOfStudy">
+                            </div>
+                            <!-- CITY OF EDUCATION -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-cityEducation">City<span> - United States (<a
+                                            href="#">Change</a>)</span> </label>
+
+                                <div class="resume__dropdown resume-city-education-select">
+                                    <div class="caption caption-100">City<i class="zmdi zmdi-chevron-down"></i></div>
+                                    <div class="list">
+                                        <div class="item">Baku</div>
+                                        <div class="item">Lankaran</div>
+                                        <div class="item">Absheron</div>
+                                        <div class="item">Qabala</div>
+                                        <div class="item">May</div>
+                                    </div>
+                                </div>
+                                <input type="text" class="biginput resume__input" id="resume-cityEducation">
+                            </div>
+                            <!-- TIME EDUCATION PERIOD -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-school">Time Period</label>
+                                <div class="form-group resume__form-check">
+                                    <input id="education-time-check" type="checkbox" name="custom-radio-btn">
+                                    <label class="custom-checkbox" for="education-time-check"><i
+                                            class="fas fa-check"></i></label>
+                                    <span class="label-text">I currently go here</span>
+                                </div>
+                                <div class="resume__form-group--div">
+                                    <div class="resume__form-group--left">
+                                        <div class="resume__dropdown resume-education-from-month mr-3">
+                                            <div class="caption">Month<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">January</div>
+                                                <div class="item">February</div>
+                                                <div class="item">March</div>
+                                                <div class="item">April</div>
+                                                <div class="item">May</div>
+                                            </div>
+                                        </div>
+                                        <div class="resume__dropdown resume-education-from-year">
+                                            <div class="caption">Year<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">2020</div>
+                                                <div class="item">2019</div>
+                                                <div class="item">2018</div>
+                                                <div class="item">April</div>
+                                                <div class="item">May</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <span class="mx-3"> to </span>
+                                    <div class="resume__form-group--right">
+                                        <div class="resume__dropdown resume-education-to-month mr-3">
+                                            <div class="caption">Month<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">January</div>
+                                                <div class="item">February</div>
+                                                <div class="item">March</div>
+                                                <div class="item">April</div>
+                                                <div class="item">May</div>
+                                            </div>
+                                        </div>
+                                        <div class="resume__dropdown resume-education-to-year">
+                                            <div class="caption">Year<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">2020</div>
+                                                <div class="item">2019</div>
+                                                <div class="item">2018</div>
+                                                <div class="item">April</div>
+                                                <div class="item">May</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span>Present</span>
+                                </div>
+                            </div>
+
+
+                            <h3 class="resume__h3 mt-1">Work Experience</h3>
+                            <!-- JOB TITLE -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-job-title">Job Title</label>
+                                <input type="text" class="biginput resume__input" id="resume-job-title">
+                            </div>
+                            <!-- JOB COMPANY-->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-job-company">Company</label>
+                                <input type="text" class="biginput resume__input" id="resume-job-company">
+                            </div>
+                            <!-- JOB CITY  -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-cityJob">City<span> - United States (<a href="#">Change</a>)</span>
+                                </label>
+
+
+                                <div class="resume__dropdown resume-city-job" id="resume-city-job">
+                                    <div class="caption caption-100">City<i class="zmdi zmdi-chevron-down"></i></div>
+                                    <div class="list">
+                                        <div class="item">Baku</div>
+                                        <div class="item">Lankaran</div>
+                                        <div class="item">Absheron</div>
+                                        <div class="item">Qabala</div>
+                                        <div class="item">May</div>
+                                    </div>
+                                </div>
+                                <input type="text" class="biginput resume__input" id="resume-cityJob">
+                            </div>
+
+                            <!-- TIME JOB PERIOD -->
+                            <div class="form-group resume__form-group">
+                                <label for="resume-school">Time Period</label>
+                                <div class="form-group resume__form-check">
+                                    <input id="job-time-check" type="checkbox" name="custom-radio-btn">
+                                    <label class="custom-checkbox" for="job-time-check"><i
+                                            class="fas fa-check"></i></label>
+                                    <span class="label-text">I currently work here</span>
+                                </div>
+                                <div class="resume__form-group--div">
+                                    <div class="resume__form-group--left">
+                                        <div class="resume__dropdown resume-job-from-month mr-3">
+                                            <div class="caption">Month<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">January</div>
+                                                <div class="item">February</div>
+                                                <div class="item">March</div>
+                                                <div class="item">April</div>
+                                                <div class="item">May</div>
+                                            </div>
+                                        </div>
+                                        <div class="resume__dropdown resume-job-from-year">
+                                            <div class="caption">Year<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">2020</div>
+                                                <div class="item">2019</div>
+                                                <div class="item">2018</div>
+                                                <div class="item">2017</div>
+                                                <div class="item">2016</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <span class="mx-3"> to </span>
+                                    <div class="resume__form-group--right">
+                                        <div class="resume__dropdown resume-job-to-month mr-3">
+                                            <div class="caption">Month<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">January</div>
+                                                <div class="item">February</div>
+                                                <div class="item">March</div>
+                                                <div class="item">April</div>
+                                                <div class="item">May</div>
+                                            </div>
+                                        </div>
+                                        <div class="resume__dropdown resume-job-to-year">
+                                            <div class="caption">Year<i class="zmdi zmdi-chevron-down"></i></div>
+                                            <div class="list">
+                                                <div class="item">2020</div>
+                                                <div class="item">2019</div>
+                                                <div class="item">2018</div>
+                                                <div class="item">2017</div>
+                                                <div class="item">2016</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span>Present</span>
+                                </div>
+                            </div>
+                            <div class="form-group resume__form-group">
+                                <label for="resume-job-editor">Description</label>
+                                <span class="mb-2">Describe your position and any significant accomplishments.</span>
+                                <textarea name="" id="resume-job-editor" cols="30" rows="10">
+                                </textarea>
+                            </div>
+                            <h3 class="resume__h3 mt-1">Skills</h3>
+
+                            <div class="form-group resume__form-group">
+                                <span><b>Recommendation: </b> include 3-5 of your top skills to help you stand
+                                    out.</span>
+
+                                <label>Add a new skill</label>
+                                <span class="mb-2">e.g. Microsoft Office</span>
+
+                                <select multiple data-placeholder="Add Skills" class="resume-skill">
+                                    <option class="resume__skill-option">Sketch</option>
+                                    <option class="resume__skill-option">Framer X</option>
+                                    <option class="resume__skill-option">Photoshop</option>
+                                    <option class="resume__skill-option">Principle</option>
+                                    <option class="resume__skill-option">Invision</option>
+                                </select>
+
+                            </div>
+
+                            <h3 class="resume__h3 mt-1">Job preferences</h3>
+                             <!-- DESIRED JOB TITLE -->
+                             <div class="form-group resume__form-group">
+                                <label for="resume-desired-job-title">Desired Job Title</label>
+                                <input type="text" class="biginput resume__input" id="resume-desired-job-title">
+                            </div>
+                            <!-- DESIRED JOB TYPE -->
+                            <div class="form-group resume__form-group">
+                                <label>Desired Job Types</label>
+                                <div class="qualification__list">
+                                    <div class="qualification__list--item qualification__list--item form-check">
+                                        <input class="qualification__list__input form-check-input" type="checkbox"
+                                            id="qualification-full-time" />
+                                        <label class="qualification__list__label form-check-label "
+                                            for="qualification-full-time"><i
+                                                class="fas fa-check qualification__list__label-check"></i><span>Full-time</span>
+                                        </label>
+
+                                    </div>
+                                    <div class="qualification__list--item form-check">
+                                        <input class="qualification__list__input form-check-input" type="checkbox"
+                                            id="qualification-part-time" />
+                                        <label class="qualification__list__label form-check-label "
+                                            for="qualification-part-time"><i
+                                                class="fas fa-check qualification__list__label-check"></i><span>Part-time</span>
+                                        </label>
+                                    </div>
+                                    <div class="qualification__list--item form-check">
+                                        <input class="qualification__list__input form-check-input" type="checkbox"
+                                            id="qualification-temporary" />
+                                        <label class="qualification__list__label form-check-label "
+                                            for="qualification-temporary"><i
+                                                class="fas fa-check qualification__list__label-check"></i><span>Temporary</span>
+                                        </label>
+                                    </div>
+                                    <div class="qualification__list--item form-check">
+                                        <input class="qualification__list__input form-check-input" type="checkbox"
+                                            id="qualification-contract" />
+                                        <label class="qualification__list__label form-check-label "
+                                            for="qualification-contract"><i
+                                                class="fas fa-check qualification__list__label-check"></i><span>Contract</span>
+                                        </label>
+                                    </div>
+                                    <div class="qualification__list--item form-check">
+                                        <input class="qualification__list__input form-check-input" type="checkbox"
+                                            id="qualification-internship" />
+                                        <label class="qualification__list__label form-check-label "
+                                            for="qualification-internship"><i
+                                                class="fas fa-check qualification__list__label-check"></i><span>Internship</span>
+                                        </label>
+                                    </div>
+                                    <div class="qualification__list--item form-check">
+                                        <input class="qualification__list__input form-check-input" type="checkbox"
+                                            id="qualification-commission" />
+                                        <label class="qualification__list__label form-check-label "
+                                            for="qualification-commission"><i
+                                                class="fas fa-check qualification__list__label-check"></i><span>Commission</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- DESIRED SALARY -->
+                            <div class="form-group resume__form-group">
+                                <label>Desired Salary</label>
+                                <div class="resume__form-group--div resume__form-group--desired-salary">
+                                    <input type="text" class="resume__salary--input resume__salary--constant-input">
+                                    <span class="dropdown-desired-money resume__dropdown-radio">
+                                        <input type="radio" name="sortType" value="azn" checked="checked"
+                                            id="sort-relevance"><label for="sort-relevance">Azn</label>
+                                        <input type="radio" name="sortType" value="dollar" id="sort-best"><label
+                                            for="sort-best">Dollar</label>
+                                        <input type="radio" name="sortType" value="euro" id="sort-low"><label
+                                            for="sort-low">Euro</label>
+        
+                                    </span>
+                                    <span class="dropdown-desired-money-type resume__dropdown-radio resume__dropdown-salary-type">
+                                        <input type="radio" name="moneyType" value="azn" checked="checked" id="per-year">
+                                        <label for="per-year">per year</label>
+                                        <input type="radio" name="moneyType" value="dollar" id="per-month">
+                                        <label for="per-month">per month</label>
+                                        <input type="radio" name="moneyType" value="euro" id="per-week">
+                                        <label for="per-week">per week</label>
+        
+                                    </span>
+                                </div>
+                             
+                            </div>
+                            <!-- DESIRED RELOCATION -->
+
+                            <div class="form-group resume__form-group">
+                                <label>Relocation</label>
+                                <div class="form-group resume__form-check">
+                                    <input id="resume-desired-job-relocation" type="checkbox" name="custom-check">
+                                    <label class="custom-checkbox" for="resume-desired-job-relocation"><i
+                                            class="fas fa-check"></i></label>
+                                    <span class="label-text">I am willing to relocate</span>
+                                </div>
+                                <div class="form-group resume__form-radio">
+                                    <input id="resume-desired-job-anywhere" type="radio" name="custom-radio-job-location"  checked>
+                                    <label class="custom-radio" for="resume-desired-job-anywhere"></label>
+                                    <span class="label-text">Anywhere</span>
+                                </div>
+                                <div class="form-group  resume__form-radio">
+                                    <input id="resume-desired-job-only" type="radio" name="custom-radio-job-location">
+                                    <label class="custom-radio" for="resume-desired-job-only"></label>
+                                    <span class="label-text">Only near...</span>
+                                </div>
+                                <div class="resume-desired-job-only-div">
+                                    <div class="form-group resume__form-group">
+                                        <label>Enter up to 3 locations you'd be willing to relocate to</label>
+                                        <input type="text" class="biginput resume__input resume__input--desired-location" id="resume-desired-job-location-first">
+                                        <input type="text" class="biginput resume__input resume__input--desired-location" id="resume-desired-job-location-second">
+                                        <input type="text" class="biginput resume__input resume__input--desired-location" id="resume-desired-job-location-third">
+                                    </div>
+                                </div>
+                              
+                            </div>
+
+
+                             <!-- DESIRED SALARY -->
+                             <h3 class="resume__h3 mt-1">Optional: Participate in our Salary Survey</h3>
+                             <div class="form-group resume__form-group">
+                                <label>Salary at s, a</label>
+                                <div class="resume__form-group--div resume__form-group--desired-salary">
+                                    <input type="text" class="resume__salary--input resume__salary--constant-input">
+                                    <span class="dropdown-desired-money resume__dropdown-radio">
+                                        <input type="radio" name="sortTypeDesiredMoney" value="azn-desired" checked="checked" id="sort-desired-azn">
+                                        <label for="sort-desired-azn">Azn</label>
+                                        <input type="radio" name="sortTypeDesiredMoney" value="dollar" id="sort-desired-dollar">
+                                        <label for="sort-desired-dollar">Dollar</label>
+                                        <input type="radio" name="sortTypeDesiredMoney" value="euro" id="sort-desired-euro">
+                                        <label for="sort-desired-euro">Euro</label>
+        
+                                    </span>
+                                    <span class="dropdown-desired-money-type resume__dropdown-radio resume__dropdown-salary-type">
+                                        <input type="radio" name="moneyTypeDesired" value="azn" checked="checked" id="per-year-desired">
+                                        <label for="per-year-desired">per year</label>
+                                        <input type="radio" name="moneyTypeDesired" value="dollar" id="per-month-desired">
+                                        <label for="per-month-desired">per month</label>
+                                        <input type="radio" name="moneyTypeDesired" value="euro" id="per-week-desired">
+                                        <label for="per-week-desired">per week</label>
+        
+                                    </span>
+                                </div>
+                             
+                            </div>
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </form>
+
+                    </div>
+
+                 
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/js/owl.carousel.min.js"></script>
+    <script src="libs/noUiSlider/nouislider.min.js"></script>
+    <script src="libs/js/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="libs/Croppie/croppie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <!-- CKEDITOR -->
+    <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
+    <script src="js/resume.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+.mynavbar {
+    padding-bottom: 0;
+
+    @include respond(lg) {
+        display: none;
+    }
+
+    &__navbar-brand {
+      padding: 0;
+      margin-bottom: 5px;
+    }
+
+    &__heart-group {
+        @include respond(lg) {
+            position: absolute;
+            top: 7px;
+            right: 50px;
+        }
+    }
+
+    &__navbar-nav {
+        @include respond(lg) {
+            margin: 0 auto;
+        }
+
+        &--right {
+            margin-left: auto;
+
+            @include respond(lg) {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__nav-item {
+        padding-bottom: 3px;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -1px;
+
+        &:hover {
+            border-bottom: 3px solid rgba(180, 13, 74, .3);
+            transition: all .3s;
+        }
+
+        &--heart {
+            position: relative;
+        }
+
+        &--user {
+            position: relative;
+        }
+    }
+
+    &__login{
+        border-right: 1px solid $color-gray-light-1;
+    }
+
+    .active {
+        border-bottom: 3px solid $color-primary-dark;
+    }
+
+    &__nav-link {
+        padding: 9px 10px 6px!important;
+    }
+
+    &__heart {
+        position: relative;
+        color: $color-primary-dark;
+        font-size: 20px;
+        z-index: 2;
+
+        &--badge {
+            top: 1px;
+            left: 26px;
+            position: absolute;
+            font-size: 9px;
+            z-index: 1;
+            padding: 2px 3px;
+            border-radius: 5px;
+        }
+    }
+
+    &__user {
+        position: relative;
+        font-size: 22px;
+        z-index: 2;
+
+        &--badge {
+            top: 4px;
+            left: 26px;
+            position: absolute;
+            font-size: 7px;
+            z-index: 1;
+            padding: 1px 2.2px;
+            border-radius: 5px;
+            color: #ffc107;
+        }
+    }
+}
+
+.mynavside {
+    display: none;
+   
+
+    @include respond(lg) {
+        display: flex;
+    }
+
+    &__heart-group {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__nav-item {
+        &--heart {
+            position: relative;
+
+            margin-right: 15px;
+            z-index: 3;
+        }
+    }
+
+    &__nav-link {
+        &--user {
+            position: relative;
+            border-top: 1px solid #c2c2c2;
+           
+        }
+        &--login{
+            border-top: 1px solid #c2c2c2;
+            border-bottom: 1px solid #c2c2c2 !important;
+        }
+
+        &--post{
+            border-bottom: 1px solid #c2c2c2 !important;
+        }
+    }
+
+    &__heart {
+
+        color: $color-primary-dark;
+        font-size: 20px;
+        z-index: 2;
+
+        &--badge {
+            top: 1px;
+            left: 19px;
+            position: absolute;
+            font-size: 9px;
+            z-index: -2;
+            padding: 2px 3px;
+            border-radius: 5px;
+        }
+    }
+
+    &__user {
+        position: relative;
+        font-size: 22px;
+        z-index: 2;
+
+        &--badge {
+            top: 10px;
+            left: 41px;
+            position: absolute;
+            font-size: 7px;
+            z-index: 1;
+            padding: 1px 2.2px;
+            border-radius: 5px;
+            color: #ffc107;
+        }}
+
+    }
+
+
+    .sidenav {
+
+        box-shadow: 2px 13px 7px 0px #000;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999999999;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 46px;
+
+      
+        @include respond(  tab-port3) {
+           padding-top: 46px;
+        }
+        @include respond(  tab-port) {
+            padding-top: 45px;
+         }
+         @include respond(  phone-land) {
+            padding-top: 46px;
+         }
+         @include respond(  phone) {
+            padding-top: 46px;
+         }
+        a {
+            padding: 16px 16px 16px 24px;
+            text-decoration: none;
+            font-size: 16px;
+            color: inherit;
+            display: block;
+            transition: 0.3s;
+            &:not(:first-child){
+            border-bottom: 1px solid #f2f2f2;}
+            &:nth-child(2){
+                border-top: 1px solid #c2c2c2;
+            }
+
+            &:hover {
+                color: #88939f;
+            }
+        }
+
+        .closebtn {
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 50px;
+        }
+    }
+
+    
+
+        

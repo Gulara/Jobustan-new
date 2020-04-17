@@ -1,0 +1,164 @@
+*{
+	box-sizing: inherit;
+}
+html{ 
+	width: 100%;
+	height: 100%;
+	font-size: 62.5%; //burda rem'in 10 piksel olmasını ayarladık ki rahat değer verebilelim tarayıcı 16 piksel veriyor biz onun 62.5 faizini alarak 10 yaptık
+	font-family: 'Roboto', sans-serif;
+
+
+	@include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+	/* @include respondmax(md){
+		font-size: 40%;
+	} 
+
+	@include respondmin(md){
+		font-size: 40%;
+	} 
+
+	@include respondmin(lg){
+		font-size: 56.25%; 
+	} 
+
+	@include respondmin(xl){
+		font-size: 62.5% ; //1rem=12px
+	}		 */
+
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
+	font-size: 14px;
+	color: #969696;
+}
+
+a {
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+
+
+/*****************************
+	Typography 
+*****************************/
+
+  
+  a {
+	outline: medium none !important;
+	color: #b40d4a;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  a:focus {
+	color: #b40d4a;
+	text-decoration: none !important;
+  }
+  
+  a:hover {
+	color: #b40d4a;
+	text-decoration: none !important;
+  }
+  
+  input {
+	outline: medium none !important;
+	color: #b40d4a;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	color: #001935;
+	margin-top: 0px;
+	font-weight: 600;
+  }
+  
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+	color: inherit;
+  }
+  
+  label {
+	font-weight: normal;
+  }
+  
+  h1 {
+	font-size: 42px;
+	font-style: normal;
+  }
+  
+  h2 {
+	font-size: 28px;
+	line-height: 38px;
+  }
+  
+  h3 {
+	font-size: 26px;
+  }
+  
+  h4 {
+	font-size: 22px;
+  }
+  
+  h5 {
+	font-size: 18px;
+  }
+  
+  h6 {
+	font-size: 16px;
+  }
+  
+  p {
+	font-weight: normal;
+	line-height: 1.7;
+  }
+  
+  *::-moz-selection {
+	background: #b40d4a;
+	color: #ffffff;
+	text-shadow: none;
+  }
+  
+  ::-moz-selection {
+	background: #b40d4a;
+	color: #ffffff;
+	text-shadow: none;
+  }
+  
+  ::selection {
+	background: #b40d4a;
+	color: #ffffff;
+	text-shadow: none;
+  }
+  
+  .container-fluid {
+	padding: 0 100px;
+  }

@@ -1,0 +1,78 @@
+.intermediate{
+    background-color: #fafafa;
+    padding: 10rem 0;
+
+    &__inner{
+        background-color: $color-white;
+        width: 60rem;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+
+    &__box{
+        
+        text-align: left;
+        padding: 3.5rem;
+    }
+
+    &__boxTitle{
+        margin-bottom: 2rem;
+    }
+
+    &__note{
+        font-size: 1.6rem;
+        color: $color-gray;
+        margin-bottom: 2rem;
+    }
+
+    &__or{
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: .5rem;
+    }
+
+    &__link{
+        padding: 1.2rem 1.5rem;
+        border-radius: 2rem;
+        background-color: $color-primary-dark;
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: normal;
+        width: 100%;
+        text-align: center;
+        color: $color-white;
+
+        &:hover{
+            color: $color-white;
+        }
+    }
+
+    &__hintBox{
+        padding: .5rem 1rem;
+        background-color: $color-gray-light-9;
+        border-radius: .5rem;
+       
+
+    }
+
+    &__hintBoxInner{
+        display: flex;
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+    &__hintIcon{
+
+        i::before{
+            font-size: 1.4rem;
+            color: $color-primary-dark;
+            margin-right: 1rem;
+        }
+    }
+    &__hint{
+       font-size: 13px;
+    }
+}

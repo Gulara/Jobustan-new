@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobustan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css"> -->
+    <link rel="stylesheet" href="libs/default.css?v1.1">
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="libs/toggle-switch/toggle-switch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body style="background-color: #fafafa;">
+
+
+    //= template/head.html
+
+    <section id="pricing-container">
+
+        <div id="pricing-switch">
+    
+            <span class="switch-label switch-label-monthly">Monthly</span>
+            <label class="switch" id="">
+                <input type="checkbox" checked="checked">
+                <span class="slider"></span>
+            </label>
+            <span class="switch-label switch-label-yearly active">Yearly <span class="save-money">Save 10%</span></span>
+            <!-- 
+          Use https://codepen.io/raubaca/pen/VejpQP for styled dropdown 
+          and https://lipis.github.io/flag-icon-css/flags/4x3/us.svg for flags
+        -->
+            <div class="save-money--mobile">Save 10% on Yearly Plans</div>
+    
+        </div>
+        <!-- end of pricing-switch -->
+    
+        <div id="pricing-cards">
+       <!-- =========================== -->
+            <!-- = Basic Subscription Card = -->
+            <!-- =========================== -->
+            <div class="price-card">
+    
+                <div class="price-card--header">
+                    <h4>Basic</h4>
+                    <!--                <p>getting started</p> -->
+                </div>
+    
+                <div class="price-card--price">
+                    <div class="price-card--price-text only-yearly">
+                        <div class="price-card--price-number odometer">249</div>
+                        <div class="only-yearly--text"><span>Only Available Yearly</span></div>
+                    </div>
+                    <div class="price-card--price-conditions">
+                        <div>Billed Annually</div>
+                        <div class="price-card--onboarding-fee">No Onboarding Fee</div>
+                    </div>
+                </div>
+    
+                <div class="price-card--cta">
+                    <a class="price-card--cta--button btn" href="/get-started-today">Get Started</a>
+                </div>
+    
+                <div class="price-card--features">
+                    <ul class="price-card--features--list">
+    
+                        <li class="price-card--features--item has-tooltip">Sales & Marketing Platform
+                            <div class="tooltip-container"><strong>Sales & Marketing Platform</strong>
+                                <p>Vendasta's end-to-end sales solution for companies that serve local businesses, and want to grow digital revenue.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Snapshot & Campaigns
+                            <div class="tooltip-container"><strong>Snapshot & Campaigns</strong>
+                                <p>Access to award-winning automated needs-assessment and email marketing automation. Unlimited emails sent to unlimited accounts.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Marketplace
+                            <div class="tooltip-container"><strong>Marketplace</strong>
+                                <p>Access to world-class resellable products & services, aimed to fulfilling the digital marketing needs of your small & medium sized business clients.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Business Center & Store
+                            <div class="tooltip-container"><strong>Business Center & Store</strong>
+                                <p>Portal for your local business clients, featuring your agency’s branding. They can access the products purchased from your Marketplace.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Tech support (limited)
+                            <div class="tooltip-container"><strong>Tech support (limited)</strong>
+                                <p>Email and Web Chat support, <br/>9am-9pm EST Mon-Fri, <br/>2pm-7pm EST Sat-Sun</p>
+                            </div>
+                        </li>
+    
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Partner Success Manager
+                            <div class="tooltip-container"><strong>Partner Success Manager</strong>
+                                <p>One-on-one with a Vendasta Success Manager, who will provide sales training so you reach your goals quickly.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Custom domains
+                            <div class="tooltip-container"><strong>Custom domains</strong>
+                                <p>Fully white-label the platform on your agency's own domains.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Concierge
+                            <div class="tooltip-container"><strong>Concierge</strong>
+                                <p>Multi-client agency fulfillment & task management app for teams.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Brand Analytics
+                            <div class="tooltip-container"><strong>Brand Analytics</strong>
+                                <p>Access to multi-location brand management app.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Managed Digital Ads
+                            <div class="tooltip-container"><strong>Managed Digital Ads</strong>
+                                <p>Access to our managed advertising service. Drive store visits, calls, texts & form fills for your clients.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Access to in-market seminars
+                            <div class="tooltip-container"><strong>Access to in-market seminars</strong>
+                                <p>Face to face training from our experts to yours.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">APIs & SSO
+                            <div class="tooltip-container"><strong>APIs & SSO</strong>
+                                <p>APIs to use our products in your dashboards.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Digital Agency
+                            <div class="tooltip-container"><strong>Digital Agency</strong>
+                                <p>Outsource your work to our fulfillment team.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">100% white-label
+                            <div class="tooltip-container"><strong>100% white-label</strong>
+                                <p>Digital Agency Email and phone communication under your brand. Customized workflows and toll-free numbers.</p>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="price-card--mobile-features-toggle"></div>
+    
+            </div>
+            <!-- End of Card -->
+           
+    
+           
+    
+            <!-- ========================= -->
+            <!-- = Pro Subscription Card = -->
+            <!-- ========================= -->
+            <div class="price-card">
+    
+                <div class="price-card--header">
+                    <h4>Pro</h4>
+                    <!--                <p>growing your business</p> -->
+                </div>
+    
+                <div class="price-card--price">
+                    <div class="price-card--price-text">
+                        <div class="price-card--price-number toggle-price-content odometer" data-price-monthly="499" data-price-yearly="450">450</div>
+                    </div>
+                    <div class="price-card--price-conditions">
+                        <div class="toggle-price-content" data-price-monthly="Billed Monthly" data-price-yearly="Billed Annually">Billed Annually</div>
+                        <div class="price-card--onboarding-fee toggle-price-content" data-price-monthly="+ $1,500 Onboarding Fee" data-price-yearly="No Onboarding Fee">No Onboarding Fee</div>
+                    </div>
+                </div>
+    
+                <div class="price-card--cta">
+                    <a class="price-card--cta--button btn" href="/get-started-today">Get Started</a>
+                </div>
+    
+                <div class="price-card--features">
+                    <ul class="price-card--features--list">
+    
+                        <li class="price-card--features--item has-tooltip">Sales & Marketing Platform
+                            <div class="tooltip-container"><strong>Sales & Marketing Platform</strong>
+                                <p>Vendasta's end-to-end sales solution for companies that serve local businesses, and want to grow digital revenue.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Snapshot & Campaigns
+                            <div class="tooltip-container"><strong>Snapshot & Campaigns</strong>
+                                <p>Access to award-winning automated needs-assessment and email marketing automation. Unlimited emails sent to unlimited accounts.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Marketplace
+                            <div class="tooltip-container"><strong>Marketplace</strong>
+                                <p>Access to world-class resellable products & services, aimed to fulfilling the digital marketing needs of your small & medium sized business clients.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Business Center & Store
+                            <div class="tooltip-container"><strong>Business Center & Store</strong>
+                                <p>Portal for your local business clients, featuring your agency’s branding. They can access the products purchased from your Marketplace.</p>
+                            </div>
+                        </li>
+    
+                        <li class="price-card--features--item has-tooltip">Tech support
+                            <div class="tooltip-container"><strong>Tech support</strong>
+                                <p>Phone, Email and Web Chat support, <br/>9am-9pm EST Mon-Fri, <br/>2pm-7pm EST Sat-Sun</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Partner Success Manager
+                            <div class="tooltip-container"><strong>Partner Success Manager</strong>
+                                <p>One-on-one with a Vendasta Success Manager, who will provide sales training so you reach your goals quickly.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Custom domains
+                            <div class="tooltip-container"><strong>Custom domains</strong>
+                                <p>Fully white-label the platform on your agency's own domains.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Concierge
+                            <div class="tooltip-container"><strong>Concierge</strong>
+                                <p>Multi-client agency fulfillment & task management app for teams.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Brand Analytics
+                            <div class="tooltip-container"><strong>Brand Analytics</strong>
+                                <p>Access to multi-location brand management app.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Managed Digital Ads
+                            <div class="tooltip-container"><strong>Managed Digital Ads</strong>
+                                <p>Access to our managed advertising service. Drive store visits, calls, texts & form fills for your clients.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Access to in-market seminars
+                            <div class="tooltip-container"><strong>Access to in-market seminars</strong>
+                                <p>Face to face training from our experts to yours.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">APIs & SSO
+                            <div class="tooltip-container"><strong>APIs & SSO</strong>
+                                <p>APIs to use our products in your dashboards.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">Digital Agency
+                            <div class="tooltip-container"><strong>Digital Agency</strong>
+                                <p>Outsource your work to our fulfillment team.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">100% white-label
+                            <div class="tooltip-container"><strong>100% white-label</strong>
+                                <p>Digital Agency Email and phone communication under your brand. Customized workflows and toll-free numbers.</p>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="price-card--mobile-features-toggle"></div>
+    
+            </div>
+            <!-- End of Card -->
+     <!-- ================================ -->
+            <!-- = Enterprise Subscription Card = -->
+            <!-- ================================ -->
+            <div class="price-card price-card--hero">
+    
+                <div class="price-card--header">
+                    <h4>Enterprise</h4>
+                    <!--                <p>for growing your business</p> -->
+                </div>
+                <div class="price-card--hero-text">
+                    Most Popular Plan
+                </div>
+    
+                <div class="price-card--price">
+                    <div class="price-card--price-text">
+                        <div class="price-card--price-number toggle-price-content odometer" data-price-monthly="999" data-price-yearly="900">900</div>
+                    </div>
+                    <div class="price-card--price-conditions">
+                        <div class="toggle-price-content" data-price-monthly="Billed Monthly" data-price-yearly="Billed Annually">Billed Annually</div>
+                        <div class="price-card--onboarding-fee toggle-price-content" data-price-monthly="+ $2,500 Onboarding Fee" data-price-yearly="No Onboarding Fee">No Onboarding Fee</div>
+                    </div>
+                </div>
+    
+                <div class="price-card--cta">
+                    <a class="price-card--cta--button btn" href="/get-started-today">Get Started</a>
+                </div>
+    
+                <div class="price-card--features">
+                    <ul class="price-card--features--list">
+    
+                        <li class="price-card--features--item has-tooltip">Sales & Marketing Platform
+                            <div class="tooltip-container"><strong>Sales & Marketing Platform</strong>
+                                <p>Vendasta's end-to-end sales solution for companies that serve local businesses, and want to grow digital revenue.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Snapshot & Campaigns
+                            <div class="tooltip-container"><strong>Snapshot & Campaigns</strong>
+                                <p>Access to award-winning automated needs-assessment and email marketing automation. Unlimited emails sent to unlimited accounts.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Marketplace
+                            <div class="tooltip-container"><strong>Marketplace</strong>
+                                <p>Access to world-class resellable products & services, aimed to fulfilling the digital marketing needs of your small & medium sized business clients.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Business Center & Store
+                            <div class="tooltip-container"><strong>Business Center & Store</strong>
+                                <p>Portal for your local business clients, featuring your agency’s branding. They can access the products purchased from your Marketplace.</p>
+                            </div>
+                        </li>
+    
+                        <li class="price-card--features--item has-tooltip">Tech support
+                            <div class="tooltip-container"><strong>Tech support</strong>
+                                <p>Phone, Email and Web Chat support, <br/>9am-9pm EST Mon-Fri, <br/>2pm-7pm EST Sat-Sun</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Partner Success Manager
+                            <div class="tooltip-container"><strong>Partner Success Manager</strong>
+                                <p>One-on-one with a Vendasta Success Manager, who will provide sales training so you reach your goals quickly.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Custom domains
+                            <div class="tooltip-container"><strong>Custom domains</strong>
+                                <p>Fully white-label the platform on your agency's own domains.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Concierge
+                            <div class="tooltip-container"><strong>Concierge</strong>
+                                <p>Multi-client agency fulfillment & task management app for teams.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Brand Analytics
+                            <div class="tooltip-container"><strong>Brand Analytics</strong>
+                                <p>Access to multi-location brand management app.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Managed Digital Ads
+                            <div class="tooltip-container"><strong>Managed Digital Ads</strong>
+                                <p>Access to our managed advertising service. Drive store visits, calls, texts & form fills for your clients.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Access to in-market seminars
+                            <div class="tooltip-container"><strong>Access to in-market seminars</strong>
+                                <p>Face to face training from our experts to yours.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">APIs & SSO
+                            <div class="tooltip-container"><strong>APIs & SSO</strong>
+                                <p>APIs to use our products in your dashboards.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip">Digital Agency
+                            <div class="tooltip-container"><strong>Digital Agency</strong>
+                                <p>Outsource your work to our fulfillment team.</p>
+                            </div>
+                        </li>
+                        <li class="price-card--features--item has-tooltip tooltip-disabled features-disabled">100% white-label
+                            <div class="tooltip-container"><strong>100% white-label</strong>
+                                <p>Digital Agency Email and phone communication under your brand. Customized workflows and toll-free numbers.</p>
+                            </div>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                <div class="price-card--mobile-features-toggle"></div>
+    
+            </div>
+            <!-- End of Card -->
+        
+    
+        </div>
+        <!--    end of pricing-cards -->
+    
+        
+    
+    </section>
+
+    
+    //= template/foot.html
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- VALIDATE -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/js/owl.carousel.min.js"></script>
+    <!-- <script src="libs/noUiSlider/nouislider.min.js"></script> -->
+    <script src="libs/js/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <!-- <script src="libs/Croppie/croppie.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    
+    <script src="js/pricing.js"></script>
+
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+
+</body>
+
+</html>

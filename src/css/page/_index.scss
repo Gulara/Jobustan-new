@@ -1,0 +1,85 @@
+.post-resume {
+    margin-top: 20px;
+
+    &--div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+
+        @include respond(main-img-resp-1) {
+         justify-content: flex-start;
+        }
+    }
+
+    &--link {
+        font-size: 16px;
+        color: $color-primary-dark;
+        font-weight: bold;
+
+        span {
+            color: $color-gray;
+            margin-left: 5px;
+        }
+        
+        @include respond(main-img-resp-1) {
+          font-size: 15px;
+           }
+    }
+
+
+}
+
+.popular-searches {
+    &--h2 {
+        text-align: center;
+        margin: 40px auto 20px;
+        font-weight: bold;
+        font-size: 24px;
+
+        @include respond(main-img-resp-1) {
+            font-size: 18px;
+             }
+    }
+
+    &__div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 1rem auto;
+        &::after {
+            content: "";
+            flex: auto;
+          }
+    }
+
+    &__link {
+        padding: 10px 15px;
+        background-color: #ececec;
+        border-color: transparent;
+        color: #2d2d2d;
+        font-size: 15px;
+        border: 0;
+        align-items: center;
+        margin: 5px;
+        border-radius: 10px;
+        word-wrap: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(main-img-resp-1) {
+            padding: 8px 12px;
+             }
+       
+        .fa-search {
+            color: #b1b1b1;
+            font-size: 17px;
+        }
+
+        p {
+            margin-left: 5px;
+            width: 100%;
+        }
+    }
+}

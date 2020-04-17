@@ -1,0 +1,78 @@
+.filter-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.filter-td, 
+.filter-th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.filter-job{
+    font-size: 15px;
+    overflow: hidden;
+    &__col-left{
+        margin-left: 20px;
+        @include respond(main-img-resp-1) {
+            margin-left: 0;
+        }
+    }
+
+    &__navbar{
+        
+        font-size: 16px;
+        margin: 0 20px;
+        &__category {
+            background-color: $color-primary-dark;
+            color: #fff;
+            .owl-nav {
+                display: none;
+            }
+        }
+        &__item {
+            margin: 10px 0;
+            line-height: 20px;
+            .owl-nav {
+                display: none;
+            }
+        }
+    }
+}
+.owl-carousel-category {
+   
+
+    .owl-item {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}
+
+.owl-carousel-label{
+    background-color: #fff;
+    color: inherit;
+    display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  z-index: 1;
+  position: relative;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+}
+
+.owl-carousel-input[type=checkbox]{
+  display: none;
+/*   margin-right: -20px;
+  position: relative;
+  z-index: 2; */
+}
+
+.owl-carousel-input[type=checkbox]:checked + label{
+    background-color: $color-primary-dark;
+    color: #fff;
+    border: $color-primary-dark;
+}
+.owl-carousel-all-item{
+    display: none ;
+}

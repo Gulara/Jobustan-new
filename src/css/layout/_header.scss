@@ -1,0 +1,20 @@
+.header {
+	font-size: 16px;
+	border-bottom: 1px solid #c8c8c8;
+	background-color: #fff;
+	;
+
+	&__logo {
+		height: 20px;
+	}
+
+	&__div {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		@include respond(lg) {
+           flex-direction: column;
+        }
+	}
+}

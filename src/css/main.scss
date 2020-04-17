@@ -1,0 +1,35 @@
+@import "abstracts/bt5start";
+@import "abstracts/function";
+@import "abstracts/mixin";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+@import "base/fonts";
+@import "base/d";
+
+@import "components/myBtn"; 
+@import "components/select2";
+@import "components/dropdown-multiple";
+@import "components/form";
+
+
+@import "layout/footer"; 
+@import "layout/grid"; 
+@import "layout/header";
+@import "layout/navigation";
+
+
+@import "page/post-a-job";
+@import "page/category-inner";
+@import "page/resume";
+@import "page/resume-inner";
+@import "page/filter-job";
+@import "page/login";
+@import "page/create-or-upload";
+@import "page/index";
+@import "page/pricing";
+@import "page/register";
+
+

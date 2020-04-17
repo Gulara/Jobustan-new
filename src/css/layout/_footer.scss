@@ -1,0 +1,131 @@
+.footer{
+  background-color: #F4F4F4;
+  font-size: 16px;
+
+  @include respond(main-img-resp-1) {
+    display: none;
+  }
+  &__link{
+    color: inherit;
+
+    &:hover {
+      color: $color-primary;
+      transition: all .3s;
+      cursor: pointer;
+    }
+
+    &:hover i{
+      color: $color-primary;
+      transition: all .3s;
+      cursor: pointer;
+    }
+  }
+  &__heading{
+    font-size: 16px;
+
+    i {
+      display: none;
+     
+    }
+
+    
+    
+
+  }
+  &__list{
+    @include respond(main-img-resp-1) {
+      display: none;
+    }
+
+   
+   
+  }
+  &__logo {
+    height: 25px;
+    margin-bottom: 10px;
+  }
+  &__location{
+    font-size: 16px;
+    padding-right: 95px;
+    margin: 10px 0;
+  }
+  &__social-h5{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+  }
+}
+
+.footer-phone{
+  background-color: #F4F4F4;
+  font-size: 16px;
+  display: none;
+
+  @include respond(main-img-resp-1) {
+    display: block;
+  }
+
+  &__link{
+    color: inherit;
+
+    &:hover {
+      color: $color-primary;
+      transition: all .3s;
+      cursor: pointer;
+    }
+
+    &:hover i{
+      color: $color-primary;
+      transition: all .3s;
+      cursor: pointer;
+    }
+  }
+  &__heading{
+    font-size: 16px;
+
+    i {
+      display: none;
+      @include respond(main-img-resp-1) {
+        display: inline-block;
+      }
+    }
+
+    @include respond(main-img-resp-1) {
+      flex-wrap: wrap;
+      &:hover {
+        color: $color-primary;
+        transition: all .3s;
+        cursor: pointer;
+      }
+    }
+    
+
+  }
+  &__list{
+    @include respond(main-img-resp-1) {
+      display: none;
+    }
+
+   
+   
+  }
+  &__logo {
+    height: 25px;
+    margin-bottom: 10px;
+  }
+
+  &__location{
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  &__social-h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+  }
+  &__social{
+    font-size: 22px;
+  }
+}
