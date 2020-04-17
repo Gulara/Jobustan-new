@@ -4743,6 +4743,12 @@ label.error {
   .resume__h3 {
     font-size: 24px;
     margin: 40px 0 10px 0; }
+  .resume__header {
+    font-weight: normal;
+    color: #969696;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c8c8c8; }
   .resume__p {
     font-size: 16px;
     margin-bottom: 20px; }
@@ -4891,6 +4897,32 @@ label.error {
               align-items: center; }
     .resume__form-group--desired-salary {
       position: relative; }
+    .resume__form-group__item {
+      border: 2px solid #eae0e4;
+      -webkit-border-radius: 20px;
+         -moz-border-radius: 20px;
+              border-radius: 20px;
+      padding: 5px 10px;
+      background: #fff;
+      color: #b40d4a;
+      cursor: pointer;
+      font-weight: bold;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      display: inline-block !important;
+      margin-bottom: 20px; }
+    .resume__form-group__all {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
   .resume__input {
     height: 40px;
     padding: 0 10px 0 10px;
@@ -5183,6 +5215,59 @@ label.error {
       position: relative; }
     .resume__salary--constant-input {
       width: 200px; }
+  .resume__addMilitary {
+    margin: 20px auto; }
+    .resume__addMilitary__list {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .resume__addMilitary__list--item {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #6e2626;
+        padding-left: 0;
+        margin: 5px 10px 5px 0; }
+        @media only screen and (max-width: 450px) {
+          .resume__addMilitary__list--item {
+            width: 100%; } }
+      .resume__addMilitary__list__label {
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #b40d4a;
+        color: #b40d4a;
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 16px;
+        -webkit-border-radius: 20px;
+           -moz-border-radius: 20px;
+                border-radius: 20px; }
+        @media only screen and (min-width: 600px) and (max-width: 900px) {
+          .resume__addMilitary__list__label {
+            font-size: 13px;
+            padding: 8px 5px; } }
+      .resume__addMilitary__list__input[type='checkbox'] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: none; }
+        .resume__addMilitary__list__input[type='checkbox']:checked + label {
+          background: #b40d4a;
+          color: #ffffff !important; }
+      .resume__addMilitary__list__input[type='radio'] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: none; }
+        .resume__addMilitary__list__input[type='radio']:checked + label {
+          background: #b40d4a;
+          color: #ffffff !important; }
   .resume__btn-decrement, .resume__btn-increment {
     width: 40px;
     width: 60px;
