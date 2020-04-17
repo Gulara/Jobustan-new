@@ -6,7 +6,7 @@
   $(function () {
       // Initialize form validation on the registration form.
       // It has the name attribute "registration"
-      $("form").validate({
+      $(".post-a-job-form").validate({
           // Specify validation rules
         //   ignore: [],
           debug: false,
@@ -125,7 +125,7 @@
           // in the "action" attribute of the form when valid
           submitHandler: function (form) {
               form.submit();
-            //   alert('successful submit');
+              alert('successful submit');
 
               //   alert('valid form');
               //   return false;
