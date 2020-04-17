@@ -1323,22 +1323,45 @@ $(document).ready(function () {
                     if (!$clicked.parents().hasClass("dropdown-multi-days")) $(".dropdown-multi-days dd ul").hide();
                 });
 
-                $('.mutliSelect-days input[type="checkbox"]').on('click', function () {
-
-                    var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
-                        title = $(this).val() + ",";
-
-                    if ($(this).is(':checked')) {
-                        var html = '<span title="' + title + '">' + title + '</span>';
-                        $('.multiSel-days').append(html);
-                        $(".hida-days").hide();
-                    } else {
-                        $('span[title="' + title + '"]').remove();
-                        var ret = $(".hida");
-                        $('.dropdown-multi-days dt a').append(ret);
-
-                    }
+                $("li").click(function (e) {
+                    var cb = $(this).find(":checkbox")[0];
+                    if (e.target != cb) cb.checked = !cb.checked;
+                    var checkedVal = $(cb).val();
+                          var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
+                          checkedVal = $(cb).val() + ",";
+                    $(this).toggleClass("selected", cb.checked);
+                    console.log(checkedVal);
+                    if ($(this).children().is(':checked')) {
+                                var html = '<span title="' + checkedVal + '">' + checkedVal + '</span>';
+                                $('.multiSel-days').append(html);
+                                $(".hida-days").hide();
+                            } else {
+                                $('span[title="' + checkedVal + '"]').remove();
+                                // var ret = $(".hida-days");
+                                // $('.dropdown-multi-days dt a').append(ret);
+                              
+                            }
+                            if($('input[data-id="multi-days"]:checked').length == 0){
+                                $(".hida-days").show();
+                            }
                 });
+
+                // $('.mutliSelect-days input[type="checkbox"]').on('click', function () {
+
+                //     var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
+                //         title = $(this).val() + ",";
+
+                //     if ($(this).is(':checked')) {
+                //         var html = '<span title="' + title + '">' + title + '</span>';
+                //         $('.multiSel-days').append(html);
+                //         $(".hida-days").hide();
+                //     } else {
+                //         $('span[title="' + title + '"]').remove();
+                //         var ret = $(".hida-days");
+                //         $('.dropdown-multi-days dt a').append(ret);
+
+                //     }
+                // });
             }
 
 
@@ -1380,102 +1403,7 @@ $(document).ready(function () {
             let limitBenefits = document.querySelectorAll('.qualification__div--item-Benefits').length;
             if (limitBenefits < 2) {
                 $('.qualification__div').append(divBenefits);
-                // // BENEFITS  MULTIPLE SELECT START
-                // var select2 = $('.benefits-select-multiple');
-                // var options2 = select2.find('option');
 
-                // var div2 = $('<div />').addClass('selectMultipleBenefits');
-                // var active2 = $('<div />');
-                // var list2 = $('<ul />');
-                // var placeholder2 = select2.data('placeholder');
-
-                // var span2 = $('<span />').text(placeholder2).appendTo(active2);
-                // options2.each(function () {
-                //     var text2 = $(this).text();
-                //     if ($(this).is(':selected')) {
-                //         active2.append($('<a />').html('<em>' + text2 + '</em><i></i>'));
-                //         span2.addClass('hide');
-                //     } else {
-                //         list2.append($('<li />').html(text2));
-                //     }
-                // });
-
-                // active2.append($('<div />').addClass('arrow'));
-                // div2.append(active2).append(list2);
-
-                // select2.wrap(div2);
-
-                // $(document).on('click', '.selectMultipleBenefits ul li', function (e) {
-                //     var select2 = $(this).parent().parent();
-                //     var li2 = $(this);
-                //     if (!select2.hasClass('clicked')) {
-                //         select2.addClass('clicked');
-                //         li2.prev().addClass('beforeRemove');
-                //         li2.next().addClass('afterRemove');
-                //         li2.addClass('remove');
-                //         var a2 = $('<a />').addClass('notShown').html('<em>' + li2.text() + '</em><i></i>').hide().appendTo(select2.children('div'));
-                //         a2.slideDown(100, function () {
-                //             setTimeout(function () {
-                //                 a2.addClass('shown');
-                //                 select2.children('div').children('span').addClass('hide');
-                //                 select2.find('option:contains(' + li2.text() + ')').prop('selected', true);
-                //             }, 100);
-                //         });
-                //         setTimeout(function () {
-                //             if (li2.prev().is(':last-child')) {
-                //                 li2.prev().removeClass('beforeRemove');
-                //             }
-                //             if (li2.next().is(':first-child')) {
-                //                 li2.next().removeClass('afterRemove');
-                //             }
-                //             setTimeout(function () {
-                //                 li2.prev().removeClass('beforeRemove');
-                //                 li2.next().removeClass('afterRemove');
-                //             }, 100);
-
-                //             li2.slideUp(100, function () {
-                //                 li2.remove();
-                //                 select2.removeClass('clicked');
-                //             });
-                //         }, 100);
-                //     }
-                // });
-
-                // $(document).on('click', '.selectMultipleBenefits > div a', function (e) {
-                //     var select2 = $(this).parent().parent();
-                //     var self2 = $(this);
-                //     self2.removeClass().addClass('remove');
-                //     select2.addClass('open');
-                //     setTimeout(function () {
-                //         self2.addClass('disappear');
-                //         setTimeout(function () {
-                //             self2.animate({
-                //                 width: 0,
-                //                 height: 0,
-                //                 padding: 0,
-                //                 margin: 0
-                //             }, 100, function () {
-                //                 var li2 = $('<li />').text(self2.children('em').text()).addClass('notShown').appendTo(select2.find('ul'));
-                //                 li2.slideDown(100, function () {
-                //                     li2.addClass('show');
-                //                     setTimeout(function () {
-                //                         select2.find('option:contains(' + self2.children('em').text() + ')').prop('selected', false);
-                //                         if (!select2.find('option:selected').length) {
-                //                             select2.children('div').children('span').removeClass('hide');
-                //                         }
-                //                         li2.removeClass();
-                //                     }, 100);
-                //                 });
-                //                 self2.remove();
-                //             })
-                //         }, 100);
-                //     }, 100);
-                // });
-
-                // $(document).on('click', '.selectMultipleBenefits > div', function (e) {
-                //     $(this).parent().toggleClass('open');
-                // });
-                // // BENEFITS  MULTIPLE SELECT END
 
                 $(".dropdown-multi-benefits dt a").on('click', function (e) {
                     e.preventDefault();
@@ -1494,23 +1422,44 @@ $(document).ready(function () {
                     var $clicked = $(e.target);
                     if (!$clicked.parents().hasClass("dropdown-multi-benefits")) $(".dropdown-multi-benefits dd ul").hide();
                 });
-
-                $('.mutliSelect-benefits input[type="checkbox"]').on('click', function () {
-
-                    var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
-                        title = $(this).val() + ",";
-
-                    if ($(this).is(':checked')) {
-                        var html = '<span title="' + title + '">' + title + '</span>';
-                        $('.multiSel-benefits').append(html);
-                        $(".hida-benefits").hide();
-                    } else {
-                        $('span[title="' + title + '"]').remove();
-                        var ret = $(".hida");
-                        $('.dropdown-multi-benefits dt a').append(ret);
-
-                    }
+                $("li").click(function (e) {
+                    var cb = $(this).find(":checkbox")[0];
+                    if (e.target != cb) cb.checked = !cb.checked;
+                    var checkedVal = $(cb).val();
+                          var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
+                          checkedVal = $(cb).val() + ",";
+                    $(this).toggleClass("selected", cb.checked);
+                    console.log(checkedVal);
+                    if ($(this).children().is(':checked')) {
+                                var html = '<span title="' + checkedVal + '">' + checkedVal + '</span>';
+                                $('.multiSel-benefits').append(html);
+                                $(".hida-benefits").hide();
+                            } else {
+                                $('span[title="' + checkedVal + '"]').remove();
+                               
+                            
+                            }
+                            if($('input[data-id="multi-benefits"]:checked').length == 0){
+                                $(".hida-benefits").show();
+                            }
                 });
+
+                // $('.mutliSelect-benefits input[type="checkbox"]').on('click', function () {
+
+                //     var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
+                //         title = $(this).val() + ",";
+
+                //     if ($(this).is(':checked')) {
+                //         var html = '<span title="' + title + '">' + title + '</span>';
+                //         $('.multiSel-benefits').append(html);
+                //         // $(".hida-benefits").hide();
+                //     } else {
+                //         $('span[title="' + title + '"]').remove();
+                //         var ret = $(".hida-benefits");
+                //         $('.dropdown-multi-benefits dt a').append(ret);
+
+                //     }
+                // });
             }
             // BENEFITS CHECKBOX START
             $('.checkboxBenefits').click(function () {

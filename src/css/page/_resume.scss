@@ -19,6 +19,16 @@
   &__h3 {
     font-size: 24px;
     margin: 40px 0 10px 0;
+
+   
+  }
+  &__header{
+    font-weight: normal;
+    color:#969696;
+
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #c8c8c8;
   }
 
   &__p {
@@ -27,6 +37,9 @@
   }
 
   &__div {
+    &--example {
+      display: none;
+    }
     &--item {
       position: relative;
       padding: 2rem 4rem 2rem 2rem;
@@ -131,6 +144,24 @@
 
     &--desired-salary {
       position: relative;
+    }
+
+    &__item{
+      border: 2px solid #eae0e4;
+      border-radius: 20px;
+      padding: 5px 10px;
+      background: #fff;
+      color: $color-primary-dark;
+      cursor: pointer;
+   
+      font-weight: bold;
+width: max-content;
+      display: inline-block !important;
+      margin-bottom: 20px;
+    }
+    &__all{
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -433,6 +464,75 @@
       }
     }
   }
+  &__addMilitary {
+    margin: 20px auto;
+
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+   
+
+      &--item {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #6e2626;
+        padding-left: 0;
+        margin: 5px 10px 5px 0;
+        // width: 33%;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      &__label {
+        text-align: center;
+        cursor: pointer;
+        // background-color: $color-primary;
+        border: 1px solid $color-primary-dark;
+        color: $color-primary-dark;
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 16px;
+
+        border-radius: 20px;
+
+        @include respond(tab-port) {
+          font-size: 13px;
+          padding: 8px 5px;
+        }
+      }
+
+      &__input[type='checkbox'] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: none;
+
+        &:checked + label {
+          background: $color-primary-dark;
+
+          // background-color: $color-primary;
+          color: #ffffff !important;
+        }
+      }
+
+      &__input[type='radio'] {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        display: none;
+
+        &:checked + label {
+          background: $color-primary-dark;
+
+          // background-color: $color-primary;
+          color: #ffffff !important;
+        }
+      }
+    }}
 
   &__btn-decrement,
   &__btn-increment {

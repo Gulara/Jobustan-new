@@ -216,3 +216,115 @@
         }
     }
 }
+
+
+//////////////
+.dropdown-multi {
+    // position: absolute;
+    // top:40%;
+    // transform: translateY(-40%);
+  
+    a {
+        background: #fff;
+        color: $color-primary-dark;
+        width: 100% !important;
+        box-shadow: 0 4px 16px 0 rgba(22,42,90,.12);
+        border: 1px solid $color-gray-light-1;
+      }
+  }
+  
+
+  
+  .dropdown-multi dd,
+  .dropdown-multi dt {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .dropdown-multi ul {
+    margin: -1px 0 0 0;
+  }
+  
+  .dropdown-multi dd {
+    position: relative;
+  }
+  
+  .dropdown-multi a,
+  .dropdown-multi a:visited {
+    color: $color-primary-dark;
+    text-decoration: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .dropdown-multi dt a {
+    background-color: #fff;
+    display: block;
+    padding: 8px 20px 5px 10px;
+    min-height: 25px;
+    line-height: 24px;
+    overflow: hidden;
+    border: 0;
+    width: 272px;
+  }
+  
+  .dropdown-multi dt a span,
+  .multiSel span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 3px 2px 0;
+  }
+  
+  .dropdown-multi dd ul {
+    background-color: #fff;
+    border: 0;
+    color: $color-primary-dark;
+    display: none;
+    left: 0px;
+    padding: 2px 15px 2px 5px;
+    position: absolute;
+    top: 2px;
+    width: 280px;
+    list-style: none;
+    height: auto;
+    overflow: auto;
+    z-index: 99999999;
+    width: 100%; 
+    li {
+        padding: 10px 5px;
+        border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        input {
+            visibility: hidden;
+            display: none;
+
+            &:checked +.fa-check{
+                opacity: 1;
+            }
+        }
+        .fa-check{
+            opacity: 0;
+        }
+    }
+
+
+  }
+  
+  .dropdown-multi span.value {
+    display: none;
+  }
+  
+  .dropdown-multi dd ul li a {
+    padding: 5px;
+    display: block;
+  }
+  
+  .dropdown-multi dd ul li a:hover {
+    background-color: #fff;
+  }
+  
+
+
