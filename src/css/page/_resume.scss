@@ -67,6 +67,16 @@
       z-index: 5;
     }
 
+    &__input{
+width: 100%;
+padding: 10px 15px;
+margin-bottom: 20px;
+    }
+    &__datalist{
+      width: 100%;
+
+    }
+
     .switch-block {
       width: 300px;
       border-radius: 20px;
