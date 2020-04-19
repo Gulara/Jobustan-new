@@ -1,5 +1,30 @@
 $(document).ready(function () {
+    // CITY SELECT  START
+    $(function () {
 
+        $('.resume-city-select > .caption').on('click', function () {
+            $(this).parent().toggleClass('open');
+        });
+
+        $('.resume-city-select > .list > .item').on('click', function () {
+            $('.resume-city-select > .list > .item').removeClass('selected');
+            $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+        });
+
+        $(document).on('keyup', function (evt) {
+            if ((evt.keyCode || evt.which) === 27) {
+                $('.resume-city-select').removeClass('open');
+            }
+        });
+
+        $(document).on('click', function (evt) {
+            if ($(evt.target).closest(".resume-city-select > .caption").length === 0) {
+                $('.resume-city-select').removeClass('open');
+            }
+        });
+
+    });
+    // CITY SELECT  END
 
     //  ALL AUTOCOMPLETE FUNCTION START
     (function (e) {
@@ -359,7 +384,7 @@ $(document).ready(function () {
 
 
 
-    // EXPERIENCE START
+    // WORK EXPERIENCE START
     $(document).ready(function () {
         $('#resumeWorkExperience').click(function () {
 
@@ -372,196 +397,505 @@ $(document).ready(function () {
                 $('.resume__div__WorkExperience').append(divExperience);
 
                 // AUTOCOMPLETE JOB TITLE START
-                $(function(){
-                    var jobTitle = [
-                      { value: 'Afghan afghani', data: 'AFN' },
-                      { value: 'Albanian lek', data: 'ALL' },
-                      { value: 'Algerian dinar', data: 'DZD' },
-                      { value: 'European euro', data: 'EUR' },
-                  
-                      { value: 'Azerbaijani manat', data: 'AZN' },
-                      { value: 'Bahamian dollar', data: 'BSD' },
-                   
-                    
-                      { value: 'Moldovan leu', data: 'MDL' },
-                      { value: 'Mongolian tugrik', data: 'MNT' },
-                      { value: 'Moroccan dirham', data: 'MAD' },
-                      { value: 'Mozambican metical', data: 'MZM' },
-                      { value: 'Myanma kyat', data: 'MMK' },
-                
-                      { value: 'Omani rial', data: 'OMR' },
-                      { value: 'Pakistani rupee', data: 'PKR' },
-                      { value: 'Panamanian balboa', data: 'PAB' },
-                      { value: 'Papua New Guinean kina', data: 'PGK' },
-                      { value: 'Paraguayan guarani', data: 'PYG' },
-                      { value: 'Peruvian nuevo sol', data: 'PEN' },
-                      { value: 'Philippine peso', data: 'PHP' },
-                      { value: 'Polish zloty', data: 'PLN' },
-                     
-                
-                      { value: 'United Arab Emirates dirham', data: 'AED' },
-                    
-                      { value: 'Zimbabwean dollar', data: 'ZWD' },
+                $(function () {
+                    var jobTitle = [{
+                            value: 'Afghan afghani',
+                            data: 'AFN'
+                        },
+                        {
+                            value: 'Albanian lek',
+                            data: 'ALL'
+                        },
+                        {
+                            value: 'Algerian dinar',
+                            data: 'DZD'
+                        },
+                        {
+                            value: 'European euro',
+                            data: 'EUR'
+                        },
+
+                        {
+                            value: 'Azerbaijani manat',
+                            data: 'AZN'
+                        },
+                        {
+                            value: 'Bahamian dollar',
+                            data: 'BSD'
+                        },
+
+
+                        {
+                            value: 'Moldovan leu',
+                            data: 'MDL'
+                        },
+                        {
+                            value: 'Mongolian tugrik',
+                            data: 'MNT'
+                        },
+                        {
+                            value: 'Moroccan dirham',
+                            data: 'MAD'
+                        },
+                        {
+                            value: 'Mozambican metical',
+                            data: 'MZM'
+                        },
+                        {
+                            value: 'Myanma kyat',
+                            data: 'MMK'
+                        },
+
+                        {
+                            value: 'Omani rial',
+                            data: 'OMR'
+                        },
+                        {
+                            value: 'Pakistani rupee',
+                            data: 'PKR'
+                        },
+                        {
+                            value: 'Panamanian balboa',
+                            data: 'PAB'
+                        },
+                        {
+                            value: 'Papua New Guinean kina',
+                            data: 'PGK'
+                        },
+                        {
+                            value: 'Paraguayan guarani',
+                            data: 'PYG'
+                        },
+                        {
+                            value: 'Peruvian nuevo sol',
+                            data: 'PEN'
+                        },
+                        {
+                            value: 'Philippine peso',
+                            data: 'PHP'
+                        },
+                        {
+                            value: 'Polish zloty',
+                            data: 'PLN'
+                        },
+
+
+                        {
+                            value: 'United Arab Emirates dirham',
+                            data: 'AED'
+                        },
+
+                        {
+                            value: 'Zimbabwean dollar',
+                            data: 'ZWD'
+                        },
                     ];
-                    
+
                     // setup autocomplete function pulling from currencies[] array
                     $('.resume-job-title').autocomplete({
-                      lookup: jobTitle,
-                      onSelect: function (suggestion) {
-                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
-                        $('#outputcontent').html(thehtml);
-                      }
+                        lookup: jobTitle,
+                        onSelect: function (suggestion) {
+                            var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                            $('#outputcontent').html(thehtml);
+                        }
                     });
-                    
-                  
-                  });
+
+
+                });
                 // AUTOCOMPLETE JOB TITLE END
                 // AUTOCOMPLETE JOB COMPANY
-                $(function(){
-                    var jobCompany = [
-                      { value: 'Afghan afghani', data: 'AFN' },
-                      { value: 'Albanian lek', data: 'ALL' },
-                      { value: 'Algerian dinar', data: 'DZD' },
-                      { value: 'European euro', data: 'EUR' },
-                  
-                      { value: 'Azerbaijani manat', data: 'AZN' },
-                      { value: 'Bahamian dollar', data: 'BSD' },
-                   
-                    
-                      { value: 'Moldovan leu', data: 'MDL' },
-                      { value: 'Mongolian tugrik', data: 'MNT' },
-                      { value: 'Moroccan dirham', data: 'MAD' },
-                      { value: 'Mozambican metical', data: 'MZM' },
-                      { value: 'Myanma kyat', data: 'MMK' },
-                
-                      { value: 'Omani rial', data: 'OMR' },
-                      { value: 'Pakistani rupee', data: 'PKR' },
-                      { value: 'Panamanian balboa', data: 'PAB' },
-                      { value: 'Papua New Guinean kina', data: 'PGK' },
-                      { value: 'Paraguayan guarani', data: 'PYG' },
-                      { value: 'Peruvian nuevo sol', data: 'PEN' },
-                      { value: 'Philippine peso', data: 'PHP' },
-                      { value: 'Polish zloty', data: 'PLN' },
-                     
-                
-                      { value: 'United Arab Emirates dirham', data: 'AED' },
-                    
-                      { value: 'Zimbabwean dollar', data: 'ZWD' },
+                $(function () {
+                    var jobCompany = [{
+                            value: 'Afghan afghani',
+                            data: 'AFN'
+                        },
+                        {
+                            value: 'Albanian lek',
+                            data: 'ALL'
+                        },
+                        {
+                            value: 'Algerian dinar',
+                            data: 'DZD'
+                        },
+                        {
+                            value: 'European euro',
+                            data: 'EUR'
+                        },
+
+                        {
+                            value: 'Azerbaijani manat',
+                            data: 'AZN'
+                        },
+                        {
+                            value: 'Bahamian dollar',
+                            data: 'BSD'
+                        },
+
+
+                        {
+                            value: 'Moldovan leu',
+                            data: 'MDL'
+                        },
+                        {
+                            value: 'Mongolian tugrik',
+                            data: 'MNT'
+                        },
+                        {
+                            value: 'Moroccan dirham',
+                            data: 'MAD'
+                        },
+                        {
+                            value: 'Mozambican metical',
+                            data: 'MZM'
+                        },
+                        {
+                            value: 'Myanma kyat',
+                            data: 'MMK'
+                        },
+
+                        {
+                            value: 'Omani rial',
+                            data: 'OMR'
+                        },
+                        {
+                            value: 'Pakistani rupee',
+                            data: 'PKR'
+                        },
+                        {
+                            value: 'Panamanian balboa',
+                            data: 'PAB'
+                        },
+                        {
+                            value: 'Papua New Guinean kina',
+                            data: 'PGK'
+                        },
+                        {
+                            value: 'Paraguayan guarani',
+                            data: 'PYG'
+                        },
+                        {
+                            value: 'Peruvian nuevo sol',
+                            data: 'PEN'
+                        },
+                        {
+                            value: 'Philippine peso',
+                            data: 'PHP'
+                        },
+                        {
+                            value: 'Polish zloty',
+                            data: 'PLN'
+                        },
+
+
+                        {
+                            value: 'United Arab Emirates dirham',
+                            data: 'AED'
+                        },
+
+                        {
+                            value: 'Zimbabwean dollar',
+                            data: 'ZWD'
+                        },
                     ];
-                    
+
                     // setup autocomplete function pulling from currencies[] array
                     $('.resume-job-company').autocomplete({
-                      lookup: jobCompany,
-                      onSelect: function (suggestion) {
-                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
-                        $('#outputcontent').html(thehtml);
-                      }
+                        lookup: jobCompany,
+                        onSelect: function (suggestion) {
+                            var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                            $('#outputcontent').html(thehtml);
+                        }
                     });
-                    
-                  
-                  });
+
+
+                });
                 // JOB COMPANY END
-                // CITY SELECT  START
+
+
+
+                //  CITY AUTOCOMPLETE START
+                $(function () {
+                    var city = [{
+                            value: 'Afghan afghani',
+                            data: 'AFN'
+                        },
+                        {
+                            value: 'Albanian lek',
+                            data: 'ALL'
+                        },
+                        {
+                            value: 'Algerian dinar',
+                            data: 'DZD'
+                        },
+                        {
+                            value: 'European euro',
+                            data: 'EUR'
+                        },
+
+                        {
+                            value: 'Azerbaijani manat',
+                            data: 'AZN'
+                        },
+                        {
+                            value: 'Bahamian dollar',
+                            data: 'BSD'
+                        },
+
+                        {
+                            value: 'Peruvian nuevo sol',
+                            data: 'PEN'
+                        },
+                        {
+                            value: 'Philippine peso',
+                            data: 'PHP'
+                        },
+                        {
+                            value: 'Polish zloty',
+                            data: 'PLN'
+                        },
+                        {
+                            value: 'Qatari riyal',
+                            data: 'QAR'
+                        },
+                        {
+                            value: 'Romanian leu',
+                            data: 'RON'
+                        },
+
+                        {
+                            value: 'Saudi riyal',
+                            data: 'SAR'
+                        },
+                        {
+                            value: 'Serbian dinar',
+                            data: 'RSD'
+                        },
+                        {
+                            value: 'Seychellois rupee',
+                            data: 'SCR'
+                        },
+                        {
+                            value: 'Sierra Leonean leone',
+                            data: 'SLL'
+                        },
+                        {
+                            value: 'Singapore dollar',
+                            data: 'SGD'
+                        },
+                        {
+                            value: 'Slovak koruna',
+                            data: 'SKK'
+                        },
+                        {
+                            value: 'Solomon Islands dollar',
+                            data: 'SBD'
+                        },
+                        {
+                            value: 'Somali shilling',
+                            data: 'SOS'
+                        },
+                        {
+                            value: 'South African rand',
+                            data: 'ZAR'
+                        },
+                        {
+                            value: 'Sudanese pound',
+                            data: 'SDG'
+                        },
+                        {
+                            value: 'Sri Lankan rupee',
+                            data: 'LKR'
+                        },
+
+                        {
+                            value: 'Ugandan shilling',
+                            data: 'UGX'
+                        },
+                        {
+                            value: 'Ukrainian hryvnia',
+                            data: 'UAH'
+                        },
+                        {
+                            value: 'United Arab Emirates dirham',
+                            data: 'AED'
+                        },
+
+                        {
+                            value: 'Zimbabwean dollar',
+                            data: 'ZWD'
+                        },
+                    ];
+
+                    // setup autocomplete function pulling from currencies[] array
+                    $('.resume-city').autocomplete({
+                        lookup: city,
+                        onSelect: function (suggestion) {
+                            var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                            $('#outputcontent').html(thehtml);
+                        }
+                    });
+
+
+                });
+                // CITY AUTOCOMPLETE END
+                // JOB CITY  START
                 $(function () {
 
-                    $('.resume-city-select > .caption').on('click', function () {
+                    $('.resume-city-job > .caption').on('click', function () {
                         $(this).parent().toggleClass('open');
                     });
 
-                    $('.resume-city-select > .list > .item').on('click', function () {
-                        $('.resume-city-select > .list > .item').removeClass('selected');
+                    $('.resume-city-job > .list > .item').on('click', function () {
+                        $('.resume-city-job > .list > .item').removeClass('selected');
                         $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
                     });
 
                     $(document).on('keyup', function (evt) {
                         if ((evt.keyCode || evt.which) === 27) {
-                            $('.resume-city-select').removeClass('open');
+                            $('.resume-city-job').removeClass('open');
                         }
                     });
 
                     $(document).on('click', function (evt) {
-                        if ($(evt.target).closest(".resume-city-select > .caption").length === 0) {
-                            $('.resume-city-select').removeClass('open');
+                        if ($(evt.target).closest(".resume-city-job > .caption").length === 0) {
+                            $('.resume-city-job').removeClass('open');
                         }
                     });
 
                 });
-                // CITY SELECT  END
+                // JOB CITY END
+                // MONTH FROM JOB
+                $(function () {
 
-
-                //  CITY AUTOCOMPLETE START
-                $(function(){
-                    var city = [
-                      { value: 'Afghan afghani', data: 'AFN' },
-                      { value: 'Albanian lek', data: 'ALL' },
-                      { value: 'Algerian dinar', data: 'DZD' },
-                      { value: 'European euro', data: 'EUR' },
-                  
-                      { value: 'Azerbaijani manat', data: 'AZN' },
-                      { value: 'Bahamian dollar', data: 'BSD' },
-                   
-                      { value: 'Peruvian nuevo sol', data: 'PEN' },
-                      { value: 'Philippine peso', data: 'PHP' },
-                      { value: 'Polish zloty', data: 'PLN' },
-                      { value: 'Qatari riyal', data: 'QAR' },
-                      { value: 'Romanian leu', data: 'RON' },
-              
-                      { value: 'Saudi riyal', data: 'SAR' },
-                      { value: 'Serbian dinar', data: 'RSD' },
-                      { value: 'Seychellois rupee', data: 'SCR' },
-                      { value: 'Sierra Leonean leone', data: 'SLL' },
-                      { value: 'Singapore dollar', data: 'SGD' },
-                      { value: 'Slovak koruna', data: 'SKK' },
-                      { value: 'Solomon Islands dollar', data: 'SBD' },
-                      { value: 'Somali shilling', data: 'SOS' },
-                      { value: 'South African rand', data: 'ZAR' },
-                      { value: 'Sudanese pound', data: 'SDG' },
-                      { value: 'Sri Lankan rupee', data: 'LKR' },
-              
-                      { value: 'Ugandan shilling', data: 'UGX' },
-                      { value: 'Ukrainian hryvnia', data: 'UAH' },
-                      { value: 'United Arab Emirates dirham', data: 'AED' },
-                    
-                      { value: 'Zimbabwean dollar', data: 'ZWD' },
-                    ];
-                    
-                    // setup autocomplete function pulling from currencies[] array
-                    $('.resume-city').autocomplete({
-                      lookup: city,
-                      onSelect: function (suggestion) {
-                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
-                        $('#outputcontent').html(thehtml);
-                      }
+                    $('.resume-job-from-month > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
                     });
-                    
-                  
-                  });
-              // CITY AUTOCOMPLETE END
+
+                    $('.resume-job-from-month > .list > .item').on('click', function () {
+                        $('.resume-job-from-month > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-job-from-month').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-job-from-month > .caption").length === 0) {
+                            $('.resume-job-from-month').removeClass('open');
+                        }
+                    });
+
+                });
+                //  YEAR FROM JOB
+                $(function () {
+
+                    $('.resume-job-from-year > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-job-from-year > .list > .item').on('click', function () {
+                        $('.resume-job-from-year > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-job-from-year').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-job-from-year > .caption").length === 0) {
+                            $('.resume-job-from-year').removeClass('open');
+                        }
+                    });
+
+                });
+
+                // MONTH TO JOB
+                $(function () {
+
+                    $('.resume-job-to-month > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-job-to-month > .list > .item').on('click', function () {
+                        $('.resume-job-to-month > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-job-to-month').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-job-to-month > .caption").length === 0) {
+                            $('.resume-job-to-month').removeClass('open');
+                        }
+                    });
+
+                });
+                //  YEAR TO JOB
+                $(function () {
+
+                    $('.resume-job-to-year > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-job-to-year > .list > .item').on('click', function () {
+                        $('.resume-job-to-year > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-job-to-year').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-job-to-year > .caption").length === 0) {
+                            $('.resume-job-to-year').removeClass('open');
+                        }
+                    });
+
+                });
+
+
+
+                //  CK EDITOR
+                // CKEDITOR.replace('resume-job-editor', {
+                //     skin: 'moono',
+                //     enterMode: CKEDITOR.ENTER_BR,
+                //     shiftEnterMode: CKEDITOR.ENTER_P,
+                //     toolbar: [
+
+
+                //         {
+                //             name: 'paragraph',
+                //             groups: ['list', 'indent'],
+                //             items: ['NumberedList', 'BulletedList']
+                //         },
+
+                //     ],
+                // });
 
             }
 
-
-
-
-
-
-            // EXPERIENCE AUTOCOMPLETE START
-
-            // EXPERIENCE AUTOCOMPLETE END
-
-
-
-
-
-            $(".qualification--remove-btn").click(function () {
+            $(".resume--remove-btn").click(function () {
                 console.log(this);
-                $(this).closest('.qualification__div--item').remove();
+                $(this).closest('.resume__div--item').remove();
 
             });
         });
     });
 
-    // EXPERIENCE END
+    // WORK  EXPERIENCE END
 
 
 
@@ -569,32 +903,391 @@ $(document).ready(function () {
 
     // EDUCATION START
     $(document).ready(function () {
-        $('#qualificationEducation').click(function () {
-            let divEducation = $('.qualification__div--qualificationEducation').html()
-            let limitEducation = document.querySelectorAll('.qualification__div--item-Education').length;
+        $('#resumeEducation').click(function () {
+            let divEducation = $('.resume__div--Education').html()
+            let limitEducation = document.querySelectorAll('.resume__div--item-Education').length;
 
             if (limitEducation < 5) {
-                $('.qualification__div').append(divEducation);
+                $('.resume__div__education').append(divEducation);
+                // EDUCATION LEVEL  START
+                $(function () {
+
+                    $('.resume-education-level > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-education-level > .list > .item').on('click', function () {
+                        $('.resume-education-level > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-education-level').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-education-level > .caption").length === 0) {
+                            $('.resume-education-level').removeClass('open');
+                        }
+                    });
+
+                });
+                // EDUCATION LEVEL END
+
+                // CITY EDUCATION SELECT START
+                $(function () {
+
+                    $('.resume-city-education-select > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-city-education-select > .list > .item').on('click', function () {
+                        $('.resume-city-education-select > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-city-education-select').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-city-education-select > .caption").length === 0) {
+                            $('.resume-city-education-select').removeClass('open');
+                        }
+                    });
+
+                });
+                // CITY EDUCATION SELECT END
+
+                // AUTOCOMPLETE CITY EDUCATION START
+                $(function () {
+                    var cityEducation = [{
+                            value: 'Afghan afghani',
+                            data: 'AFN'
+                        },
+                        {
+                            value: 'Albanian lek',
+                            data: 'ALL'
+                        },
+                        {
+                            value: 'Algerian dinar',
+                            data: 'DZD'
+                        },
+                        {
+                            value: 'European euro',
+                            data: 'EUR'
+                        },
+
+                        {
+                            value: 'Azerbaijani manat',
+                            data: 'AZN'
+                        },
+                        {
+                            value: 'Bahamian dollar',
+                            data: 'BSD'
+                        },
+
+
+                        {
+                            value: 'Moldovan leu',
+                            data: 'MDL'
+                        },
+                        {
+                            value: 'Mongolian tugrik',
+                            data: 'MNT'
+                        },
+                        {
+                            value: 'Moroccan dirham',
+                            data: 'MAD'
+                        },
+                        {
+                            value: 'Mozambican metical',
+                            data: 'MZM'
+                        },
+                        {
+                            value: 'Myanma kyat',
+                            data: 'MMK'
+                        },
+
+                        {
+                            value: 'Omani rial',
+                            data: 'OMR'
+                        },
+                        {
+                            value: 'Pakistani rupee',
+                            data: 'PKR'
+                        },
+                        {
+                            value: 'Panamanian balboa',
+                            data: 'PAB'
+                        },
+                        {
+                            value: 'Papua New Guinean kina',
+                            data: 'PGK'
+                        },
+                        {
+                            value: 'Paraguayan guarani',
+                            data: 'PYG'
+                        },
+                        {
+                            value: 'Peruvian nuevo sol',
+                            data: 'PEN'
+                        },
+                        {
+                            value: 'Philippine peso',
+                            data: 'PHP'
+                        },
+                        {
+                            value: 'Polish zloty',
+                            data: 'PLN'
+                        },
+
+
+                        {
+                            value: 'United Arab Emirates dirham',
+                            data: 'AED'
+                        },
+
+                        {
+                            value: 'Zimbabwean dollar',
+                            data: 'ZWD'
+                        },
+                    ];
+
+                    // setup autocomplete function pulling from currencies[] array
+                    $('.resume-cityEducation').autocomplete({
+                        lookup: cityEducation,
+                        onSelect: function (suggestion) {
+                            var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                            $('#outputcontent').html(thehtml);
+                        }
+                    });
+
+
+                });
+                // AUTOCOMPLETE CITY EDUCATION END
+                $(function () {
+                    var school = [{
+                            value: 'Afghan afghani',
+                            data: 'AFN'
+                        },
+                        {
+                            value: 'Albanian lek',
+                            data: 'ALL'
+                        },
+                        {
+                            value: 'Algerian dinar',
+                            data: 'DZD'
+                        },
+                        {
+                            value: 'European euro',
+                            data: 'EUR'
+                        },
+
+                        {
+                            value: 'Azerbaijani manat',
+                            data: 'AZN'
+                        },
+                        {
+                            value: 'Bahamian dollar',
+                            data: 'BSD'
+                        },
+
+
+                        {
+                            value: 'Moldovan leu',
+                            data: 'MDL'
+                        },
+                        {
+                            value: 'Mongolian tugrik',
+                            data: 'MNT'
+                        },
+                        {
+                            value: 'Moroccan dirham',
+                            data: 'MAD'
+                        },
+                        {
+                            value: 'Mozambican metical',
+                            data: 'MZM'
+                        },
+                        {
+                            value: 'Myanma kyat',
+                            data: 'MMK'
+                        },
+
+                        {
+                            value: 'Omani rial',
+                            data: 'OMR'
+                        },
+                        {
+                            value: 'Pakistani rupee',
+                            data: 'PKR'
+                        },
+                        {
+                            value: 'Panamanian balboa',
+                            data: 'PAB'
+                        },
+                        {
+                            value: 'Papua New Guinean kina',
+                            data: 'PGK'
+                        },
+                        {
+                            value: 'Paraguayan guarani',
+                            data: 'PYG'
+                        },
+                        {
+                            value: 'Peruvian nuevo sol',
+                            data: 'PEN'
+                        },
+                        {
+                            value: 'Philippine peso',
+                            data: 'PHP'
+                        },
+                        {
+                            value: 'Polish zloty',
+                            data: 'PLN'
+                        },
+
+
+                        {
+                            value: 'United Arab Emirates dirham',
+                            data: 'AED'
+                        },
+
+                        {
+                            value: 'Zimbabwean dollar',
+                            data: 'ZWD'
+                        },
+                    ];
+
+                    // setup autocomplete function pulling from currencies[] array
+                    $('.resume-school').autocomplete({
+                        lookup: school,
+                        onSelect: function (suggestion) {
+                            var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                            $('#outputcontent').html(thehtml);
+                        }
+                    });
+
+
+                });
+                // CITY AUTOCOMPLETE END
+                // MONTH FROM EDUCATION
+                $(function () {
+
+                    $('.resume-education-from-month > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-education-from-month > .list > .item').on('click', function () {
+                        $('.resume-education-from-month > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-education-from-month').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-education-from-month > .caption").length === 0) {
+                            $('.resume-education-from-month').removeClass('open');
+                        }
+                    });
+
+                });
+                //  YEAR FROM EDUCATION
+                $(function () {
+
+                    $('.resume-education-from-year > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-education-from-year > .list > .item').on('click', function () {
+                        $('.resume-education-from-year > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-education-from-year').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-education-from-year > .caption").length === 0) {
+                            $('.resume-education-from-year').removeClass('open');
+                        }
+                    });
+
+                });
+
+                // MONTH TO EDUCATION
+                $(function () {
+
+                    $('.resume-education-to-month > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-education-to-month > .list > .item').on('click', function () {
+                        $('.resume-education-to-month > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-education-to-month').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-education-to-month > .caption").length === 0) {
+                            $('.resume-education-to-month').removeClass('open');
+                        }
+                    });
+
+                });
+                //  YEAR TO EDUCATION
+                $(function () {
+
+                    $('.resume-education-to-year > .caption').on('click', function () {
+                        $(this).parent().toggleClass('open');
+                    });
+
+                    $('.resume-education-to-year > .list > .item').on('click', function () {
+                        $('.resume-education-to-year > .list > .item').removeClass('selected');
+                        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html($(this).text() + '<i class="zmdi zmdi-chevron-down"></i>');
+                    });
+
+                    $(document).on('keyup', function (evt) {
+                        if ((evt.keyCode || evt.which) === 27) {
+                            $('.resume-education-to-year').removeClass('open');
+                        }
+                    });
+
+                    $(document).on('click', function (evt) {
+                        if ($(evt.target).closest(".resume-education-to-year > .caption").length === 0) {
+                            $('.resume-education-to-year').removeClass('open');
+                        }
+                    });
+
+                });
+
             }
 
 
 
 
-            //EDUCATION  CHECKBOX START
-            $('.checkboxEducation').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            //EDUCATION  CHECKBOX END
 
-            $(".qualification--remove-btn").click(function () {
+
+            $(".resume--remove-btn").click(function () {
                 console.log(this);
-                $(this).closest('.qualification__div--item').remove();
+                $(this).closest('.resume__div--item').remove();
             });
         });
 
@@ -604,14 +1297,13 @@ $(document).ready(function () {
 
     // EDUCATION END
 
-
-    // LANGUAGE START
-    $(document).ready(function () {
-        $('#qualificationLanguage').click(function () {
-            let divLanguage = $('.qualification__div--qualificationLanguage').html();
-            let limitLanguage = document.querySelectorAll('.qualification__div--item-Language').length;
+      // LANGUAGE START
+      $(document).ready(function () {
+        $('#resumeLanguage').click(function () {
+            let divLanguage = $('.resume__div--Language').html();
+            let limitLanguage = document.querySelectorAll('.resume__div--item-Language').length;
             if (limitLanguage < 5) {
-                $('.qualification__div').append(divLanguage);
+                $('.resume__div__Language').append(divLanguage);
             }
 
             // LANGUAGE AUTOCOMPLETE START
@@ -640,7 +1332,7 @@ $(document).ready(function () {
                     },
                 ];
 
-                $('.qualificationLang').autocomplete({
+                $('.resumeLang').autocomplete({
                     lookup: languages,
                     onSelect: function (suggestion) {
                         var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
@@ -653,20 +1345,10 @@ $(document).ready(function () {
 
             // LANGUAGE AUTOCOMPLETE END
 
-            // LANGUAGE  CHECKBOX START
-            $('.checkboxLanguage').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            // LANGUAGE  CHECKBOX END
-            $(".qualification--remove-btn").click(function () {
+            
+            $(".resume--remove-btn").click(function () {
                 console.log(this);
-                $(this).closest('.qualification__div--item').remove();
+                $(this).closest('.resume__div--item').remove();
             });
         });
 
@@ -675,234 +1357,13 @@ $(document).ready(function () {
     });
     // LANGUAGE END
 
-
-
-    // LICENSE START
-    $(document).ready(function () {
-        $('#qualificationLicense').click(function () {
-            let divLicense = $('.qualification__div--qualificationLicense').html();
-            let limitLicense = document.querySelectorAll('.qualification__div--item-License').length;
-            if (limitLicense < 5) {
-                $('.qualification__div').append(divLicense);
-            }
-
-
-            // LICENSE AUTOCOMPLETE START
-            $(function () {
-                var license = [{
-                        value: 'Afghan afghani',
-                        data: 'AFN'
-                    },
-                    {
-                        value: 'Albanian lek',
-                        data: 'ALL'
-                    },
-                    {
-                        value: 'Bolivian boliviano',
-                        data: 'BOB'
-                    },
-                    {
-                        value: 'Nicaraguan cordoba',
-                        data: 'NIO'
-                    },
-
-                    {
-                        value: 'Zimbabwean dollar',
-                        data: 'ZWD'
-                    },
-                ];
-
-                $('.qualificationInputLicense').autocomplete({
-                    lookup: license,
-                    onSelect: function (suggestion) {
-                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
-                        $('#outputcontent').html(thehtml);
-                    }
-                });
-
-
-            });
-            // LICENSE AUTOCOMPLETE END
-
-            // LICENSE  CHECKBOX START
-            $('.checkboxLicense').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            // LICENSE  CHECKBOX END
-
-            $(".qualification--remove-btn").click(function () {
-                console.log(this);
-                $(this).closest('.qualification__div--item').remove();
-            });
-        });
-
-
-
-    });
-    // LICENSE END
-
-    // WORKING DAYS START
-
-    $(document).ready(function () {
-        $('#qualificationWorkingDays').click(function () {
-            let divWorkingDays = $('.qualification__div--qualificationWorkingDays').html();
-            $(this).addClass("disabledbutton");
-            let limitWorkingDays = document.querySelectorAll('.qualification__div--item-WorkingDays').length;
-            if (limitWorkingDays < 2) {
-                $('.qualification__div').append(divWorkingDays);
-
-
-
-                $(".dropdown-multi-days dt a").on('click', function (e) {
-                    e.preventDefault();
-                    $(".dropdown-multi-days dd ul").slideToggle('fast');
-                });
-
-                $(".dropdown-multi-days dd ul li a").on('click', function () {
-                    $(".dropdown-multi-days dd ul").hide();
-                });
-
-                function getSelectedValue(id) {
-                    return $("#" + id).find("dt a span.value").html();
-                }
-
-                $(document).bind('click', function (e) {
-                    var $clicked = $(e.target);
-                    if (!$clicked.parents().hasClass("dropdown-multi-days")) $(".dropdown-multi-days dd ul").hide();
-                });
-
-                $('.mutliSelect-days input[type="checkbox"]').on('click', function () {
-
-                    var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
-                        title = $(this).val() + ",";
-
-                    if ($(this).is(':checked')) {
-                        var html = '<span title="' + title + '">' + title + '</span>';
-                        $('.multiSel-days').append(html);
-                        $(".hida-days").hide();
-                    } else {
-                        $('span[title="' + title + '"]').remove();
-                        var ret = $(".hida");
-                        $('.dropdown-multi-days dt a').append(ret);
-
-                    }
-                });
-            }
-
-
-
-
-
-            // WORKING DAYS CHECKBOX START
-            $('.checkboxWorkingDays').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            // WORKING DAYS CHECKBOX END
-
-            $(".qualification--remove-btn-days").click(function () {
-                $('.multiSel-days').html('');
-                $(".hida-days").show();
-                $(this).closest('.qualification__div--item').remove();
-                $('#qualificationWorkingDays').removeClass("disabledbutton");
-            });
-
-        });
-
-
-
-    });
-    // WORKING DAYS END
-
-
-    // BENEFITS START
-    $(document).ready(function () {
-        $('#qualificationBenefits').click(function () {
-            $(this).addClass("disabledbutton");
-            let divBenefits = $('.qualification__div--qualificationBenefits').html();
-            let limitBenefits = document.querySelectorAll('.qualification__div--item-Benefits').length;
-            if (limitBenefits < 2) {
-                $('.qualification__div').append(divBenefits);
-
-
-                $(".dropdown-multi-benefits dt a").on('click', function (e) {
-                    e.preventDefault();
-                    $(".dropdown-multi-benefits dd ul").slideToggle('fast');
-                });
-
-                $(".dropdown-multi-benefits dd ul li a").on('click', function () {
-                    $(".dropdown-multi-benefits dd ul").hide();
-                });
-
-                function getSelectedValue(id) {
-                    return $("#" + id).find("dt a span.value").html();
-                }
-
-                $(document).bind('click', function (e) {
-                    var $clicked = $(e.target);
-                    if (!$clicked.parents().hasClass("dropdown-multi-benefits")) $(".dropdown-multi-benefits dd ul").hide();
-                });
-
-                $('.mutliSelect-benefits input[type="checkbox"]').on('click', function () {
-
-                    var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
-                        title = $(this).val() + ",";
-
-                    if ($(this).is(':checked')) {
-                        var html = '<span title="' + title + '">' + title + '</span>';
-                        $('.multiSel-benefits').append(html);
-                        $(".hida-benefits").hide();
-                    } else {
-                        $('span[title="' + title + '"]').remove();
-                        var ret = $(".hida");
-                        $('.dropdown-multi-benefits dt a').append(ret);
-
-                    }
-                });
-            }
-            // BENEFITS CHECKBOX START
-            $('.checkboxBenefits').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            // BENEFITS CHECKBOX END
-
-            $(".qualification--remove-btn-benefits").click(function () {
-                $('.multiSel-benefits').html('');
-                $(".hida-benefits").show();
-                $('#qualificationBenefits').removeClass("disabledbutton");
-                console.log(this);
-                $(this).closest('.qualification__div--item').remove();
-
-            });
-        });
-    });
-    //BENEFITS END
-
-
     // SKILLS START
     $(document).ready(function () {
-        $('#qualificationSkills').click(function () {
-            let divSkills = $('.qualification__div--qualificationSkills').html();
-            let limitSkills = document.querySelectorAll('.qualification__div--item-Skills').length;
+        $('#resumeSkills').click(function () {
+            let divSkills = $('.resume__div--Skills').html();
+            let limitSkills = document.querySelectorAll('.resume__div--item-Skills').length;
             if (limitSkills < 5) {
-                $('.qualification__div').append(divSkills);
+                $('.resume__div__skills').append(divSkills);
             }
 
             // SKILLS AUTOCOMPLETE START
@@ -999,7 +1460,7 @@ $(document).ready(function () {
                     },
                 ];
 
-                $('.qualificationInputSkills').autocomplete({
+                $('.resumeInputSkills').autocomplete({
                     lookup: skills,
                     onSelect: function (suggestion) {
                         var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
@@ -1012,24 +1473,13 @@ $(document).ready(function () {
 
             // SKILLS AUTOCOMPLETE END
 
-            // SKILLS CHECKBOX START
-            $('.checkboxSkills').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            // SKILLS CHECKBOX END
 
 
 
-            $(".qualification--remove-btn").click(function () {
+
+            $(".resume--remove-btn").click(function () {
                 console.log(this);
-                $(this).closest('.qualification__div--item').remove();
-                maxAppend--;
+                $(this).closest('.resume__div--item').remove();
             });
 
 
@@ -1038,22 +1488,390 @@ $(document).ready(function () {
 
     //  SKILLS END
 
+    // JOB PREFERENCES START
+    $(document).ready(function () {
+        $('#resumeJobPreferences').click(function () {
+            let divJobPreferences = $('.resume__div--JobPreferences').html();
+            let limitJobPreferences = document.querySelectorAll('.resume__div--item-JobPreferences').length;
+            if (limitJobPreferences < 5) {
+                $('.resume__div__JobPreferences').append(divJobPreferences);
+                // AUTOCOMPLETE DESIRED JOB TITLE START
+                $(function () {
+                    var desiredJobTitle = [{
+                            value: 'Afghan afghani',
+                            data: 'AFN'
+                        },
+                        {
+                            value: 'Albanian lek',
+                            data: 'ALL'
+                        },
+                        {
+                            value: 'Algerian dinar',
+                            data: 'DZD'
+                        },
+                        {
+                            value: 'European euro',
+                            data: 'EUR'
+                        },
+
+                        {
+                            value: 'Azerbaijani manat',
+                            data: 'AZN'
+                        },
+                        {
+                            value: 'Bahamian dollar',
+                            data: 'BSD'
+                        },
+
+
+                        {
+                            value: 'Moldovan leu',
+                            data: 'MDL'
+                        },
+                        {
+                            value: 'Mongolian tugrik',
+                            data: 'MNT'
+                        },
+                        {
+                            value: 'Moroccan dirham',
+                            data: 'MAD'
+                        },
+                        {
+                            value: 'Mozambican metical',
+                            data: 'MZM'
+                        },
+                        {
+                            value: 'Myanma kyat',
+                            data: 'MMK'
+                        },
+
+                        {
+                            value: 'Omani rial',
+                            data: 'OMR'
+                        },
+                        {
+                            value: 'Pakistani rupee',
+                            data: 'PKR'
+                        },
+                        {
+                            value: 'Panamanian balboa',
+                            data: 'PAB'
+                        },
+                        {
+                            value: 'Papua New Guinean kina',
+                            data: 'PGK'
+                        },
+                        {
+                            value: 'Paraguayan guarani',
+                            data: 'PYG'
+                        },
+                        {
+                            value: 'Peruvian nuevo sol',
+                            data: 'PEN'
+                        },
+                        {
+                            value: 'Philippine peso',
+                            data: 'PHP'
+                        },
+                        {
+                            value: 'Polish zloty',
+                            data: 'PLN'
+                        },
+
+
+                        {
+                            value: 'United Arab Emirates dirham',
+                            data: 'AED'
+                        },
+
+                        {
+                            value: 'Zimbabwean dollar',
+                            data: 'ZWD'
+                        },
+                    ];
+
+                    // setup autocomplete function pulling from currencies[] array
+                    $('.resume-desired-job-title').autocomplete({
+                        lookup: desiredJobTitle,
+                        onSelect: function (suggestion) {
+                            var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                            $('#outputcontent').html(thehtml);
+                        }
+                    });
+
+
+                });
+
+
+                // AUTOCOMPLETE  DESIRED JOB TITLE END// 
+
+                // DESIRED SALARY START
+                // DROPDOWN MONEY
+                $('.dropdown-desired-money').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $(this).toggleClass('expanded');
+                    $('#' + $(e.target).attr('for')).prop('checked', true);
+                });
+                $(document).click(function () {
+                    $('.dropdown-desired-money').removeClass('expanded');
+                });
+                // DROPDOWN MONEY TYPE
+                $('.dropdown-desired-money-type').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    $(this).toggleClass('expanded');
+                    $('#' + $(e.target).attr('for')).prop('checked', true);
+                });
+                $(document).click(function () {
+                    $('.dropdown-desired-money-type').removeClass('expanded');
+                });
+
+
+                // DESIRED SALARY END
+
+
+                // AUTOCOMPLETE DESIRED JOB
+                $(function(){
+                    var desiredJobLocation = [
+                      { value: 'Afghan afghani', data: 'AFN' },
+                      { value: 'Albanian lek', data: 'ALL' },
+                      { value: 'Algerian dinar', data: 'DZD' },
+                      { value: 'European euro', data: 'EUR' },
+                  
+                      { value: 'Azerbaijani manat', data: 'AZN' },
+                      { value: 'Bahamian dollar', data: 'BSD' },
+                   
+                    
+                      { value: 'Moldovan leu', data: 'MDL' },
+                      { value: 'Mongolian tugrik', data: 'MNT' },
+                      { value: 'Moroccan dirham', data: 'MAD' },
+                      { value: 'Mozambican metical', data: 'MZM' },
+                      { value: 'Myanma kyat', data: 'MMK' },
+                
+                      { value: 'Omani rial', data: 'OMR' },
+                      { value: 'Pakistani rupee', data: 'PKR' },
+                      { value: 'Panamanian balboa', data: 'PAB' },
+                      { value: 'Papua New Guinean kina', data: 'PGK' },
+                      { value: 'Paraguayan guarani', data: 'PYG' },
+                      { value: 'Peruvian nuevo sol', data: 'PEN' },
+                      { value: 'Philippine peso', data: 'PHP' },
+                      { value: 'Polish zloty', data: 'PLN' },
+                     
+                
+                      { value: 'United Arab Emirates dirham', data: 'AED' },
+                    
+                      { value: 'Zimbabwean dollar', data: 'ZWD' },
+                    ];
+                    
+                    // setup autocomplete function pulling from currencies[] array
+                    $('.resume-desired-job-location-first').autocomplete({
+                      lookup: desiredJobLocation,
+                      onSelect: function (suggestion) {
+                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                        $('#outputcontent').html(thehtml);
+                      }
+                    });
+                       // setup autocomplete function pulling from currencies[] array
+                       $('.resume-desired-job-location-second').autocomplete({
+                        lookup: desiredJobLocation,
+                        onSelect: function (suggestion) {
+                          var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                          $('#outputcontent').html(thehtml);
+                        }
+                      });
+                         // setup autocomplete function pulling from currencies[] array
+                    $('.resume-desired-job-location-third').autocomplete({
+                      lookup: desiredJobLocation,
+                      onSelect: function (suggestion) {
+                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                        $('#outputcontent').html(thehtml);
+                      }
+                    });
+                    
+                  
+                  });
+                
+                
+                // DESIRED JOB TITLE END// 
+            }
+
+
+
+
+
+
+
+            $(".resume--remove-btn").click(function () {
+                console.log(this);
+                $(this).closest('.resume__div--item').remove();
+            });
+
+
+        });
+    });
+    // JOB PREFERENCES END
+
+
+  
+
+
+
+    // LICENSE START
+    $(document).ready(function () {
+        $('#resumeLicense').click(function () {
+            let divLicense = $('.resume__div--License').html();
+            let limitLicense = document.querySelectorAll('.resume__div--item-License').length;
+            if (limitLicense < 5) {
+                $('.resume__form-group__all-div').append(divLicense);
+            }
+
+
+            // LICENSE AUTOCOMPLETE START
+            $(function () {
+                var license = [{
+                        value: 'Afghan afghani',
+                        data: 'AFN'
+                    },
+                    {
+                        value: 'Albanian lek',
+                        data: 'ALL'
+                    },
+                    {
+                        value: 'Bolivian boliviano',
+                        data: 'BOB'
+                    },
+                    {
+                        value: 'Nicaraguan cordoba',
+                        data: 'NIO'
+                    },
+
+                    {
+                        value: 'Zimbabwean dollar',
+                        data: 'ZWD'
+                    },
+                ];
+
+                $('.resumeInputLicense').autocomplete({
+                    lookup: license,
+                    onSelect: function (suggestion) {
+                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                        $('#outputcontent').html(thehtml);
+                    }
+                });
+
+
+            });
+            // LICENSE AUTOCOMPLETE END
+
+            
+
+            $(".resume--remove-btn").click(function () {
+                console.log(this);
+                $(this).closest('.resume__div--item').remove();
+            });
+        });
+
+
+
+    });
+    // LICENSE END
+    // ADD MILITARY START
+    $(document).ready(function () {
+        $('#resumeAddMilitary').click(function () {
+            let divAddMilitary = $('.resume__div--AddMilitary').html();
+            let limitAddMilitary = document.querySelectorAll('.resume__div--item-AddMilitary').length;
+            if (limitAddMilitary < 5) {
+                $('.resume__form-group__all-div').append(divAddMilitary);
+            }
+
+            $(".resume--remove-btn").click(function () {
+                console.log(this);
+                $(this).closest('.resume__div--item').remove();
+            });
+        });
+
+
+
+    });
+    // ADD MILITARY END
+     // AWARD START
+     $(document).ready(function () {
+        $('#resumeAwards').click(function () {
+            let divAwards = $('.resume__div--Awards').html();
+            let limitAwards = document.querySelectorAll('.resume__div--item-Awards').length;
+            if (limitAwards < 5) {
+                $('.resume__form-group__all-div').append(divAwards);
+            }
+
+
+            // Awards AUTOCOMPLETE START
+            $(function () {
+                var Awards = [{
+                        value: 'Afghan afghani',
+                        data: 'AFN'
+                    },
+                    {
+                        value: 'Albanian lek',
+                        data: 'ALL'
+                    },
+                    {
+                        value: 'Bolivian boliviano',
+                        data: 'BOB'
+                    },
+                    {
+                        value: 'Nicaraguan cordoba',
+                        data: 'NIO'
+                    },
+
+                    {
+                        value: 'Zimbabwean dollar',
+                        data: 'ZWD'
+                    },
+                ];
+
+                $('.resumeInputAwards').autocomplete({
+                    lookup: Awards,
+                    onSelect: function (suggestion) {
+                        var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;
+                        $('#outputcontent').html(thehtml);
+                    }
+                });
+
+
+            });
+            // Awards AUTOCOMPLETE END
+
+            
+
+            $(".resume--remove-btn").click(function () {
+                console.log(this);
+                $(this).closest('.resume__div--item').remove();
+            });
+        });
+
+
+
+    });
+    // AWARD END
+
+
 
     // GENDER START
     $(document).ready(function () {
-        $('#qualificationGender').click(function (e) {
+        $('#resumeGender').click(function (e) {
             e.preventDefault();
-            let divGender = $('.qualification__div--qualificationGender').html();
-            // let divGender = $(".qualification__div--item-Gender").parent().html();
+            let divGender = $('.resume__div--Gender').html();
+            // let divGender = $(".resume__div--item-Gender").parent().html();
 
             $(this).addClass("disabledbutton");
-            let limitGender = document.querySelectorAll('.qualification__div--item-Gender').length;
+            let limitGender = document.querySelectorAll('.resume__div--item-Gender').length;
             if (limitGender < 2) {
-                // $('.qualification__div--qualificationGenderNew').append(divGender);
-                $('.qualification__div').append(divGender);
-                document.querySelectorAll('.qualification__div--item-Gender')[0].remove();
+                // $('.resume__div--resumeGenderNew').append(divGender);
+                $('.resume__form-group__all-div').append(divGender);
+                document.querySelectorAll('.resume__div--item-Gender')[0].remove();
 
-                $('.qualification__div').find("label.male-gender").attr("for", "male-gender");
+                $('.resume__form-group__all-div').find("label.male-gender").attr("for", "male-gender");
                 $("input.male-gender").attr("id", "male-gender");
                 $("label.female-gender").attr("for", "female-gender");
                 $("input.female-gender").attr("id", "female-gender");
@@ -1080,14 +1898,14 @@ $(document).ready(function () {
             }
 
 
-            $(".qualification--remove-btn").click(function () {
-                // let newGender = $(".qualification__div--qualificationGenderNew").html();
-                let newGender = $(".qualification__div").find(".qualification__div--item-Gender").parent().html();
+            $(".resume--remove-btn").click(function () {
+                // let newGender = $(".resume__div--resumeGenderNew").html();
+                let newGender = $(".resume__form-group__all-div").find(".resume__div--item-Gender").parent().html();
                 console.log(newGender);
 
-                $(".qualification__div--qualificationGender").children().html(newGender);
-                $(this).closest('.qualification__div--item').remove();
-                $('#qualificationGender').removeClass("disabledbutton");
+                $(".resume__div--Gender").children().html(newGender);
+                $(this).closest('.resume__div--item').remove();
+                $('#resumeGender').removeClass("disabledbutton");
             });
 
         });
@@ -1097,38 +1915,24 @@ $(document).ready(function () {
 
     // AGE START
     $(document).ready(function () {
-        $('#qualificationAge').click(function () {
-            let divAge = $('.qualification__div--qualificationAge').html();
+        $('#resumeAge').click(function () {
+            let divAge = $('.resume__div--Age').html();
 
 
 
-            let limitAge = document.querySelectorAll('.qualification__div--item-Age').length;
+            let limitAge = document.querySelectorAll('.resume__div--item-Age').length;
             $(this).addClass("disabledbutton");
             if (limitAge < 2) {
-                $('.qualification__div').append(divAge);
+                $('.resume__form-group__all-div').append(divAge);
 
             }
 
 
 
+            $(".resume--remove-btn").click(function () {
 
-            // AGE CHECKBOX START
-            $('.checkboxAge').click(function () {
-                if ($(this).prop("checked") == true) {
-                    $(this).attr("value", "Required");
-                    // console.log("Required is checked.");
-                } else if ($(this).prop("checked") == false) {
-                    $(this).attr("value", "Preffer");
-                    // console.log("Preffer is unchecked.");
-                }
-            });
-            // AGE CHECKBOX END
-
-
-            $(".qualification--remove-btn").click(function () {
-
-                $(this).closest('.qualification__div--item').remove();
-                $('#qualificationAge').removeClass("disabledbutton");
+                $(this).closest('.resume__div--item').remove();
+                $('#resumeAge').removeClass("disabledbutton");
 
             });
         });
@@ -1168,112 +1972,3 @@ $(document).ready(function () {
 //////////SELECT
 
 
-
-// SKILLS AUTOCOMPLETE END
-$('input[data-list]').each(function () {
-    var availableTags = [{
-
-            value: 'Albanian lek',
-            data: 'ALL'
-        },
-
-        {
-            value: 'Aruban florin',
-            data: 'AWG'
-        },
-        {
-            value: 'Australian dollar',
-            data: 'AUD'
-        },
-        {
-            value: 'Azerbaijani manat',
-            data: 'AZN'
-        },
-        {
-            value: 'West African CFA franc',
-            data: 'XOF'
-        },
-        {
-            value: 'Bhutanese ngultrum',
-            data: 'BTN'
-        },
-        {
-            value: 'Bolivian boliviano',
-            data: 'BOB'
-        },
-        {
-            value: 'Bosnia-Herzegovina konvertibilna marka',
-            data: 'BAM'
-        },
-        {
-            value: 'Netherlands Antillean gulden',
-            data: 'ANG'
-        },
-        {
-            value: 'New Zealand dollar',
-            data: 'NZD'
-        },
-        {
-            value: 'Nicaraguan cordoba',
-            data: 'NIO'
-        },
-        {
-            value: 'Nigerian naira',
-            data: 'NGN'
-        },
-        {
-            value: 'Norwegian krone',
-            data: 'NOK'
-        },
-        {
-            value: 'Omani rial',
-            data: 'OMR'
-        },
-        {
-            value: 'Pakistani rupee',
-            data: 'PKR'
-        },
-        {
-            value: 'Panamanian balboa',
-            data: 'PAB'
-        },
-        {
-            value: 'Papua New Guinean kina',
-            data: 'PGK'
-        },
-        {
-            value: 'United Arab Emirates dirham',
-            data: 'AED'
-        },
-        {
-            value: 'British pound',
-            data: 'GBP'
-        },
-        {
-            value: 'United States dollar',
-            data: 'USD'
-        },
-        {
-            value: 'Zambian kwacha',
-            data: 'ZMK'
-        },
-        {
-            value: 'Zimbabwean dollar',
-            data: 'ZWD'
-        },
-    ];
-
-    var availableTags = $('#' + $(this).attr("data-list")).find('option').map(function () {
-        return this.value;
-    }).get();
-
-    $(this).autocomplete({
-        source: availableTags
-    }).on('focus', function () {
-        $(this).autocomplete('search', ' ');
-    }).on('search', function () {
-        if ($(this).val() === '') {
-            $(this).autocomplete('search', ' ');
-        }
-    });
-});

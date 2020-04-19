@@ -4812,6 +4812,12 @@ label.error {
   .resume__div--bottom {
     padding-top: 20px;
     z-index: 5; }
+  .resume__div__input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px; }
+  .resume__div__datalist {
+    width: 100%; }
   .resume__div .switch-block {
     width: 300px;
     -webkit-border-radius: 20px;
