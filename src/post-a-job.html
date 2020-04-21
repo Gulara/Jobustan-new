@@ -39,15 +39,16 @@
                                 <div class="qualification__div--top">
                                     <span class="mr-2">Minimum of </span>
                                     <div>
-                                        <input list="experienceYears" placeholder="Start typing..." >
+                                        <input name="experienceYears" list="experienceYears" placeholder="Start typing..." value="">
                                         <datalist id="experienceYears">
-                                            <option>1 year</option>
-                                            <option>2 years</option>
-                                            <option>3 years</option>
-                                            <option>4 years</option>
-                                            <option>5 years</option>
-                                            <option>6 years</option>
+                                            <option data-value="1" value="1 year"></option>
+                                            <option data-value="2" value="2 years "></option>
+                                            <option data-value="3" value="3 years"></option>
+                                            <option data-value="4" value="4 years"></option>
+                                            <option data-value="5" value="5 years"></option>
+                                            <option data-value="6" value="6 years"></option>
                                         </datalist>
+                                        <input type="hidden" name="" class="hidden-experienceYears" value>
                                     </div>
                                     <!-- <div class="qualification-select-div qualification__select--experience">
                                         <select
@@ -66,8 +67,20 @@
                                         </select>
                                     </div> -->
                                     <span class="mx-2"> of </span>
-                                    <input type="text"
-                                        class=" qualification__input qualification__input--experience">
+                                    <div>
+                                        <input name="experienceName" list="experienceName" placeholder="Start typing..." value="">
+                                        <datalist id="experienceName">
+                                            <option data-value="1" value="1 Name"></option>
+                                            <option data-value="2" value="2 Name "></option>
+                                            <option data-value="3" value="3 Name"></option>
+                                            <option data-value="4" value="4 Name"></option>
+                                            <option data-value="5" value="5 Name"></option>
+                                            <option data-value="6" value="6 Name"></option>
+                                        </datalist>
+                                        <input type="hidden" name="" class="hidden-experienceName" value>
+                                    </div>
+                                    <!-- <input type="text"
+                                        class=" qualification__input qualification__input--experience"> -->
                                     <span class="mx-2 mt-phone"> experience </span>
                                 </div>
                                 <div class="qualification__div--bottom">
@@ -94,12 +107,13 @@
                                     <div>
                                         <input list="educationLevel" placeholder="Start typing...">
                                         <datalist id="educationLevel">
-                                            <option>High school</option>
-                                            <option>Associate</option>
-                                            <option>Bachelor"s</option>
-                                            <option>Master"s</option>
-                                            <option>Doctorate</option>
+                                            <option data-value="High school" value="High school"></option>
+                                            <option data-value="Associate" value="Associate"></option>
+                                            <option data-value="Bachelor's" value="Bachelor's"></option>
+                                            <option data-value="Master's" value="Master's"></option>
+                                            <option data-value="Doctorate" value="Doctorate"></option>
                                         </datalist>
+                                        <input type="hidden" name="" class="hidden-educationLevel" value>
                                     </div>
                                     <!-- <div class="qualification-select-div m-t-10 mr-auto">
                                         <select
@@ -133,20 +147,37 @@
                                 <div class="qualification__div--top">
                                     <div id="searchfield" class="searchfield">
                                         <form>
-                                            <label class="mr-2" for="qualificationLang">Language:</label><input
+                                            <label class="mr-2" for="qualificationLang">Language:</label>
+                                            <div>
+                                                <input list="languageName" placeholder="Start typing...">
+                                                <datalist id="languageName">
+                                                    <option data-value="English" value="English"></option>
+                                                    <option data-value="Elementary" value="Elementary"></option>
+                                                    <option data-value="Intermediate" value="Intermediate"></option>
+                                                    <option data-value="Upper Intermediate" value="Upper Intermediate"></option>
+                                                    <option data-value="Advanced" value="Advanced"></option>
+                                                    <option data-value="Proficient" value="Proficient"></option>
+                                                </datalist>
+
+                                                <input type="hidden" name="" class="hidden-languageName" value>
+                                            </div>
+                                            <!-- <input
                                                 type="text" name="currency" class="biginput qualificationLang"
-                                                id="qualificationLang" class="qualificationLang"><label
+                                                id="qualificationLang" class="qualificationLang"> -->
+                                                <label
                                                 class="mx-2 m-t-10"> Level: </label>
                                             <div>
                                                 <input list="languageLevel" placeholder="Start typing...">
                                                 <datalist id="languageLevel">
-                                                    <option>Beginner</option>
-                                                    <option>Elementary</option>
-                                                    <option>Intermediate</option>
-                                                    <option>Upper Intermediate</option>
-                                                    <option>Advanced</option>
-                                                    <option>Proficient</option>
+                                                    <option data-value="Beginner" value="Beginner"></option>
+                                                    <option data-value="Elementary" value="Elementary"></option>
+                                                    <option data-value="Intermediate" value="Intermediate"></option>
+                                                    <option data-value="Upper Intermediate" value="Upper Intermediate"></option>
+                                                    <option data-value="Advanced" value="Advanced"></option>
+                                                    <option data-value="Proficient" value="Proficient"></option>
                                                 </datalist>
+
+                                                <input type="hidden" name="" class="hidden-languageLevel" value>
                                             </div>
                                             <!-- <div class="qualification-select-div m-t-10"> <select
                                                     class="iq-languageLevel qualification__select"
@@ -186,12 +217,29 @@
                             <div class="qualification__div--item qualification__div--item-License">
                                 <div class="qualification__div--top">
                                     <div id="searchfield">
-                                        <form><label class="mr-2" for="qualificationInputLicense">Valid
-                                            </label><input type="text" name="currency"
+                                        <form>
+                                            <label class="mr-2 d-inline-block" for="qualificationInputLicense">Valid
+                                            </label>
+                                            <div class="d-inline-block">
+                                                <input list="licenseName" placeholder="Start typing...">
+                                                <datalist id="licenseName">
+                                                    <option data-value="Beginner" value="Beginner"></option>
+                                                    <option data-value="Elementary" value="Elementary"></option>
+                                                    <option data-value="Intermediate" value="Intermediate"></option>
+                                                    <option data-value="Upper Intermediate" value="Upper Intermediate"></option>
+                                                    <option data-value="Advanced" value="Advanced"></option>
+                                                    <option data-value="Proficient" value="Proficient"></option>
+                                                </datalist>
+
+                                                <input type="hidden" name="" class="hidden-licenseName" value>
+                                            </div>
+                                            <!-- <input type="text" name="currency"
                                                 class="biginput mr-auto qualificationInputLicense"
-                                                id="qualificationInputLicense"><span class="mx-2 m-t-10"
+                                                id="qualificationInputLicense"> -->
+                                                <span class="mx-2 m-t-10 d-inline-block"
                                                 for="qualificationLicense"> license or
-                                                certification </span></form>
+                                                certification </span>
+                                            </form>
                                     </div>
                                 </div>
 
@@ -230,25 +278,26 @@
                                             <div class="mutliSelect mutliSelect-days">
                                                 <ul>
                                                     <li>
-                                                        <input type="checkbox" value="Monday" data-id="multi-days"/>Monday <i class="fas fa-check"></i></li>
+                                                        <input name =multiDays type="checkbox" value="Monday" data-id="multi-days"/>Monday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Tuesday" data-id="multi-days" />Tuesday <i class="fas fa-check"></i></li>
+                                                        <input name =multiDays type="checkbox" value="Tuesday" data-id="multi-days" />Tuesday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Wednesday" data-id="multi-days"/>Wednesday <i class="fas fa-check"></i></li>
+                                                        <input name =multiDays type="checkbox" value="Wednesday" data-id="multi-days"/>Wednesday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Thursday"  data-id="multi-days"/>Thursday<i class="fas fa-check"></i>
+                                                        <input name =multiDays type="checkbox" value="Thursday"  data-id="multi-days"/>Thursday<i class="fas fa-check"></i>
                                                     </li>
                                                     <li>
-                                                        <input type="checkbox" value="Friday" data-id="multi-days" />Friday <i class="fas fa-check"></i></li>
+                                                        <input name =multiDays type="checkbox" value="Friday" data-id="multi-days" />Friday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Saturday"  data-id="multi-days"/>Saturday <i class="fas fa-check"></i></li>
+                                                        <input name =multiDays type="checkbox" value="Saturday"  data-id="multi-days"/>Saturday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Sunday" data-id="multi-days" />Sunday<i class="fas fa-check"></i></li>
+                                                        <input name =multiDays type="checkbox" value="Sunday" data-id="multi-days" />Sunday<i class="fas fa-check"></i></li>
                                                 </ul>
                                             </div>
                                         </dd>
 
                                     </dl>
+                                    <input type="hidden" name="" value="" class="hidden-multi-days">
                                 </div>
                                 <div class="qualification__div--bottom">
                                     <div class="switch-block">
@@ -285,41 +334,25 @@
                                             <div class="mutliSelect mutliSelect-benefits">
                                                 <ul>
                                                     <li>
-                                                        <input type="checkbox" value="Monday" data-id="multi-benefits" />Monday</li>
+                                                        <input name=multiBenefits type="checkbox" value="Monday" data-id="multi-benefits" />Monday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Tuesday" data-id="multi-benefits"/>Tuesday</li>
+                                                        <input name=multiBenefits  type="checkbox" value="Tuesday" data-id="multi-benefits"/>Tuesday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Wednesday" data-id="multi-benefits" />Wednesday</li>
+                                                        <input name=multiBenefits  type="checkbox" value="Wednesday" data-id="multi-benefits" />Wednesday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Thursday" data-id="multi-benefits"/>Thursday
-                                                    </li>
+                                                        <input name=multiBenefits  type="checkbox" value="Thursday" data-id="multi-benefits"/>Thursday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Friday" data-id="multi-benefits"/>Friday</li>
+                                                        <input name=multiBenefits  type="checkbox" value="Friday" data-id="multi-benefits"/>Friday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Saturday" data-id="multi-benefits"/>Saturday</li>
+                                                        <input name=multiBenefits  type="checkbox" value="Saturday" data-id="multi-benefits"/>Saturday <i class="fas fa-check"></i></li>
                                                     <li>
-                                                        <input type="checkbox" value="Sunday" data-id="multi-benefits"/>Sunday</li>
+                                                        <input name=multiBenefits  type="checkbox" value="Sunday" data-id="multi-benefits"/>Sunday <i class="fas fa-check"></i></li>
                                                 </ul>
                                             </div>
                                         </dd>
 
                                     </dl>
-                                    <!-- <select multiple class="benefits-select-multiple"
-                                        data-placeholder="Add Benefits">
-                                        <option class="benefits-option">Health insurance</option>
-                                        <option class="benefits-option">Dental insurance</option>
-                                        <option class="benefits-option">Vision insurance</option>
-                                        <option class="benefits-option">Retirement plan</option>
-                                        <option class="benefits-option">Signing bonus</option>
-                                        <option class="benefits-option">Paid time off</option>
-                                        <option class="benefits-option">Flexible schedule</option>
-                                        <option class="benefits-option">Parental leave</option>
-                                        <option class="benefits-option">Relocation assistance</option>
-                                        <option class="benefits-option">Professional development assistance</option>
-                                        <option class="benefits-option">Tuition reimbursement</option>
-                                        <option class="benefits-option">Other</option>
-                                        <option class="benefits-option">None</option>
-                                    </select> -->
+                                    <input type="hidden" name="" value="" class="hidden-multi-benefits">
                                 </div>
                                 <div class="qualification__div--bottom">
                                     <div class="switch-block">
@@ -342,20 +375,35 @@
                                 <div class="qualification__div--top">
                                     <div id="searchfield" class="searchfield">
                                         <form><label class="mr-2"
-                                                for="qualificationInputSkills">Skills:</label><input type="text"
+                                                for="qualificationInputSkills">Skills:</label>
+                                                <div>
+                                                    <input list="skillsName" placeholder="Start typing...">
+                                                    <datalist id="skillsName">
+                                                        <option data-value="English" value="English"></option>
+                                                    <option data-value="Elementary" value="Elementary"></option>
+                                                    <option data-value="Intermediate" value="Intermediate"></option>
+                                                    <option data-value="Upper Intermediate" value="Upper Intermediate"></option>
+                                                    <option data-value="Advanced" value="Advanced"></option>
+                                                    <option data-value="Proficient" value="Proficient"></option>
+                                                    </datalist>
+                                                    <input type="hidden" name="" class="hidden-skillsName" value>
+                                                </div>
+                                                <!-- <input type="text"
                                                 name="currency" class="biginput qualificationInputSkills"
-                                                id="qualificationInputSkills"><label class="mx-2 m-t-10"> Level:
+                                                id="qualificationInputSkills"> -->
+                                                <label class="mx-2 m-t-10"> Level:
                                             </label>
                                             <div>
                                                 <input list="skillsLevel" placeholder="Start typing...">
                                                 <datalist id="skillsLevel">
-                                                    <option>Beginner</option>
-                                                    <option>Elementary</option>
-                                                    <option>Intermediate</option>
-                                                    <option>Upper Intermediate</option>
-                                                    <option>Advanced</option>
-                                                    <option>Proficient</option>
+                                                    <option data-value="Beginner" value="Beginner"></option>
+                                                    <option data-value="Elementary" value="Elementary"></option>
+                                                    <option data-value="Intermediate" value="Intermediate"></option>
+                                                    <option data-value="Upper Intermediate" value="Upper Intermediate"></option>
+                                                    <option data-value="Advanced" value="Advanced"></option>
+                                                    <option data-value="Proficient" value="Proficient"></option>
                                                 </datalist>
+                                                <input type="hidden" name="" class="hidden-skillsLevel" value>
                                             </div>
                                             <!-- <div class="qualification-select-div m-t-10"> <select
                                                     class="iq-SkillsLevel qualification__select"
@@ -435,40 +483,28 @@
                                                 <div>
                                                     <input list="minAgeLevel" placeholder="Start typing min age">
                                                     <datalist id="minAgeLevel">
-                                                        <option>18</option>
-                                                        <option>20</option>
-                                                        <option>25</option>
-                                                        <option>30</option>
-                                                        <option>35</option>
-                                                        <option>40</option>
+                                                        <option data-value="18" value="18"></option>
+                                                        <option data-value="20" value="20"></option>
+                                                        <option data-value="22" value="22"></option>
+                                                        <option data-value="25" value="25"></option>
+                                                     
                                                     </datalist>
+                                                    <input type="hidden" name="" class="hidden-minAgeLevel" value>
                                                 </div>
-                                                <!-- <div class="qualification-select-div m-t-10"> 
-                                                    <select
-                                                        class="iq-ageLevel qualification__select" name="ageLevel">
-                                                        <option class="ageLevel_option" value="18" selected="">18
-                                                        </option>
-                                                        <option class="ageLevel_option" value="19">19</option>
-                                                        <option class="ageLevel_option" value="20">20</option>
-                                                        <option class="ageLevel_option" value="21">21</option>
-                                                        <option class="ageLevel_option" value="22">22</option>
-                                                        <option class="experienceYears_option" value="23">23
-                                                        </option>
-                                                    </select>
-                                                </div> -->
+                                               
                                             </div>
                                             <div class="d-flex  w-100 justify-content-between align-items-center">
                                                 <label class="mx-2 m-t-10"> Max: </label>
                                                 <div>
-                                                    <input list="minAgeLevel" placeholder="Start typing max age">
-                                                    <datalist id="minAgeLevel">
-                                                        <option>30</option>
-                                                        <option>35</option>
-                                                        <option>40</option>
-                                                        <option>45</option>
-                                                        <option>50</option>
-                                                        <option>55</option>
+                                                    <input list="maxAgeLevel" placeholder="Start typing max age">
+                                                    <datalist id="maxAgeLevel">
+                                                        <option data-value="30" value="30"></option>
+                                                        <option data-value="40" value="40"></option>
+                                                        <option data-value="50" value="50"></option>
+                                                        <option data-value="60" value="60"></option>
+                                                       
                                                     </datalist>
+                                                    <input type="hidden" name="" class="hidden-maxAgeLevel" value>
                                                 </div>
                                                 <!-- <div class="qualification-select-div m-t-10"> <select
                                                         class="iq-ageLevel qualification__select" name="ageLevel">
@@ -509,8 +545,19 @@
                         <div class="qualification__job">
                             <div class="form-group qualification__form-group">
                                 <label for="qualification-company-name">Your Company Name</label>
-                                <input type="text" name="post_companyName" class="qualification__input"
-                                    id="qualification-company-name">
+                                <div>
+                                    <input name="companyName" list="companyName"  value="" class="qualification__input w-100">
+                                    <datalist id="companyName">
+                                        <option data-value="1" value="1 Name"></option>
+                                        <option data-value="2" value="2 Name "></option>
+                                        <option data-value="3" value="3 Name"></option>
+                                        <option data-value="4" value="4 Name"></option>
+                                        <option data-value="5" value="5 Name"></option>
+                                        <option data-value="6" value="6 Name"></option>
+                                    </datalist>
+                                    <input type="hidden" name="" class="hidden-companyName" value>
+                                </div>
+                                <!-- <input type="text" name="post_companyName" class="qualification__input"id="qualification-company-name"> -->
                             </div>
                             <div class="form-group qualification__form-group">
                                 <label for="qualification-user-name">Your Name</label>
@@ -529,8 +576,19 @@
                             </div>
                             <div class="form-group qualification__form-group">
                                 <label for="qualification-location">Location</label>
-                                <input type="text" name="post_location" class="qualification__input"
-                                    id="qualification-location" placeholder="City or postal code">
+                                <div>
+                                    <input name="locationName" list="locationName" placeholder="City or postal code" value="" class="qualification__input w-100">
+                                    <datalist id="locationName">
+                                        <option data-value="1" value="1 Name"></option>
+                                        <option data-value="2" value="2 Name "></option>
+                                        <option data-value="3" value="3 Name"></option>
+                                        <option data-value="4" value="4 Name"></option>
+                                        <option data-value="5" value="5 Name"></option>
+                                        <option data-value="6" value="6 Name"></option>
+                                    </datalist>
+                                    <input type="hidden" name="" class="hidden-locationName" value>
+                                </div>
+                                <!-- <input type="text" name="post_location" class="qualification__input"id="qualification-location" placeholder="City or postal code"> -->
                             </div>
                             <div class="qualification__language">
                                 <div class="qualification__language-div"> <span> Job posting will be displayed in:
