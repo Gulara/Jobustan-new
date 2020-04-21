@@ -4,6 +4,24 @@
 
 // SALARY RADIO BUTTON START
 $(document).ready(function () {
+    $("input[list=companyName]").focusout(function () {
+        let value = $(this).val();
+        let dataVal =$('#companyName [value="' + value + '"]').data('value')
+        console.log(dataVal);
+        $(this).siblings(".hidden-companyName").val(dataVal);
+        if($(this).siblings(".hidden-companyName").val() === "") {
+            $(this).siblings(".hidden-companyName").val(value)
+        }
+    });
+    $("input[list=locationName]").focusout(function () {
+        let value = $(this).val();
+        let dataVal =$('#locationName [value="' + value + '"]').data('value')
+        console.log(dataVal);
+        $(this).siblings(".hidden-locationName").val(dataVal);
+        if($(this).siblings(".hidden-locationName").val() === "") {
+            $(this).siblings(".hidden-locationName").val(value)
+        }
+    });
 
 
     $('.iq-salaryLevel ').select2();
@@ -876,24 +894,60 @@ $(document).ready(function () {
     $(document).ready(function () {
         $('#qualificationExperience').click(function () {
 
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $('div.qualification__div--qualificationExperience .qualification__div--item-Experience').addClass('experience-' + randomClass + '');
+
             let divExperience = $('.qualification__div--qualificationExperience').html();
 
+            $('div.qualification__div--qualificationExperience .qualification__div--item-Experience').removeClass('experience-' + randomClass + '');
+
+
             let limitExperience = document.querySelectorAll('.qualification__div--item-Experience').length;
+            var des = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
+
 
             if (limitExperience < 5) {
                 $('.qualification__div').append(divExperience);
 
+                $('.experience-' + randomClass + ' input.hidden-experienceYears').attr('name', 'experience[experienceYears][' + limitExperience + ']');
+                $('.experience-' + randomClass + ' input.qualification__input--experience').attr('name', 'experience[experience][' + limitExperience + ']');
+                $('.experience-' + randomClass + ' input.checkboxExperience').attr('name', 'experience[type][' + limitExperience + ']');
+             
+                $("input[list=experienceYears]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#experienceYears [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-experienceYears").val(dataVal);
+                    if($(this).siblings(".hidden-experienceYears").val() === "") {
+                        $(this).siblings(".hidden-experienceYears").val(value)
+                    }
+                });
+                $("input[list=experienceName]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#experienceName [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-experienceName").val(dataVal);
+                    if($(this).siblings(".hidden-experienceName").val() === "") {
+                        $(this).siblings(".hidden-experienceName").val(value)
+                    }
+                });
+
+
+
+
             }
 
+
+
             $('.qualification__div--item-Experience').each(function () {
-                console.log($(this).find('.select2 ').length);
-                console.log($(this).length);
+
                 if ($('.select2 ').length != $('.qualification__div--item-Experience').length) {
                     $('.iq-experienceYears').select2();
                 }
 
             });
-            // EXPERIENCE SELECT2 
+            // EXPERIENCE SELECT2
 
 
 
@@ -1017,15 +1071,35 @@ $(document).ready(function () {
     // EDUCATION START
     $(document).ready(function () {
         $('#qualificationEducation').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $('div.qualification__div--qualificationEducation .qualification__div--item-Education').addClass('education-' + randomClass + '');
+
             let divEducation = $('.qualification__div--qualificationEducation').html()
+
+            $('div.qualification__div--qualificationEducation .qualification__div--item-Education').removeClass('education-' + randomClass + '');
+
             let limitEducation = document.querySelectorAll('.qualification__div--item-Education').length;
 
             if (limitEducation < 5) {
                 $('.qualification__div').append(divEducation);
+
+                $('.education-' + randomClass + ' input[list="educationLevel"]').attr('name', 'education[educationLevel][' + limitEducation + ']');
+
+                $('.education-' + randomClass + ' input.checkboxEducation').attr('name', 'education[type][' + limitEducation + ']');
+                $("input[list=educationLevel]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#educationLevel [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-educationLevel").val(dataVal);
+                    if($(this).siblings(".hidden-educationLevel").val() === "") {
+                        $(this).siblings(".hidden-educationLevel").val(value)
+                    }
+                });
             }
 
 
-            // EDUCATION SELECT2 
+            // EDUCATION SELECT2
             // $('.iq-localizedEduLevel').select2();
 
 
@@ -1057,14 +1131,38 @@ $(document).ready(function () {
     // LANGUAGE START
     $(document).ready(function () {
         $('#qualificationLanguage').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+            $('div.qualification__div--qualificationLanguage .qualification__div--item-Language').addClass('lang-' + randomClass + '');
             let divLanguage = $('.qualification__div--qualificationLanguage').html();
+            $('div.qualification__div--qualificationLanguage .qualification__div--item-Language').removeClass('lang-' + randomClass + '');
+
             let limitLanguage = document.querySelectorAll('.qualification__div--item-Language').length;
             if (limitLanguage < 5) {
                 $('.qualification__div').append(divLanguage);
+                $('.lang-' + randomClass + ' input#qualificationLang').attr('name', 'lang[name][' + limitLanguage + ']')
+                $('.lang-' + randomClass + ' input.checkboxLanguage').attr('name', 'lang[type][' + limitLanguage + ']')
+                $('.lang-' + randomClass + ' input[list="languageLevel"]').attr('name', 'lang[level][' + limitLanguage + ']')
+                $("input[list=languageName]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#languageName [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-languageName").val(dataVal);
+                    if($(this).siblings(".hidden-languageName").val() === "") {
+                        $(this).siblings(".hidden-languageName").val(value)
+                    }
+                });
+                $("input[list=languageLevel]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#languageLevel [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-languageLevel").val(dataVal);
+                    if($(this).siblings(".hidden-languageLevel").val() === "") {
+                        $(this).siblings(".hidden-languageLevel").val(value)
+                    }
+                });
             }
 
-            // LANGUAGE SELECT2 
-            $('.iq-languageLevel').select2();
+           
             // LANGUAGE AUTOCOMPLETE START
 
             $(function () {
@@ -1131,10 +1229,27 @@ $(document).ready(function () {
     // LICENSE START
     $(document).ready(function () {
         $('#qualificationLicense').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+            $('div.qualification__div--qualificationLicense .qualification__div--item-License').addClass('license-' + randomClass + '');
             let divLicense = $('.qualification__div--qualificationLicense').html();
+            $('div.qualification__div--qualificationLicense .qualification__div--item-License').removeClass('license-' + randomClass + '');
+
+
             let limitLicense = document.querySelectorAll('.qualification__div--item-License').length;
             if (limitLicense < 5) {
                 $('.qualification__div').append(divLicense);
+                $('.license-' + randomClass + ' input#qualificationInputLicense').attr('name', 'license[name][' + limitLicense + ']')
+                $('.license-' + randomClass + ' input.checkboxLicense').attr('name', 'license[type][' + limitLicense + ']')
+
+                $("input[list=licenseName]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#licenseName [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-licenseName").val(dataVal);
+                    if($(this).siblings(".hidden-licenseName").val() === "") {
+                        $(this).siblings(".hidden-licenseName").val(value)
+                    }
+                });
             }
 
 
@@ -1207,103 +1322,6 @@ $(document).ready(function () {
             let limitWorkingDays = document.querySelectorAll('.qualification__div--item-WorkingDays').length;
             if (limitWorkingDays < 2) {
                 $('.qualification__div').append(divWorkingDays);
-                // // WORKING DAYS  MULTIPLE SELECT START
-                // var select = $('.working-days-select');
-                // var options = select.find('option');
-
-                // var div = $('<div />').addClass('selectMultipleWorkingDays');
-                // var active = $('<div />');
-                // var list = $('<ul />');
-                // var placeholder = select.data('placeholder');
-
-                // var span = $('<span />').text(placeholder).appendTo(active);
-                // options.each(function () {
-                //     var text = $(this).text();
-                //     if ($(this).is(':selected')) {
-                //         active.append($('<a />').html('<em>' + text + '</em><i></i>'));
-                //         span.addClass('hide');
-                //     } else {
-                //         list.append($('<li />').html(text));
-                //     }
-                // });
-
-                // active.append($('<div />').addClass('arrow'));
-                // div.append(active).append(list);
-
-                // select.wrap(div);
-
-                // $(document).on('click', '.selectMultipleWorkingDays ul li', function (e) {
-                //     var select = $(this).parent().parent();
-                //     var li = $(this);
-                //     if (!select.hasClass('clicked')) {
-                //         select.addClass('clicked');
-                //         li.prev().addClass('beforeRemove');
-                //         li.next().addClass('afterRemove');
-                //         li.addClass('remove');
-                //         var a = $('<a />').addClass('notShown').html('<em>' + li.text() + '</em><i></i>').hide().appendTo(select.children('div'));
-                //         a.slideDown(100, function () {
-                //             setTimeout(function () {
-                //                 a.addClass('shown');
-                //                 select.children('div').children('span').addClass('hide');
-                //                 select.find('option:contains(' + li.text() + ')').prop('selected', true);
-                //             }, 100);
-                //         });
-                //         setTimeout(function () {
-                //             if (li.prev().is(':last-child')) {
-                //                 li.prev().removeClass('beforeRemove');
-                //             }
-                //             if (li.next().is(':first-child')) {
-                //                 li.next().removeClass('afterRemove');
-                //             }
-                //             setTimeout(function () {
-                //                 li.prev().removeClass('beforeRemove');
-                //                 li.next().removeClass('afterRemove');
-                //             }, 100);
-
-                //             li.slideUp(400, function () {
-                //                 li.remove();
-                //                 select.removeClass('clicked');
-                //             });
-                //         }, 100);
-                //     }
-                // });
-
-                // $(document).on('click', '.selectMultipleWorkingDays > div a', function (e) {
-                //     var select = $(this).parent().parent();
-                //     var self = $(this);
-                //     self.removeClass().addClass('remove');
-                //     select.addClass('open');
-                //     setTimeout(function () {
-                //         self.addClass('disappear');
-                //         setTimeout(function () {
-                //             self.animate({
-                //                 width: 0,
-                //                 height: 0,
-                //                 padding: 0,
-                //                 margin: 0
-                //             }, 100, function () {
-                //                 var li = $('<li />').text(self.children('em').text()).addClass('notShown').appendTo(select.find('ul'));
-                //                 li.slideDown(400, function () {
-                //                     li.addClass('show');
-                //                     setTimeout(function () {
-                //                         select.find('option:contains(' + self.children('em').text() + ')').prop('selected', false);
-                //                         if (!select.find('option:selected').length) {
-                //                             select.children('div').children('span').removeClass('hide');
-                //                         }
-                //                         li.removeClass();
-                //                     }, 100);
-                //                 });
-                //                 self.remove();
-                //             })
-                //         }, 100);
-                //     }, 100);
-                // });
-
-                // $(document).on('click', '.selectMultipleWorkingDays > div ', function (e) {
-                //     $(this).parent().toggleClass('open');
-                // });
-                // // WORKING DAYS  MULTIPLE SELECT END
-
 
                 $(".dropdown-multi-days dt a").on('click', function (e) {
                     e.preventDefault();
@@ -1323,45 +1341,40 @@ $(document).ready(function () {
                     if (!$clicked.parents().hasClass("dropdown-multi-days")) $(".dropdown-multi-days dd ul").hide();
                 });
 
+
                 $("li").click(function (e) {
                     var cb = $(this).find(":checkbox")[0];
                     if (e.target != cb) cb.checked = !cb.checked;
                     var checkedVal = $(cb).val();
-                          var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
-                          checkedVal = $(cb).val() + ",";
+                    var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
+                        checkedVal = $(cb).val() + ",";
                     $(this).toggleClass("selected", cb.checked);
-                    console.log(checkedVal);
+
+                    daysArray = [];
+                    $("input:checkbox[name=multiDays]:checked").each(function () {
+                        daysArray.push($(this).val());
+                    });
+                    $(".hidden-multi-days").val(daysArray);
+                    // console.log(checkedVal);
                     if ($(this).children().is(':checked')) {
-                                var html = '<span title="' + checkedVal + '">' + checkedVal + '</span>';
-                                $('.multiSel-days').append(html);
-                                $(".hida-days").hide();
-                            } else {
-                                $('span[title="' + checkedVal + '"]').remove();
-                                // var ret = $(".hida-days");
-                                // $('.dropdown-multi-days dt a').append(ret);
-                              
-                            }
-                            if($('input[data-id="multi-days"]:checked').length == 0){
-                                $(".hida-days").show();
-                            }
+                        var html = '<span title="' + checkedVal + '" value="' + checkedVal + '">' + checkedVal + '</span>';
+
+
+
+                        $('.multiSel-days').append(html);
+                        $(".hida-days").hide();
+
+                    } else {
+                        $('span[title="' + checkedVal + '"]').remove();
+
+                        // var ret = $(".hida-days");
+                        // $('.dropdown-multi-days dt a').append(ret);
+
+                    }
+                    if ($('input[data-id="multi-days"]:checked').length == 0) {
+                        $(".hida-days").show();
+                    }
                 });
-
-                // $('.mutliSelect-days input[type="checkbox"]').on('click', function () {
-
-                //     var title = $(this).closest('.mutliSelect-days').find('input[type="checkbox"]').val(),
-                //         title = $(this).val() + ",";
-
-                //     if ($(this).is(':checked')) {
-                //         var html = '<span title="' + title + '">' + title + '</span>';
-                //         $('.multiSel-days').append(html);
-                //         $(".hida-days").hide();
-                //     } else {
-                //         $('span[title="' + title + '"]').remove();
-                //         var ret = $(".hida-days");
-                //         $('.dropdown-multi-days dt a').append(ret);
-
-                //     }
-                // });
             }
 
 
@@ -1426,40 +1439,30 @@ $(document).ready(function () {
                     var cb = $(this).find(":checkbox")[0];
                     if (e.target != cb) cb.checked = !cb.checked;
                     var checkedVal = $(cb).val();
-                          var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
-                          checkedVal = $(cb).val() + ",";
+                    var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
+                        checkedVal = $(cb).val() + ",";
                     $(this).toggleClass("selected", cb.checked);
-                    console.log(checkedVal);
+
+                    benefitsArray = [];
+                    $("input:checkbox[name=multiBenefits]:checked").each(function () {
+                        benefitsArray.push($(this).val());
+                    });
+                    $(".hidden-multi-benefits").val(benefitsArray);
+                    // console.log(checkedVal);
                     if ($(this).children().is(':checked')) {
-                                var html = '<span title="' + checkedVal + '">' + checkedVal + '</span>';
-                                $('.multiSel-benefits').append(html);
-                                $(".hida-benefits").hide();
-                            } else {
-                                $('span[title="' + checkedVal + '"]').remove();
-                               
-                            
-                            }
-                            if($('input[data-id="multi-benefits"]:checked').length == 0){
-                                $(".hida-benefits").show();
-                            }
+                        var html = '<span title="' + checkedVal + '">' + checkedVal + '</span>';
+                        $('.multiSel-benefits').append(html);
+                        $(".hida-benefits").hide();
+                    } else {
+                        $('span[title="' + checkedVal + '"]').remove();
+
+
+                    }
+                    if ($('input[data-id="multi-benefits"]:checked').length == 0) {
+                        $(".hida-benefits").show();
+                    }
                 });
 
-                // $('.mutliSelect-benefits input[type="checkbox"]').on('click', function () {
-
-                //     var title = $(this).closest('.mutliSelect-benefits').find('input[type="checkbox"]').val(),
-                //         title = $(this).val() + ",";
-
-                //     if ($(this).is(':checked')) {
-                //         var html = '<span title="' + title + '">' + title + '</span>';
-                //         $('.multiSel-benefits').append(html);
-                //         // $(".hida-benefits").hide();
-                //     } else {
-                //         $('span[title="' + title + '"]').remove();
-                //         var ret = $(".hida-benefits");
-                //         $('.dropdown-multi-benefits dt a').append(ret);
-
-                //     }
-                // });
             }
             // BENEFITS CHECKBOX START
             $('.checkboxBenefits').click(function () {
@@ -1489,10 +1492,38 @@ $(document).ready(function () {
     // SKILLS START
     $(document).ready(function () {
         $('#qualificationSkills').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+            $('div.qualification__div--qualificationSkills .qualification__div--item-Skills').addClass('skills-' + randomClass + '');
             let divSkills = $('.qualification__div--qualificationSkills').html();
+
+            $('div.qualification__div--qualificationSkills .qualification__div--item-Skills').removeClass('skills-' + randomClass + '');
+
             let limitSkills = document.querySelectorAll('.qualification__div--item-Skills').length;
             if (limitSkills < 5) {
                 $('.qualification__div').append(divSkills);
+
+                $('.skills-' + randomClass + ' input#qualificationInputSkills').attr('name', 'skills[name][' + limitSkills + ']')
+                $('.skills-' + randomClass + ' input[list="skillsLevel"]').attr('name', 'skills[level][' + limitSkills + ']')
+                $('.skills-' + randomClass + ' input.checkboxSkills').attr('name', 'skills[type][' + limitSkills + ']')
+
+                $("input[list=skillsName]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#skillsName [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-skillsName").val(dataVal);
+                    if($(this).siblings(".hidden-skillsName").val() === "") {
+                        $(this).siblings(".hidden-skillsName").val(value)
+                    }
+                });
+                $("input[list=skillsLevel]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#skillsLevel [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-skillsLevel").val(dataVal);
+                    if($(this).siblings(".hidden-skillsLevel").val() === "") {
+                        $(this).siblings(".hidden-skillsLevel").val(value)
+                    }
+                });
             }
             $('.iq-SkillsLevel').select2();
             // SKILLS AUTOCOMPLETE START
@@ -1696,6 +1727,28 @@ $(document).ready(function () {
             $(this).addClass("disabledbutton");
             if (limitAge < 2) {
                 $('.qualification__div').append(divAge);
+
+
+                $("input[list=minAgeLevel]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal =$('#minAgeLevel [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-minAgeLevel").val(dataVal);
+                    if($(this).siblings(".hidden-minAgeLevel").val() === "") {
+                        $(this).siblings(".hidden-minAgeLevel").val(value)
+                    }
+                });
+                
+                $("input[list=maxAgeLevel]").focusout(function () {
+                    
+                    let value = $(this).val();
+                    let dataVal =$('#maxAgeLevel [value="' + value + '"]').data('value')
+                    console.log(dataVal);
+                    $(this).siblings(".hidden-maxAgeLevel").val(dataVal);
+                    if($(this).siblings(".hidden-maxAgeLevel").val() === "") {
+                        $(this).siblings(".hidden-maxAgeLevel").val(value)
+                    }
+                });
 
             }
 
