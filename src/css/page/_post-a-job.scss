@@ -2296,7 +2296,8 @@ input.priceSlider {
 .switch-toggle.switch-candy,
 .switch-light.switch-candy>span {
     box-shadow: none;
-    border: 2px solid #eae0e4
+    border: 2px solid #eae0e4;
+    border-radius: 20px;
 }
 
 #qualification__list__input-error,
