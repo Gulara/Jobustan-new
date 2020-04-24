@@ -9,11 +9,12 @@
     text-align: left;
     padding: 8px;
 }
-.filter-job{
+.profile-account{
     font-size: 15px;
     overflow: hidden;
-    &__col-left{
+    &__col-table{
         margin-left: 20px;
+        width: 97.5%;
         @include respond(main-img-resp-1) {
             margin-left: 0;
         }
@@ -26,6 +27,7 @@
         &__category {
             background-color: $color-primary-dark;
             color: #fff;
+            padding: 10px 0;
             .owl-nav {
                 display: none;
             }
@@ -37,6 +39,12 @@
                 display: none;
             }
         }
+    }
+    &__search{
+        padding: 15px 0;
+    }
+    &__filter-input{
+        padding: 3px 6px;
     }
 }
 .owl-carousel-category {

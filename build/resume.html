@@ -396,7 +396,8 @@
                         <div class="resume__div--Language">
                             <div class="resume__div--item resume__div--item-Language">
                                 <div class="resume__div--top">
-                                    <div id="searchfield" class="searchfield">
+                                   
+                                 <div id="searchfield" class="searchfield">
                                         <form>
                                             <label class="mr-2" for="resumeLang">Language:</label>
                                             <div>
@@ -550,7 +551,9 @@
                         <div class="resume__div--AddMilitary">
                             <div>
                                 <div class="resume__div--item resume__div--item-AddMilitary">
-
+                                    <div class="resume__div--top">
+                                        <div>Add Military:</div>
+                                    </div>
 
                                     <div class="resume__div--bottom">
                                         <div class="switch-block">
@@ -627,6 +630,9 @@
                         <!-- AGE -->
                         <div class="resume__div--Age">
                             <div class="resume__div--item resume__div--item-Age">
+                                
+                                    <div class="mb-3">Your Age:</div>
+                                
                                 <div class="resume__div--top">
                                     <div>
                                         <input list="resumeAgeDay" placeholder="Day" class="resume__input w-100">
@@ -720,6 +726,7 @@
                         <!-- AWARDS -->
                         <div class="resume__div--Awards">
                             <div class="resume__div--item resume__div--item-Awards">
+                                <div class="mb-3">Your Awards:</div>
                                 <div class="resume__div--top">
                                     <div>
                                         <input name="awardsName" list="awardsName" value="" class="resume__input w-100">
@@ -1047,18 +1054,21 @@
                                                     class="fas fa-check"></i></label>
                                             <span class="label-text">I am willing to relocate</span>
                                         </div>
-                                        <div class="form-group resume__form-radio">
-                                            <input id="resume-desired-job-anywhere" type="radio"
-                                                name="custom-radio-job-location" checked>
-                                            <label class="custom-radio" for="resume-desired-job-anywhere"></label>
-                                            <span class="label-text">Anywhere</span>
+                                        <div class="resume__radio-group">
+                                            <div class="form-group resume__form-radio">
+                                                <input id="resume-desired-job-anywhere" type="radio"
+                                                    name="customRadioJobLocation" customRadioJobLocation="customRadioJobLocation" >
+                                                <label class="custom-radio" for="resume-desired-job-anywhere"></label>
+                                                <span class="label-text">Anywhere</span>
+                                            </div>
+                                            <div class="form-group  resume__form-radio">
+                                                <input id="resume-desired-job-only" type="radio"
+                                                    name="customRadioJobLocation"customRadioJobLocation="customRadioJobLocation" >
+                                                <label class="custom-radio" for="resume-desired-job-only"></label>
+                                                <span class="label-text">Only near...</span>
+                                            </div>
                                         </div>
-                                        <div class="form-group  resume__form-radio">
-                                            <input id="resume-desired-job-only" type="radio"
-                                                name="custom-radio-job-location">
-                                            <label class="custom-radio" for="resume-desired-job-only"></label>
-                                            <span class="label-text">Only near...</span>
-                                        </div>
+                                      
 
 
                                     </div>

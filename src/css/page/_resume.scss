@@ -24,6 +24,9 @@
   &__Present {
     display: none;
   }
+  &__radio-group{
+    display: none;
+  }
 
   &__title {
     font-size: 11px;
@@ -158,6 +161,7 @@
       }
     }
   }
+  
 
   &__form-group {
     display: flex;
