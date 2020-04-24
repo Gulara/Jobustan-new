@@ -1,4 +1,64 @@
 $(document).ready(function () {
+    // ////////////////
+    document.getElementById('resume-desired-job-relocation').onclick = function() {
+        // access properties using this keyword
+        if ( this.checked ) {
+            $(".resume__radio-group").slideDown();
+           
+        } else {
+            // Returns false if not checked
+            $(".resume__radio-group").slideUp();
+            $('input[customRadioJobLocation=customRadioJobLocation]').attr('chk', '0');
+            $('input[customRadioJobLocation=customRadioJobLocation]').prop('checked', false);
+        }
+    };
+
+    // $('#resume-desired-job-relocation').click(function () {
+    //     $(".resume__radio-group").toggle(this.checked);
+    // });
+    // UNCHECKED RADIO BUTTON
+
+    InitRadio('customRadioJobLocation');
+
+    function InitRadio(customRadioJobLocation) {
+        val = 0;
+        $.each($(':radio[customRadioJobLocation="' + customRadioJobLocation + '"]'), function () {
+
+            $(this).val(val++);
+             $(this).attr('chk', '0');
+            $(this).on("click", function (event) {
+                SetRadioButtonChkProperty($(this).val(), customRadioJobLocation);
+                let checkedSiblings = $(this).parent().siblings();
+                // checkedSiblings.slideToggle('slow');
+
+            });
+        });
+    }
+
+    function SetRadioButtonChkProperty(val, customRadioJobLocation) {
+        $.each($(':radio[customRadioJobLocation="' + customRadioJobLocation + '"]'), function () {
+
+            if ($(this).val() != val)
+                $(this).attr('chk', '0');
+
+
+            else {
+                if ($(this).attr('chk') == '0')
+                    $(this).attr('chk', '1');
+
+                else {
+                    $(this).attr('chk', '0');
+                    $(this).prop('checked', false);
+                    //  $('#driver-form-pedestrian, #driver-form, .customRadioJobLocation__icon').css({
+                    //      'display': 'none'
+                    //  });
+                }
+            }
+        });
+    }
+
+ 
+    // ///////////////
     // DESIRED SALARY START
     // DROPDOWN MONEY
     $('.dropdown-desired-money').click(function (e) {
@@ -114,7 +174,7 @@ $(document).ready(function () {
                 });
 
 
-               
+
 
                 //EXPERIENCE  CHECKBOX START
                 $('.checkboxExperienceTime').click(function () {
@@ -128,26 +188,27 @@ $(document).ready(function () {
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-year_txt').text("Year");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideDown();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideUp();
-                      
+
                     }
-                    $(".resume-experience-from-month_val").change(function () {
-                        var option = $(this).find('option:selected').val();
-                        $(this).prev('.resume-experience-from-month_txt').text(option);
-                    });
-                    $(".resume-experience-from-year_val").change(function () {
-                        var option = $(this).find('option:selected').val();
-                        $(this).prev('.resume-experience-from-year_txt').text(option);
-                    });
-    
-    
-                    $(".resume-experience-to-month_val").change(function () {
-                        var option = $(this).find('option:selected').val();
-                        $(this).prev('.resume-experience-to-month_txt').text(option);
-                    });
-                    $(".resume-experience-to-year_val").change(function () {
-                        var option = $(this).find('option:selected').val();
-                        $(this).prev('.resume-experience-to-year_txt').text(option);
-                    });
+
+                });
+                $(".resume-experience-from-month_val").change(function () {
+                    var option = $(this).find('option:selected').val();
+                    $(this).prev('.resume-experience-from-month_txt').text(option);
+                });
+                $(".resume-experience-from-year_val").change(function () {
+                    var option = $(this).find('option:selected').val();
+                    $(this).prev('.resume-experience-from-year_txt').text(option);
+                });
+
+
+                $(".resume-experience-to-month_val").change(function () {
+                    var option = $(this).find('option:selected').val();
+                    $(this).prev('.resume-experience-to-month_txt').text(option);
+                });
+                $(".resume-experience-to-year_val").change(function () {
+                    var option = $(this).find('option:selected').val();
+                    $(this).prev('.resume-experience-to-year_txt').text(option);
                 });
                 //EXPERIENCE CHECKBOX END
 
@@ -314,7 +375,7 @@ $(document).ready(function () {
                 // CITY EDUCATION SELECT END
 
 
-               
+
 
                 ///
                 // $(document).on('click', '.educationTimePeriod', function (e) {
@@ -341,7 +402,7 @@ $(document).ready(function () {
                         $(this).parent().parent().parent().siblings(".resume__Present").slideUp();
                         // $(this).parent().parent().parent().siblings(".resume__form-group--right").children('.resume-education-to-month').children().children().removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Month' + '<i class="zmdi zmdi-chevron-down"></i>')
                         // $(this).parent().parent().parent().siblings(".resume__form-group--right").children('.resume-education-to-year').children().children().removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Year' + '<i class="zmdi zmdi-chevron-down"></i>')
-              
+
                     }
                 });
                 $(".resume-education-from-month_val").change(function () {
