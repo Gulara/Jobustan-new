@@ -6852,6 +6852,79 @@ label.error {
          -o-transform: scale(50, 50);
             transform: scale(50, 50); } }
 
+.filter-table {
+  border-collapse: collapse;
+  width: 100%; }
+
+.filter-td,
+.filter-th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px; }
+
+.profile-account {
+  font-size: 15px;
+  overflow: hidden; }
+  .profile-account__col-table {
+    margin-left: 20px;
+    width: 97.5%; }
+    @media only screen and (max-width: 767px) {
+      .profile-account__col-table {
+        margin-left: 0; } }
+  .profile-account__navbar {
+    font-size: 16px;
+    margin: 0 20px; }
+    .profile-account__navbar__category {
+      background-color: #b40d4a;
+      color: #fff;
+      padding: 10px 0; }
+      .profile-account__navbar__category .owl-nav {
+        display: none; }
+    .profile-account__navbar__item {
+      margin: 10px 0;
+      line-height: 20px; }
+      .profile-account__navbar__item .owl-nav {
+        display: none; }
+  .profile-account__search {
+    padding: 15px 0; }
+  .profile-account__filter-input {
+    padding: 3px 6px; }
+
+.owl-carousel-category .owl-item {
+  padding: 5px 10px;
+  cursor: pointer; }
+
+.owl-carousel-label {
+  background-color: #fff;
+  color: inherit;
+  display: inline-block;
+  padding: 5px 10px;
+  -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+          border-radius: 20px;
+  border: 1px solid #ccc;
+  z-index: 1;
+  position: relative;
+  -webkit-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  cursor: pointer; }
+
+.owl-carousel-input[type=checkbox] {
+  display: none;
+  /*   margin-right: -20px;
+  position: relative;
+  z-index: 2; */ }
+
+.owl-carousel-input[type=checkbox]:checked + label {
+  background-color: #b40d4a;
+  color: #fff;
+  border: #b40d4a; }
+
+.owl-carousel-all-item {
+  display: none; }
+
 .login {
   border: 2px solid #fafafa;
   background-color: #fff;
@@ -8076,75 +8149,388 @@ li.price-card--features--item:not(.features-disabled):before {
     font-size: 12px;
     margin-bottom: 20px; }
 
-.filter-table {
-  border-collapse: collapse;
-  width: 100%; }
-
-.filter-td,
-.filter-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px; }
-
-.profile-account {
-  font-size: 15px;
-  overflow: hidden; }
-  .profile-account__col-table {
-    margin-left: 20px;
-    width: 97.5%; }
-    @media only screen and (max-width: 767px) {
-      .profile-account__col-table {
-        margin-left: 0; } }
-  .profile-account__navbar {
-    font-size: 16px;
-    margin: 0 20px; }
-    .profile-account__navbar__category {
-      background-color: #b40d4a;
-      color: #fff;
-      padding: 10px 0; }
-      .profile-account__navbar__category .owl-nav {
-        display: none; }
-    .profile-account__navbar__item {
-      margin: 10px 0;
-      line-height: 20px; }
-      .profile-account__navbar__item .owl-nav {
-        display: none; }
-  .profile-account__search {
-    padding: 15px 0; }
-  .profile-account__filter-input {
-    padding: 3px 6px; }
-
-.owl-carousel-category .owl-item {
-  padding: 5px 10px;
-  cursor: pointer; }
-
-.owl-carousel-label {
+.account-settings {
+  border: 2px solid #fafafa;
   background-color: #fff;
-  color: inherit;
-  display: inline-block;
-  padding: 5px 10px;
-  -webkit-border-radius: 20px;
-     -moz-border-radius: 20px;
-          border-radius: 20px;
-  border: 1px solid #ccc;
-  z-index: 1;
-  position: relative;
-  -webkit-transition: all 250ms ease-out;
-  -o-transition: all 250ms ease-out;
-  -moz-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
-  cursor: pointer; }
+  padding: 2rem;
+  font-size: 16px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border-top: 3px solid #b40d4a; }
+  .account-settings__title {
+    font-size: 11px;
+    margin: 10px 0; }
+  .account-settings__h2 {
+    font-size: 24px;
+    margin: 10px 0 20px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 991px) {
+      .account-settings__h2 {
+        font-size: 28px; } }
+  .account-settings__h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #c8c8c8;
+    line-height: 0.1em;
+    margin: 20px 0;
+    font-size: 16px; }
+    .account-settings__h3 span {
+      background: #fff;
+      padding: 0 10px; }
+  .account-settings__form-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px; }
+    .account-settings__form-group--div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .account-settings__form-group--left, .account-settings__form-group--right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .account-settings__form-group--desired-salary {
+      position: relative; }
+  .account-settings__input {
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #c8c8c8;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    color: inherit;
+    font-weight: normal;
+    font-size: 14px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    @media only screen and (max-width: 450px) {
+      .account-settings__input--experience {
+        margin-top: 10px;
+        width: 60%; } }
+    .account-settings__input--desired-location {
+      margin: 10px 0; }
+    @media only screen and (min-width: 600px) and (max-width: 900px) {
+      .account-settings__input {
+        margin-top: 10px; } }
+  .account-settings__checkbox__input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer; }
+    .account-settings__checkbox__input:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      width: 5px;
+      height: 12px;
+      border: solid #b40d4a;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+         -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+           -o-transform: rotate(45deg);
+              transform: rotate(45deg); }
+  .account-settings__checkbox__label {
+    position: relative;
+    cursor: pointer; }
+    .account-settings__checkbox__label:before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 2px solid #b40d4a;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+         -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+      padding: 8px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 15px; }
+  .account-settings__btn {
+    width: 150px;
+    margin: 10px 0;
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+    border: 2px solid #000;
+    color: #000; }
+    .account-settings__btn:hover {
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000; }
+    .account-settings__btn img {
+      width: 25px;
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      height: auto; }
+  .account-settings__create-btn {
+    padding: 7px 25px;
+    width: 100%;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+    background-color: #b40d4a;
+    margin: 0 auto;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px; }
+  .account-settings__create-text {
+    font-size: 12px;
+    margin-bottom: 20px; }
 
-.owl-carousel-input[type=checkbox] {
-  display: none;
-  /*   margin-right: -20px;
-  position: relative;
-  z-index: 2; */ }
-
-.owl-carousel-input[type=checkbox]:checked + label {
-  background-color: #b40d4a;
-  color: #fff;
-  border: #b40d4a; }
-
-.owl-carousel-all-item {
-  display: none; }
+.account-settings-edit {
+  border: 2px solid #fafafa;
+  background-color: #fff;
+  padding: 2rem;
+  font-size: 16px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border-top: 3px solid #b40d4a; }
+  .account-settings-edit__title {
+    font-size: 11px;
+    margin: 10px 0; }
+  .account-settings-edit__h2 {
+    font-size: 24px;
+    margin: 10px 0 20px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 991px) {
+      .account-settings-edit__h2 {
+        font-size: 28px; } }
+  .account-settings-edit__h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #c8c8c8;
+    line-height: 0.1em;
+    margin: 20px 0;
+    font-size: 16px; }
+    .account-settings-edit__h3 span {
+      background: #fff;
+      padding: 0 10px; }
+  .account-settings-edit__form-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px; }
+    .account-settings-edit__form-group--div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .account-settings-edit__form-group--left, .account-settings-edit__form-group--right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .account-settings-edit__form-group--desired-salary {
+      position: relative; }
+  .account-settings-edit__input {
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #c8c8c8;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    color: inherit;
+    font-weight: normal;
+    font-size: 14px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    cursor: pointer; }
+    @media only screen and (max-width: 450px) {
+      .account-settings-edit__input--experience {
+        margin-top: 10px;
+        width: 60%; } }
+    .account-settings-edit__input--desired-location {
+      margin: 10px 0; }
+    @media only screen and (min-width: 600px) and (max-width: 900px) {
+      .account-settings-edit__input {
+        margin-top: 10px; } }
+  .account-settings-edit__checkbox__input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer; }
+    .account-settings-edit__checkbox__input:checked + label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      width: 5px;
+      height: 12px;
+      border: solid #b40d4a;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+         -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+           -o-transform: rotate(45deg);
+              transform: rotate(45deg); }
+  .account-settings-edit__checkbox__label {
+    position: relative;
+    cursor: pointer; }
+    .account-settings-edit__checkbox__label:before {
+      content: '';
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 2px solid #b40d4a;
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+         -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+      padding: 8px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 15px; }
+  .account-settings-edit__btn {
+    width: 150px;
+    margin: 10px 0;
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+    border: 2px solid #000;
+    color: #000; }
+    .account-settings-edit__btn:hover {
+      border: 2px solid #000;
+      background-color: #fff;
+      color: #000; }
+    .account-settings-edit__btn img {
+      width: 25px;
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      height: auto; }
+  .account-settings-edit__submit-btn {
+    padding: 7px 25px;
+    width: 100%;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+    background-color: #b40d4a;
+    margin: 0 auto;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px; }
