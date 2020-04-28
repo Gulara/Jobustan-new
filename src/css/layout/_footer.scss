@@ -5,6 +5,9 @@
   @include respond(main-img-resp-1) {
     display: none;
   }
+  &__without-container{
+    padding: 0 20px;
+  }
   &__link{
     color: inherit;
 

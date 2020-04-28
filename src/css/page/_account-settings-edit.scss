@@ -46,6 +46,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 30px;
+        position: relative;
 
         &--div {
             display: flex;
@@ -93,6 +94,13 @@ cursor: pointer;
         @include respond(tab-port) {
             margin-top: 10px;
         }
+    }
+    &__show-password {
+        position: absolute;
+        font-size: 20px;
+        right: 5px;
+        top: 50%;
+        cursor: pointer;
     }
 
     &__checkbox {

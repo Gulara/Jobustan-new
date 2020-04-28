@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jobustan</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css"> -->
+    <link rel="stylesheet" href="libs/default.css?v1.1">
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="libs/toggle-switch/toggle-switch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.css">
+    <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
+
+
+    <!-- NEW LINKS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css">
+        <!--  OWL CAROUSEL -->
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <!-- <link rel="stylesheet" href="css/main/main.css?v1.5"> -->
+    <!-- <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" /> -->
+
+
+
+</head>
+
+<body style="background-color: #fff;">
+    <!-- WITHOUT CONTAINER START -->
+    <header class="header header__without-container">
+      
+        <!-- NOT REGISTERED START-->
+        <nav class="navbar navbar-expand-lg navbar-light  mynavbar">
+            <a class="navbar-brand mynavbar__navbar-brand" href="#"><img
+                    src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="header__div">
+                <ul class="navbar-nav mr-auto mynavbar__navbar-nav collapse navbar-collapse navbarSupportedContent">
+                    <li class="nav-item  mynavbar__nav-item active">
+                        <a class="nav-link mynavbar__nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Create your CV</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Companies</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Carrier Center</a>
+                    </li>
+                   
+                </ul>
+                <div class="navbar-nav mynavbar__navbar-nav--right">
+                    <ul class="navbar-nav  mynavbar__navbar-nav  mynavbar__heart-group">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--heart">
+                            <a class="nav-link mynavbar__nav-link" href="#"><i
+                                    class="fas fa-heart mynavbar__heart"></i><span
+                                    class="badge badge-pill badge-warning  mynavbar__heart--badge">15</span></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav collapse  mynavbar__navbar-nav navbar-collapse navbarSupportedContent">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__login">
+                            <a class="nav-link mynavbar__nav-link" href="#">Log in</a>
+                        </li>
+                       
+                        <li class="nav-item mynavbar__nav-item ">
+                            <a class="nav-link mynavbar__nav-link" href="#">Register</a>
+                        </li>
+                        <li class="nav-item mynavbar__nav-item ">
+                            <a class="nav-link mynavbar__nav-link" href="#">
+                                <i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+                        </li>
+                    </ul>
+    
+    
+                </div>
+    
+            </div>
+        </nav>
+        <!-- HAMBURGER MENU START  -->
+        <nav class="navbar navbar-expand-lg navbar-light  mynavside">
+            <a class="navbar-brand mynavside__navbar-brand" href="#"><img
+                    src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+    
+            <ul class="navbar-nav  mynavside__navbar-nav  mynavside__heart-group">
+                <li class="nav-item mynavside__nav-item  mynavside__nav-item--heart">
+                    <a class="nav-link mynavside__nav-link " href="#"><i
+                            class="fas fa-heart mynavside__heart"></i><span
+                            class="badge badge-pill badge-warning  mynavside__heart--badge">15</span></a>
+                </li>
+                <li><span style="font-size:25px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span></li>
+            </ul>
+    
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Jobs</a>
+                <a href="#">Create your CV</a>
+                <a href="#">Companies</a>
+                <a href="#">Carrier Center</a>
+                <!-- <a href="#">Salary Calculator</a> -->
+                <a href="#" class="mynavside__nav-link--login">Log in</a>
+                <a href="#">Register</a>
+                <a href="#" class="mynavside__nav-link--post"><i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+            </div>
+        </nav>
+          <!-- HAMBURGER MENU END  -->
+        <!-- NOT REGISTERED END-->
+        <!-- REGISTERED START-->
+    
+        <!-- <nav class="navbar navbar-expand-lg navbar-light  mynavbar">
+            <a class="navbar-brand mynavbar__navbar-brand" href="#"><img src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="header__div">
+                <ul class="navbar-nav mr-auto mynavbar__navbar-nav collapse navbar-collapse navbarSupportedContent">
+                    <li class="nav-item  mynavbar__nav-item active">
+                        <a class="nav-link mynavbar__nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Create your CV</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Companies</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Carrier Center</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Salary Calculator</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav mynavbar__navbar-nav--right">
+                    <ul class="navbar-nav  mynavbar__navbar-nav  mynavbar__heart-group">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--heart">
+                            <a class="nav-link mynavbar__nav-link" href="#"><i
+                                    class="fas fa-heart mynavbar__heart"></i><span
+                                    class="badge badge-pill badge-warning  mynavbar__heart--badge">15</span></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav collapse  mynavbar__navbar-nav navbar-collapse navbarSupportedContent">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--user">
+                            <div class="dropdown show">
+                            <a class="nav-link mynavbar__nav-link mynavbar__nav-link__registered dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                                 <i class="fas fa-user-circle mynavbar__user"></i>
+                                 <span class="badge badge-pill badge-warning  mynavbar__user--badge">1</span>
+                                
+                            </a>
+                            <div class="dropdown-menu  mynavbar__dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item mynavbar__dropdown-item" href="#">My CV</a>
+                                <a class="dropdown-item mynavbar__dropdown-item" href="#">My Companies</a>
+                                <a class="dropdown-item mynavbar__dropdown-item" href="#">Accounts Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  mynavbar__dropdown-item text-red" href="#">Sign out</a>
+                              </div>
+                            </div>
+                          </li>
+                        
+                        <li class="nav-item mynavbar__nav-item ">
+                            <a class="nav-link mynavbar__nav-link" href="#"><i
+                                    class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+                        </li>
+                    </ul>
+    
+    
+                </div>
+    
+            </div>
+        </nav> -->
+    
+    <!-- HAMBURGER MENU START  -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light  mynavside">
+            <a class="navbar-brand mynavside__navbar-brand" href="#"><img
+                    src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+    
+            <ul class="navbar-nav  mynavside__navbar-nav  mynavside__heart-group">
+                <li class="nav-item mynavside__nav-item  mynavside__nav-item--heart">
+                    <a class="nav-link mynavside__nav-link " href="#"><i
+                            class="fas fa-heart mynavside__heart"></i><span
+                            class="badge badge-pill badge-warning  mynavside__heart--badge">15</span></a>
+                </li>
+                <li><span style="font-size:25px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span></li>
+            </ul>
+    
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Jobs</a>
+                <a href="#">Create your CV</a>
+                <a href="#">Companies</a>
+                <a href="#">Carrier Center</a>
+                <a href="#">Salary Calculator</a>
+            
+                <a href="#" class="mynavside__nav-link--user"> <i class="fas fa-user-circle mynavside__user"></i>
+                    <span class="badge badge-pill badge-warning  mynavside__user--badge">1</span> Mammad Mammadov</a>
+                <a href="#" class="mynavside__nav-link--post"><i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+            </div>
+        </nav> -->
+    <!-- HAMBURGER MENU END  -->
+    <!-- REGISTERED END-->
+    
+    
+    </header>
+    <!-- WITHOUT CONTAINER END -->
+    <div class="resumes">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="resumes__navbar">
+                    <div class="resumes__navbar__category">
+                        <div class="owl-carousel-category owl-carousel">
+                            <div class="resumes__navbar--category">Category</div>
+                            <div class="resumes__navbar--forwho">For who?</div>
+                            <div class="resumes__navbar--addition"> Addition </div>
+                            <div class="resumes__navbar--height"> Height </div>
+                            <div class="resumes__navbar--width"> Width </div>
+                            <div> Category 6</div>
+                            <div> Category 7</div>
+                            <div> Category 8</div>
+                            <div> Category 9</div>
+                            <div> Category 10</div>
+                            <div> Category 11</div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+            <div class="col-md-10">
+                <div class=" resumes__col-table">
+                    <div class="resumes__search">
+                        <input id="" type="text" class="search-table" placeholder="Search ......">
+                        <div>
+                            <label for="">Job Name :</label>
+                            <select id="filter-company" class="filter resumes__filter-input">
+                                <option value="0">No value</option>
+                                <option value="Alfreds">Alfreds</option>
+                                <option value="Centro">Centro</option>
+                                <option value="Ernst">Ernst</option>
+                                <option value="Island">Island</option>
+                                <option value="Laughing">Laughing</option>
+                                <option value="Magazzini">Magazzini</option>
+                            </select>
+                        </div>
+                       <div>
+                        <label for="">Status :</label>
+                        <select id="filter-contact" class="filter resumes__filter-input">
+                            <option value="0">No value</option>
+                            <option value="Canceled">Canceled</option>
+                            <option value="Delivered">Delivered</option>
+                        </select>
+                       </div>
+                       <div>
+                        <label for="">Updated :</label>
+                        <select id="filter-range" class="filter resumes__filter-input">
+                            <option value="0" data-min="1" data-max="1">No value</option>
+                            <option value="£100,000 - £200,000" data-min="100000" data-max="200000">£100,000 - £200,000
+                            </option>
+                            <option value="£200,000 - £300,000" data-min="200000" data-max="300000">£200,000 - £300,000
+                            </option>
+                            <option value="£300,000 - £400,000" data-min="300000" data-max="400000">£300,000 - £400,000
+                            </option>
+                            <option value="£400,000 - £500,000" data-min="400000" data-max="500000">£400,000 - £500,000
+                            </option>
+                        </select>
+                       </div>
+                       
+                    </div>
+    
+    
+    
+    
+    <div>
+        
+    </div>
+                    <table class="filter-table">
+                        <thead>
+                            <tr>
+                                <th class="filter-th">Job Name</th>
+                                <th class="filter-th">Status</th>
+                                <th class="filter-th">Updated</th>
+                                <th class="filter-th">Deadline</th>
+                                <th class="filter-th">Aplicants</th>
+                                <th class="filter-th">Favorite candidates</th>
+                                <th class="filter-th">Views</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <tbody>
+                                <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank"> Alfreds<i class="fas fa-edit ml-3"></i></a></td>
+    
+                                <!-- Data attributes helps in fetching values but you can fetch value of text in td also -->
+    
+                                <td class="contact filter-td" data-contact="Delivered"> <span class="badge-success py-1 px-2 br-1r"> Delivered </span></td>
+                                <td class="range filter-td" data-min="200000" data-max="300000">£200,000 - £300,000</td>
+                                <td class=" filter-td">22.04.2020</td>
+                                <td class=" filter-td"><a href="" target="_blank">12</a> </td>
+                                <td class=" filter-td"><a href="" target="_blank"> 1<i class="fas fa-eye ml-3 text-red"></i></a> </td>
+                                <td class=" filter-td">300</td>
+                                <!-- here Data attributes are necessary as we need separate min max values -->
+    
+                        </tr>
+                        <tr>
+                            <td class="company filter-td" data-company="Centro"><a href="" target="_blank">Centro<i class="fas fa-edit ml-3"></i></a> </td>
+                            <td class="contact filter-td" data-contact="Delivered"> <span class="badge-success py-1 px-2 br-1r"> Delivered</span></td>
+                            <td class="range filter-td" data-min="100000" data-max="200000">£100,000 - £200,000</td>
+                            <td class=" filter-td">10.09.2022</td>
+                            <td class=" filter-td"><a href="" target="_blank">3</a></td>
+                            <td class=" filter-td"><a href="" target="_blank">15<i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td">400</td>
+                        </tr>
+                        <tr>
+                            <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank">Alfreds <i class="fas fa-edit ml-3"></i></a></td>
+                            <td class="contact filter-td" data-contact="Canceled"><span class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
+                            <td class="range filter-td" data-min="200000" data-max="300000">£200,000 - £300,000</td>
+                            <td class=" filter-td">03.12.2030</td>
+                            <td class=" filter-td"><a href="" target="_blank">30</a></td>
+                            <td class=" filter-td"><a href="" target="_blank">0<i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td">500</td>
+                        </tr>
+                        <tr>
+                            <td class="company filter-td" data-company="Centro">    <a href="" target="_blank"> Centro<i class="fas fa-edit ml-3"></i></a></td>
+                            <td class="contact filter-td" data-contact="Canceled"><span class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
+                            <td class="range filter-td" data-min="300000" data-max="400000">£300,000 - £400,000</td>
+                            <td class=" filter-td">12.01.2020</td>
+                            <td class=" filter-td"><a href="" target="_blank">60</a></td>
+                            <td class=" filter-td"><a href="" target="_blank">8 <i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td">600</td>
+                        </tr>
+                        <tr>
+                            <td class="company filter-td" data-company="Laughing"><a href="" target="_blank"> Laughing<i class="fas fa-edit ml-3"></i></a></td>
+                            <td class="contact filter-td" data-contact="Canceled"> <span class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
+                            <td class="range filter-td" data-min="200000" data-max="300000">£200,000 - £300,000</td>
+                            <td class=" filter-td">30.10.2025</td>
+                            <td class=" filter-td"><a href="" target="_blank">100</a></td>
+                            <td class=" filter-td"><a href="" target="_blank">14<i class="fas fa-eye ml-3 text-red"></i></a> </td>
+                            <td class=" filter-td">700</td>
+                        </tr>
+                        <tr>
+                            <td class="company filter-td" data-company="Laughing"><a href="" target="_blank"> Laughing<i class="fas fa-edit ml-3"></i> </a></td>
+                            <td class="contact filter-td" data-contact="Delivered"> <span class="badge-success py-1 px-2 br-1r"> Delivered </span></td>
+                            <td class="range filter-td" data-min="150000" data-max="250000">£150,000 - £250,000</td>
+                            <td class=" filter-td">15.12.2023</td>
+                            <td class=" filter-td"><a href="" target="_blank">90</a></td>
+                            <td class=" filter-td"><a href="" target="_blank">45 <i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td">800</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer  pt-4 footer footer__without-container">
+    
+        <!-- Footer Links -->
+        <div class=" text-center text-md-left">
+    
+            <!-- Grid row -->
+            <div class="row">
+    
+                <!-- Grid column -->
+                <div class="col-md-4 ">
+    
+                    <!-- Content -->
+                    <a class=" footer__navbar-brand" href="#">
+                        <img src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo" class="footer__logo">
+                    </a>
+                    <p class="footer__location">200 N. LaSalle St. Suite 1100, Chicago? IL 124242</p>
+    
+                    <h5  class="footer__social-h5">Stay Connected</h5>
+    
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-fb mx-1 footer__link">
+                                <i class="fab fa-facebook-f"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-tw mx-1 footer__link">
+                                <i class="fab fa-twitter"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-gplus mx-1 footer__link">
+                                <i class="fab fa-google-plus-g"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-li mx-1 footer__link">
+                                <i class="fab fa-linkedin-in"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-dribbble mx-1 footer__link">
+                                <i class="fab fa-dribbble"> </i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social buttons -->
+    
+                </div>
+                <!-- Grid column -->
+    
+             
+    
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer__heading footer__jobs-h5">Jobs <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer__jobs-list footer__list">
+                        <li>
+                            <a href="#" class=" footer__link">International Jobs</a>
+                        </li>
+                        <li>
+                            <a href="#" class=" footer__link">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class=" footer__link">Career Insights</a>
+                        </li>
+                        <li>
+                            <a href="#" class=" footer__link">Talent Network</a>
+                        </li>
+                        <li>
+                            <a href="#" class=" footer__link">Site Map</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+    
+             
+    
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer__heading footer__employers-h5">Employers <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer__employers-list footer__list">
+                        <li>
+                            <a href="#!" class=" footer__link">Browse products</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Post Jobs</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Recruiting Solutions</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Screening</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">HCM</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Advertise with Us</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+    
+               
+    
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer__heading  footer__jobustan-h5">Jobustan  <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer__jobustan-list footer__list">
+                        <li>
+                            <a href="#!" class=" footer__link">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Link 4</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+             
+                 <!-- Grid column -->
+                 <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer__heading footer__carrier-h5">Carrier Center  <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer__carrier-list footer__list">
+                        <li>
+                            <a href="#!" class=" footer__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer__link">Work at Careerbuilder</a>
+                        </li>
+                        
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+        <hr>
+    
+        <!-- Copyright -->
+        <div class="footer-copyright text-center pb-3">© 2020 Copyright:
+            <a href="https://jobustan.com/" class="footer__link"> All rights reserved</a>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!-- Footer -->
+    
+    <!-- Footer -->
+    <footer class="page-footer  pt-4 footer-phone">
+    
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+    
+            <!-- Grid row -->
+            <div class="row">
+    
+                <!-- Grid column -->
+                <div class="col-md-4 ">
+    
+                    <!-- Content -->
+                    <a class=" footer-phone__navbar-brand" href="#">
+                        <img src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo" class="footer-phone__logo">
+                    </a>
+                    <p class="footer-phone__location">200 N. LaSalle St. Suite 1100, Chicago? IL 124242</p>
+    
+                    
+    
+                </div>
+                <!-- Grid column -->
+    
+             
+    
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-phone__heading footer-phone__jobs-h5">Jobs <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer-phone__jobs-list footer-phone__list">
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 4</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+    
+             
+    
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-phone__heading footer-phone__employers-h5">Employers <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer-phone__employers-list footer-phone__list">
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 4</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+    
+               
+    
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-phone__heading  footer-phone__jobustan-h5">Jobustan  <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer-phone__jobustan-list footer-phone__list">
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 4</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+             
+                 <!-- Grid column -->
+                 <div class="col-md-4 col-lg-2 ">
+    
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4 footer-phone__heading footer-phone__carrier-h5">Carrier Center  <i class="fas fa-chevron-down ml-2"></i></h5>
+    
+                    <ul class="list-unstyled footer-phone__carrier-list footer-phone__list">
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class=" footer-phone__link">Link 4</a>
+                        </li>
+                    </ul>
+    
+                </div>
+                <!-- Grid column -->
+    
+    
+                 <!-- Grid column -->
+                 <div class="col-md-4 ">
+    
+                  
+                    <h5  class="footer-phone__social-h5">Stay Connected</h5>
+    
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline footer-phone__social">
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-fb mx-1 footer-phone__link">
+                                <i class="fab fa-facebook-f"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-tw mx-1 footer-phone__link">
+                                <i class="fab fa-twitter"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-gplus mx-1 footer-phone__link">
+                                <i class="fab fa-google-plus-g"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-li mx-1 footer-phone__link">
+                                <i class="fab fa-linkedin-in"> </i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn-floating btn-dribbble mx-1 footer-phone__link">
+                                <i class="fab fa-dribbble"> </i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social buttons -->
+    
+                </div>
+                <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+        </div>
+        <!-- footer-phone Links -->
+    
+        <hr>
+    
+        <!-- Copyright -->
+        <div class="footer-phone-copyright text-center pb-3">© 2020 Copyright:
+            <a href="https://jobustan.com/" class="footer-phone__link"> All rights reserved</a>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+    <script>
+        window.FontAwesomeConfig = {
+            searchPseudoElements: true
+        }
+    </script>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/js/owl.carousel.min.js"></script>
+    <script src="libs/noUiSlider/nouislider.min.js"></script>
+    <script src="libs/js/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+
+    <!-- NEW LINKS -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+
+
+    <script src="js/resumes.js"></script>
+
+    
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+
+</body>
+
+</html>

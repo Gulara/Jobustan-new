@@ -23,206 +23,195 @@
 
   <!--=================================
 header -->
-  <!doctype html>
-  <html class="no-js" lang="">
-  
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title></title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-      <link rel="manifest" href="site.webmanifest">
-      <link rel="apple-touch-icon" href="icon.png">
-      <!-- Place favicon.ico in the root directory -->
-  
-      <link rel="stylesheet" type="text/css" href="libs/normalize.css/normalize.css">
-  
-      <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
-      <link rel="stylesheet" href="css/main/main.min.css">
-  </head>
-  
-  <body>
-      <!--[if lte IE 9]>
-              <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-          <![endif]-->
-      <header class="header">
-          <div class="container">
-              <!-- NOT REGISTERED START-->
-              <nav class="navbar navbar-expand-lg navbar-light  mynavbar">
-                  <a class="navbar-brand mynavbar__navbar-brand" href="#"><img
-                          src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
-                          class="header__logo"></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse"
-                      data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                      aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-  
-                  <div class="header__div">
-                      <ul class="navbar-nav mr-auto mynavbar__navbar-nav collapse navbar-collapse navbarSupportedContent">
-                          <li class="nav-item  mynavbar__nav-item active">
-                              <a class="nav-link mynavbar__nav-link" href="#">Jobs</a>
+ <!-- WITH CONTAINER START -->
+
+
+ <header class="header with-container">
+    <div class="container">
+        <!-- NOT REGISTERED START-->
+        <nav class="navbar navbar-expand-lg navbar-light  mynavbar">
+            <a class="navbar-brand mynavbar__navbar-brand" href="#"><img
+                    src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="header__div">
+                <ul class="navbar-nav mr-auto mynavbar__navbar-nav collapse navbar-collapse navbarSupportedContent">
+                    <li class="nav-item  mynavbar__nav-item active">
+                        <a class="nav-link mynavbar__nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Create your CV</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Companies</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Carrier Center</a>
+                    </li>
+                   
+                </ul>
+                <div class="navbar-nav mynavbar__navbar-nav--right">
+                    <ul class="navbar-nav  mynavbar__navbar-nav  mynavbar__heart-group">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--heart">
+                            <a class="nav-link mynavbar__nav-link" href="#"><i
+                                    class="fas fa-heart mynavbar__heart"></i><span
+                                    class="badge badge-pill badge-warning  mynavbar__heart--badge">15</span></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav collapse  mynavbar__navbar-nav navbar-collapse navbarSupportedContent">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__login">
+                            <a class="nav-link mynavbar__nav-link" href="#">Log in</a>
+                        </li>
+                       
+                        <li class="nav-item mynavbar__nav-item ">
+                            <a class="nav-link mynavbar__nav-link" href="#">Register</a>
+                        </li>
+                        <li class="nav-item mynavbar__nav-item ">
+                            <a class="nav-link mynavbar__nav-link" href="#">
+                                <i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- HAMBURGER MENU START  -->
+        <nav class="navbar navbar-expand-lg navbar-light  mynavside">
+            <a class="navbar-brand mynavside__navbar-brand" href="#"><img
+                    src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+
+            <ul class="navbar-nav  mynavside__navbar-nav  mynavside__heart-group">
+                <li class="nav-item mynavside__nav-item  mynavside__nav-item--heart">
+                    <a class="nav-link mynavside__nav-link " href="#"><i
+                            class="fas fa-heart mynavside__heart"></i><span
+                            class="badge badge-pill badge-warning  mynavside__heart--badge">15</span></a>
+                </li>
+                <li><span style="font-size:25px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span></li>
+            </ul>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Jobs</a>
+                <a href="#">Create your CV</a>
+                <a href="#">Companies</a>
+                <a href="#">Carrier Center</a>
+                <!-- <a href="#">Salary Calculator</a> -->
+                <a href="#" class="mynavside__nav-link--login">Log in</a>
+                <a href="#">Register</a>
+                <a href="#" class="mynavside__nav-link--post"><i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+            </div>
+        </nav>
+          <!-- HAMBURGER MENU END  -->
+        <!-- NOT REGISTERED END-->
+        <!-- REGISTERED START-->
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light  mynavbar">
+            <a class="navbar-brand mynavbar__navbar-brand" href="#"><img src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="header__div">
+                <ul class="navbar-nav mr-auto mynavbar__navbar-nav collapse navbar-collapse navbarSupportedContent">
+                    <li class="nav-item  mynavbar__nav-item active">
+                        <a class="nav-link mynavbar__nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Create your CV</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Companies</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Carrier Center</a>
+                    </li>
+                    <li class="nav-item mynavbar__nav-item ">
+                        <a class="nav-link mynavbar__nav-link" href="#">Salary Calculator</a>
+                    </li>
+                </ul>
+                <div class="navbar-nav mynavbar__navbar-nav--right">
+                    <ul class="navbar-nav  mynavbar__navbar-nav  mynavbar__heart-group">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--heart">
+                            <a class="nav-link mynavbar__nav-link" href="#"><i
+                                    class="fas fa-heart mynavbar__heart"></i><span
+                                    class="badge badge-pill badge-warning  mynavbar__heart--badge">15</span></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav collapse  mynavbar__navbar-nav navbar-collapse navbarSupportedContent">
+                        <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--user">
+                            <div class="dropdown show">
+                            <a class="nav-link mynavbar__nav-link mynavbar__nav-link__registered dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                                 <i class="fas fa-user-circle mynavbar__user"></i>
+                                 <span class="badge badge-pill badge-warning  mynavbar__user--badge">1</span>
+                                
+                            </a>
+                            <div class="dropdown-menu  mynavbar__dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item mynavbar__dropdown-item" href="#">My CV</a>
+                                <a class="dropdown-item mynavbar__dropdown-item" href="#">My Companies</a>
+                                <a class="dropdown-item mynavbar__dropdown-item" href="#">Accounts Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  mynavbar__dropdown-item text-red" href="#">Sign out</a>
+                              </div>
+                            </div>
                           </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Create your CV</a>
-                          </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Companies</a>
-                          </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Carrier Center</a>
-                          </li>
-                          <!-- <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Salary Calculator</a>
-                          </li> -->
-                      </ul>
-                      <div class="navbar-nav mynavbar__navbar-nav--right">
-                          <ul class="navbar-nav  mynavbar__navbar-nav  mynavbar__heart-group">
-                              <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--heart">
-                                  <a class="nav-link mynavbar__nav-link" href="#"><i
-                                          class="fas fa-heart mynavbar__heart"></i><span
-                                          class="badge badge-pill badge-warning  mynavbar__heart--badge">15</span></a>
-                              </li>
-                          </ul>
-                          <ul class="navbar-nav collapse  mynavbar__navbar-nav navbar-collapse navbarSupportedContent">
-                              <li class="nav-item mynavbar__nav-item  mynavbar__login">
-                                  <a class="nav-link mynavbar__nav-link" href="#">Log in</a>
-                              </li>
-                              <li class="nav-item mynavbar__nav-item ">
-                                  <a class="nav-link mynavbar__nav-link" href="#">Register</a>
-                              </li>
-                              <li class="nav-item mynavbar__nav-item ">
-                                  <a class="nav-link mynavbar__nav-link" href="#">
-                                      <i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
-                              </li>
-                          </ul>
-  
-  
-                      </div>
-  
-                  </div>
-              </nav>
-              <!-- HAMBURGER MENU START  -->
-              <nav class="navbar navbar-expand-lg navbar-light  mynavside">
-                  <a class="navbar-brand mynavside__navbar-brand" href="#"><img
-                          src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
-                          class="header__logo"></a>
-  
-                  <ul class="navbar-nav  mynavside__navbar-nav  mynavside__heart-group">
-                      <li class="nav-item mynavside__nav-item  mynavside__nav-item--heart">
-                          <a class="nav-link mynavside__nav-link " href="#"><i
-                                  class="fas fa-heart mynavside__heart"></i><span
-                                  class="badge badge-pill badge-warning  mynavside__heart--badge">15</span></a>
-                      </li>
-                      <li><span style="font-size:25px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span></li>
-                  </ul>
-  
-                  <div id="mySidenav" class="sidenav">
-                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                      <a href="#">Jobs</a>
-                      <a href="#">Create your CV</a>
-                      <a href="#">Companies</a>
-                      <a href="#">Carrier Center</a>
-                      <!-- <a href="#">Salary Calculator</a> -->
-                      <a href="#" class="mynavside__nav-link--login">Log in</a>
-                      <a href="#">Register</a>
-                      <a href="#" class="mynavside__nav-link--post"><i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
-                  </div>
-              </nav>
-                <!-- HAMBURGER MENU END  -->
-              <!-- NOT REGISTERED END-->
-              <!-- REGISTERED START-->
-  
-              <!-- <nav class="navbar navbar-expand-lg navbar-light  mynavbar">
-                  <a class="navbar-brand mynavbar__navbar-brand" href="#"><img src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
-                          class="header__logo"></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse"
-                      data-target=".navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                      aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-  
-                  <div class="header__div">
-                      <ul class="navbar-nav mr-auto mynavbar__navbar-nav collapse navbar-collapse navbarSupportedContent">
-                          <li class="nav-item  mynavbar__nav-item active">
-                              <a class="nav-link mynavbar__nav-link" href="#">Jobs</a>
-                          </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Create your CV</a>
-                          </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Companies</a>
-                          </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Carrier Center</a>
-                          </li>
-                          <li class="nav-item mynavbar__nav-item ">
-                              <a class="nav-link mynavbar__nav-link" href="#">Salary Calculator</a>
-                          </li>
-                      </ul>
-                      <div class="navbar-nav mynavbar__navbar-nav--right">
-                          <ul class="navbar-nav  mynavbar__navbar-nav  mynavbar__heart-group">
-                              <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--heart">
-                                  <a class="nav-link mynavbar__nav-link" href="#"><i
-                                          class="fas fa-heart mynavbar__heart"></i><span
-                                          class="badge badge-pill badge-warning  mynavbar__heart--badge">15</span></a>
-                              </li>
-                          </ul>
-                          <ul class="navbar-nav collapse  mynavbar__navbar-nav navbar-collapse navbarSupportedContent">
-                              <li class="nav-item mynavbar__nav-item  mynavbar__nav-item--user">
-                                  <a class="nav-link mynavbar__nav-link" href="#">  
-                                       <i class="fas fa-user-circle mynavbar__user"></i>
-                                       <span class="badge badge-pill badge-warning  mynavbar__user--badge">1</span>
-                                      
-                                  </a>
-                                </li>
-                              <li class="nav-item mynavbar__nav-item ">
-                                  <a class="nav-link mynavbar__nav-link" href="#"><i
-                                          class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
-                              </li>
-                          </ul>
-  
-  
-                      </div>
-  
-                  </div>
-              </nav> -->
-  
-   <!-- HAMBURGER MENU START  -->
-              <!-- <nav class="navbar navbar-expand-lg navbar-light  mynavside">
-                  <a class="navbar-brand mynavside__navbar-brand" href="#"><img
-                          src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
-                          class="header__logo"></a>
-  
-                  <ul class="navbar-nav  mynavside__navbar-nav  mynavside__heart-group">
-                      <li class="nav-item mynavside__nav-item  mynavside__nav-item--heart">
-                          <a class="nav-link mynavside__nav-link " href="#"><i
-                                  class="fas fa-heart mynavside__heart"></i><span
-                                  class="badge badge-pill badge-warning  mynavside__heart--badge">15</span></a>
-                      </li>
-                      <li><span style="font-size:25px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span></li>
-                  </ul>
-  
-                  <div id="mySidenav" class="sidenav">
-                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                      <a href="#">Jobs</a>
-                      <a href="#">Create your CV</a>
-                      <a href="#">Companies</a>
-                      <a href="#">Carrier Center</a>
-                      <a href="#">Salary Calculator</a>
-                  
-                      <a href="#" class="mynavside__nav-link--user"> <i class="fas fa-user-circle mynavside__user"></i>
-                          <span class="badge badge-pill badge-warning  mynavside__user--badge">1</span> Mammad Mammadov</a>
-                      <a href="#" class="mynavside__nav-link--post"><i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
-                  </div>
-              </nav> -->
-   <!-- HAMBURGER MENU END  -->
-     <!-- REGISTERED END-->
-          </div>
-  
-      </header>
+                        
+                        <li class="nav-item mynavbar__nav-item ">
+                            <a class="nav-link mynavbar__nav-link" href="#"><i
+                                    class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </nav> -->
+
+<!-- HAMBURGER MENU START  -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light  mynavside">
+            <a class="navbar-brand mynavside__navbar-brand" href="#"><img
+                    src="http://jobustan.com/themes/jobustan/assets/img/logo.svg" alt="Logo"
+                    class="header__logo"></a>
+
+            <ul class="navbar-nav  mynavside__navbar-nav  mynavside__heart-group">
+                <li class="nav-item mynavside__nav-item  mynavside__nav-item--heart">
+                    <a class="nav-link mynavside__nav-link " href="#"><i
+                            class="fas fa-heart mynavside__heart"></i><span
+                            class="badge badge-pill badge-warning  mynavside__heart--badge">15</span></a>
+                </li>
+                <li><span style="font-size:25px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars"></i></span></li>
+            </ul>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Jobs</a>
+                <a href="#">Create your CV</a>
+                <a href="#">Companies</a>
+                <a href="#">Carrier Center</a>
+                <a href="#">Salary Calculator</a>
+            
+                <a href="#" class="mynavside__nav-link--user"> <i class="fas fa-user-circle mynavside__user"></i>
+                    <span class="badge badge-pill badge-warning  mynavside__user--badge">1</span> Mammad Mammadov</a>
+                <a href="#" class="mynavside__nav-link--post"><i class="fas fa-briefcase mr-2"></i>Post Jobs Free</a>
+            </div>
+        </nav> -->
+<!-- HAMBURGER MENU END  -->
+<!-- REGISTERED END-->
+    </div>
+
+</header>
+<!-- WITH CONTAINER END -->
   <!--=================================
 header -->
   <!--=================================
