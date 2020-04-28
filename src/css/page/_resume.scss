@@ -5,6 +5,37 @@
   font-size: 16px;
   border-radius: 5px;
   border-top: 3px solid $color-primary-dark;
+  &__custom-label{
+    display: block;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: max-content;
+  }
+  &__custom-input{
+    display: none;
+    & + span:before {
+      content: "\f096";
+      display: inline-block;
+      margin-right: 5px;
+      font-family: "FontAwesome";
+      font-weight: normal;
+      width: 1em;
+      font-size: 30px;
+      vertical-align: -10%;
+     
+    }
+    &:checked + span:before {
+      content: "\f14a";
+      color: $color-primary-dark;
+      animation: pop 180ms ease-in;
+    }
+    &:checked + span{
+      color: $color-primary-dark;
+    }
+    
+  }
+ 
 
   &__custom-checkbox {
     width: 30px;
@@ -511,6 +542,7 @@
       width: 100%;
       display: flex;
       flex-wrap: wrap;
+      display: none;
 
 
       &--item {
@@ -1380,3 +1412,16 @@
   }
 }
 
+/**--- Animation ---**/
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

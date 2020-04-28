@@ -687,9 +687,9 @@
         }
 
         &__icon {
-            margin-right: 20px;
+            margin-right: 30px;
             color: $color-primary-dark;
-            font-size: 12px;
+            font-size: 22px;
             padding-top: 4px;
 
         }
@@ -747,6 +747,51 @@
             border-radius: 20px;
             border: 1px solid $color-gray-light-1;
             margin-right: 15px;
+        }
+    }
+    &__requirements,
+    &__jobExperience,
+    &__jobLanguage,
+    &__jobSkills {
+        &__div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            padding: 10px 5px 5px 0;
+
+            &:nth-child(odd) {
+                width: 30%;
+            }
+
+            &:nth-child(even) {
+                width: 70%;
+            }
+
+        }
+    }
+    &__jobtab {
+
+        font-size: 14px;
+
+        &__h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+
+        }
+
+        &__div {
+            width: 100%;
+
+        }
+
+        &__item {
+            padding: 10px 5px 5px 0;
+
         }
     }
 }

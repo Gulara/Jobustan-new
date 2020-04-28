@@ -5,6 +5,13 @@
         display: none;
     }
 
+    &__dropdown-menu{
+       
+    }
+    &__dropdown-item{
+        font-size: 14px;
+    }
+
     &__navbar-brand {
       padding: 0;
       margin-bottom: 5px;
@@ -61,6 +68,11 @@
 
     &__nav-link {
         padding: 9px 10px 6px!important;
+        &__registered{
+            &::after{
+                display: none;
+            }
+        }
     }
 
     &__heart {

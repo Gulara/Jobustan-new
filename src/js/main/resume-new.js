@@ -670,9 +670,18 @@ $(document).ready(function () {
             $('.checkboxAddMilitary').click(function () {
                 if ($(this).prop("checked") == true) {
                     $(this).attr("value", "No");
+                  
+                    $(".resume__addMilitary__list").slideDown();
+                     $(".resume__addMilitary__list").css({
+                        "display": "flex"
+                    })
                     // console.log("Required is checked.");
                 } else if ($(this).prop("checked") == false) {
                     $(this).attr("value", "Yes");
+                    // $(".resume__addMilitary__list").css({
+                    //     "display": "none"
+                    // })
+                    $(".resume__addMilitary__list").slideUp();
                     // console.log("Preffer is unchecked.");
                 }
             });
