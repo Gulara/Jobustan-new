@@ -110,6 +110,36 @@ $(document).ready(function () {
       }
     }
   });
+  $(".owl-carousel-searchFilter").owlCarousel({
+    loop: false,
+    margin: 0,
+    dots: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      400: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 3,
+     
+      },
+      800: {
+        items: 4,
+        nav: false
+      },
+      1200: {
+        items: 5,
+        nav: true,
+      
+      },
+     
+    }
+  });
 });
 // CATEGORY ITEM
 $(document).ready(function () {

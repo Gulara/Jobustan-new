@@ -15,9 +15,10 @@
     &__col-table{
         margin-left: 20px;
         width: 97.5%;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         @include respond(main-img-resp-1) {
             margin-left: 0;
+            overflow: auto;
         }
     }
 
@@ -45,9 +46,27 @@
         padding: 15px 0;
         display: flex;
         flex-wrap: wrap;
+        margin-left: 20px;
+
+       
     }
+    &__filter-search,
     &__filter-input{
-        padding: 3px 6px;
+     
+        background-color: #fff;
+        border-radius: 3px;
+        margin-right: 5px;
+
+        padding: 8px 10px 5px 10px;
+        min-height: 25px;
+        line-height: 18px;
+        overflow: hidden;
+        border: 0;
+        width: 200px;
+        color: #4d4d4d;
+        border: 1px solid #ccc;
+        font-size: 15px;
+        font-weight: normal;
     }
 }
 .owl-carousel-category {
@@ -56,6 +75,13 @@
     .owl-item {
         padding: 5px 10px;
         cursor: pointer;
+    }
+}
+.owl-carousel-searchFilter {
+    .owl-item{
+        @include respond(main-img-resp-1) {
+            width: 250px !important;
+        }
     }
 }
 

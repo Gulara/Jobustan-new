@@ -47,19 +47,34 @@
 
 	&__modal {
 		font-size: 16px;
-		&__title{
+
+		&__title {
 			font-size: 24px;
 		}
+
 		&__close {
 			font-size: 30px;
 		}
-		&__btn-pay{
+
+		&__btn-pay {
 			font-size: 20px;
 		}
 	}
 
+	&__modal-footer {
+		flex-direction: column !important;
+
+		&__text {
+			margin: 10px 0 0;
+			padding: 5px;
+			font-size: 14px;
+			background-color: $color-gray-light-9;
+		}
+		
+	}
+
 	&__announcement {
-		margin: 20px auto;
+margin: 20px auto;
 		text-align: center;
 		padding: 20px 0;
 		// border: 2px solid $color-primary-dark;
@@ -69,22 +84,38 @@
 
 			color: $color-primary-dark;
 			font-weight: normal;
+			margin: 20px 100px;
+
 		}
 
-		& {
+		&__paragraph {
 			color: inherit;
+			font-size: 16px;
 		}
+
+
 	}
 
 	&__btn-groups {
 		display: flex;
 		justify-content: center;
-		margin: 20px 0;
+		margin: 20px 0 40px 0;
 	}
-	&__btn{
-		&:hover {
-			color: #fff;
+
+	&__btn {
+		border-radius: 20px;
+		padding: 12px 30px;
+		font-size: 14px;
+		font-weight: bold;
+
+		&--post-a-job {
+			&:hover {
+				color: #fff;
+			}
 		}
+
+		&--all-company {}
+
 	}
 
 	&__payment {
@@ -488,7 +519,7 @@
 #pricing-container .price-card--cta--button.btn {
 	min-width: 20px;
 	display: block;
-	max-width: 183px;
+	max-width: 210px;
 	margin: 0 auto;
 	font-size: 20px;
 	background-color: $color-primary-dark;
