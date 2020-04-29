@@ -9,6 +9,15 @@ $(document).ready(function () {
             $(this).siblings(".hidden-companyName").val(value)
         }
     });
+    $("input[list=jobTitle]").focusout(function () {
+        let value = $(this).val();
+        let dataVal =$('#jobTitle [value="' + value + '"]').data('value')
+        console.log(dataVal);
+        $(this).siblings(".hidden-jobTitle").val(dataVal);
+        if($(this).siblings(".hidden-jobTitle").val() === "") {
+            $(this).siblings(".hidden-jobTitle").val(value)
+        }
+    });
     $("input[list=locationName]").focusout(function () {
         let value = $(this).val();
         let dataVal =$('#locationName [value="' + value + '"]').data('value')

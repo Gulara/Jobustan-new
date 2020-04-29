@@ -11,13 +11,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-<link
+    <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="libs/owl.carousel.min.css">
     <link rel="stylesheet" href="libs/owl.theme.default.css">
-    <!-- <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css"> -->
     <link rel="stylesheet" href="libs/default.css?v1.1">
     <link rel="stylesheet" href="libs/animate.css">
     <link rel="stylesheet" href="libs/toggle-switch/toggle-switch.css">
@@ -31,12 +30,10 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css">
-        <!--  OWL CAROUSEL -->
+    <!--  OWL CAROUSEL -->
     <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.css">
     <link rel="stylesheet" href="css/main/main.css">
-    <!-- <link rel="stylesheet" href="css/main/main.css?v1.5"> -->
-    <!-- <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" /> -->
 
 
 
@@ -256,53 +253,55 @@
 
 
             </div>
-            <div class="col-md-10">
-                <div class=" resumes__col-table">
-                    <div class="resumes__search">
-                        <input id="" type="text" class="search-table" placeholder="Search ......">
-                        <div>
-                            <label for="">Job Name :</label>
-                            <select id="filter-company" class="filter resumes__filter-input">
-                                <option value="0">No value</option>
-                                <option value="Alfreds">Alfreds</option>
-                                <option value="Centro">Centro</option>
-                                <option value="Ernst">Ernst</option>
-                                <option value="Island">Island</option>
-                                <option value="Laughing">Laughing</option>
-                                <option value="Magazzini">Magazzini</option>
-                            </select>
-                        </div>
-                       <div>
+
+            <div class="col-md-12">
+                <div class="resumes__search owl-carousel-searchFilter owl-carousel">
+                    <input id="" type="text" class="search-table resumes__filter-search" placeholder="Search ......">
+                    <div>
+                        <label for="">Job Name :</label>
+                        <select id="filter-company" class="filter resumes__filter-input">
+                            <option value="0">No value</option>
+                            <option value="Alfreds">Alfreds</option>
+                            <option value="Centro">Centro</option>
+                            <option value="Ernst">Ernst</option>
+                            <option value="Island">Island</option>
+                            <option value="Laughing">Laughing</option>
+                            <option value="Magazzini">Magazzini</option>
+                        </select>
+                    </div>
+                    <div>
                         <label for="">Status :</label>
                         <select id="filter-contact" class="filter resumes__filter-input">
                             <option value="0">No value</option>
                             <option value="Canceled">Canceled</option>
                             <option value="Delivered">Delivered</option>
                         </select>
-                       </div>
-                       <div>
+                    </div>
+                    <div>
                         <label for="">Updated :</label>
                         <select id="filter-range" class="filter resumes__filter-input">
                             <option value="0" data-min="1" data-max="1">No value</option>
-                            <option value="£100,000 - £200,000" data-min="100000" data-max="200000">£100,000 - £200,000
+                            <option value="£100,000 - £200,000" data-min="100000" data-max="200000">£100,000 -
+                                £200,000
                             </option>
-                            <option value="£200,000 - £300,000" data-min="200000" data-max="300000">£200,000 - £300,000
+                            <option value="£200,000 - £300,000" data-min="200000" data-max="300000">£200,000 -
+                                £300,000
                             </option>
-                            <option value="£300,000 - £400,000" data-min="300000" data-max="400000">£300,000 - £400,000
+                            <option value="£300,000 - £400,000" data-min="300000" data-max="400000">£300,000 -
+                                £400,000
                             </option>
-                            <option value="£400,000 - £500,000" data-min="400000" data-max="500000">£400,000 - £500,000
+                            <option value="£400,000 - £500,000" data-min="400000" data-max="500000">£400,000 -
+                                £500,000
                             </option>
                         </select>
-                       </div>
-                       
                     </div>
-    
-    
-    
-    
-    <div>
-        
-    </div>
+
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class=" resumes__col-table">
+                  
+
                     <table class="filter-table">
                         <thead>
                             <tr>
@@ -317,68 +316,86 @@
                         </thead>
                         <tr>
                             <tbody>
-                                <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank"> Alfreds<i class="fas fa-edit ml-3"></i></a></td>
-    
-                                <!-- Data attributes helps in fetching values but you can fetch value of text in td also -->
-    
-                                <td class="contact filter-td" data-contact="Delivered"> <span class="badge-success py-1 px-2 br-1r"> Delivered </span></td>
+                                <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank">
+                                        Alfreds<i class="fas fa-edit ml-3"></i></a></td>
+
+
+
+                                <td class="contact filter-td" data-contact="Delivered"> <span
+                                        class="badge-success py-1 px-2 br-1r"> Delivered </span></td>
                                 <td class="range filter-td" data-min="200000" data-max="300000">£200,000 - £300,000</td>
                                 <td class=" filter-td">22.04.2020</td>
                                 <td class=" filter-td"><a href="" target="_blank">12</a> </td>
-                                <td class=" filter-td"><a href="" target="_blank"> 1<i class="fas fa-eye ml-3 text-red"></i></a> </td>
+                                <td class=" filter-td"><a href="" target="_blank"> 1<i
+                                            class="fas fa-eye ml-3 text-red"></i></a> </td>
                                 <td class=" filter-td">300</td>
-                                <!-- here Data attributes are necessary as we need separate min max values -->
-    
+
+
                         </tr>
                         <tr>
-                            <td class="company filter-td" data-company="Centro"><a href="" target="_blank">Centro<i class="fas fa-edit ml-3"></i></a> </td>
-                            <td class="contact filter-td" data-contact="Delivered"> <span class="badge-success py-1 px-2 br-1r"> Delivered</span></td>
+                            <td class="company filter-td" data-company="Centro"><a href="" target="_blank">Centro<i
+                                        class="fas fa-edit ml-3"></i></a> </td>
+                            <td class="contact filter-td" data-contact="Delivered"> <span
+                                    class="badge-success py-1 px-2 br-1r"> Delivered</span></td>
                             <td class="range filter-td" data-min="100000" data-max="200000">£100,000 - £200,000</td>
                             <td class=" filter-td">10.09.2022</td>
                             <td class=" filter-td"><a href="" target="_blank">3</a></td>
-                            <td class=" filter-td"><a href="" target="_blank">15<i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td"><a href="" target="_blank">15<i
+                                        class="fas fa-eye ml-3 text-red"></i></a></td>
                             <td class=" filter-td">400</td>
                         </tr>
                         <tr>
-                            <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank">Alfreds <i class="fas fa-edit ml-3"></i></a></td>
-                            <td class="contact filter-td" data-contact="Canceled"><span class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
+                            <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank">Alfreds <i
+                                        class="fas fa-edit ml-3"></i></a></td>
+                            <td class="contact filter-td" data-contact="Canceled"><span
+                                    class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
                             <td class="range filter-td" data-min="200000" data-max="300000">£200,000 - £300,000</td>
                             <td class=" filter-td">03.12.2030</td>
                             <td class=" filter-td"><a href="" target="_blank">30</a></td>
-                            <td class=" filter-td"><a href="" target="_blank">0<i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td"><a href="" target="_blank">0<i
+                                        class="fas fa-eye ml-3 text-red"></i></a></td>
                             <td class=" filter-td">500</td>
                         </tr>
                         <tr>
-                            <td class="company filter-td" data-company="Centro">    <a href="" target="_blank"> Centro<i class="fas fa-edit ml-3"></i></a></td>
-                            <td class="contact filter-td" data-contact="Canceled"><span class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
+                            <td class="company filter-td" data-company="Centro"> <a href="" target="_blank"> Centro<i
+                                        class="fas fa-edit ml-3"></i></a></td>
+                            <td class="contact filter-td" data-contact="Canceled"><span
+                                    class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
                             <td class="range filter-td" data-min="300000" data-max="400000">£300,000 - £400,000</td>
                             <td class=" filter-td">12.01.2020</td>
                             <td class=" filter-td"><a href="" target="_blank">60</a></td>
-                            <td class=" filter-td"><a href="" target="_blank">8 <i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td"><a href="" target="_blank">8 <i
+                                        class="fas fa-eye ml-3 text-red"></i></a></td>
                             <td class=" filter-td">600</td>
                         </tr>
                         <tr>
-                            <td class="company filter-td" data-company="Laughing"><a href="" target="_blank"> Laughing<i class="fas fa-edit ml-3"></i></a></td>
-                            <td class="contact filter-td" data-contact="Canceled"> <span class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
+                            <td class="company filter-td" data-company="Laughing"><a href="" target="_blank"> Laughing<i
+                                        class="fas fa-edit ml-3"></i></a></td>
+                            <td class="contact filter-td" data-contact="Canceled"> <span
+                                    class="badge-danger py-1 px-2 br-1r"> Canceled </span></td>
                             <td class="range filter-td" data-min="200000" data-max="300000">£200,000 - £300,000</td>
                             <td class=" filter-td">30.10.2025</td>
                             <td class=" filter-td"><a href="" target="_blank">100</a></td>
-                            <td class=" filter-td"><a href="" target="_blank">14<i class="fas fa-eye ml-3 text-red"></i></a> </td>
+                            <td class=" filter-td"><a href="" target="_blank">14<i
+                                        class="fas fa-eye ml-3 text-red"></i></a> </td>
                             <td class=" filter-td">700</td>
                         </tr>
                         <tr>
-                            <td class="company filter-td" data-company="Laughing"><a href="" target="_blank"> Laughing<i class="fas fa-edit ml-3"></i> </a></td>
-                            <td class="contact filter-td" data-contact="Delivered"> <span class="badge-success py-1 px-2 br-1r"> Delivered </span></td>
+                            <td class="company filter-td" data-company="Laughing"><a href="" target="_blank"> Laughing<i
+                                        class="fas fa-edit ml-3"></i> </a></td>
+                            <td class="contact filter-td" data-contact="Delivered"> <span
+                                    class="badge-success py-1 px-2 br-1r"> Delivered </span></td>
                             <td class="range filter-td" data-min="150000" data-max="250000">£150,000 - £250,000</td>
                             <td class=" filter-td">15.12.2023</td>
                             <td class=" filter-td"><a href="" target="_blank">90</a></td>
-                            <td class=" filter-td"><a href="" target="_blank">45 <i class="fas fa-eye ml-3 text-red"></i></a></td>
+                            <td class=" filter-td"><a href="" target="_blank">45 <i
+                                        class="fas fa-eye ml-3 text-red"></i></a></td>
                             <td class=" filter-td">800</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-                
+
             </div>
 
         </div>
@@ -791,7 +808,7 @@
 
     <script src="js/resumes.js"></script>
 
-    
+
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
 

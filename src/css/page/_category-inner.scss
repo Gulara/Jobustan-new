@@ -473,11 +473,12 @@
 
         &-left {
             margin-left: 20px;
-
+            margin-bottom: 50px;
 
 
             @include respond(main-img-resp-1) {
                 margin-left: 0;
+                margin-bottom: 30px;
                 position: inherit;
             }
         }
