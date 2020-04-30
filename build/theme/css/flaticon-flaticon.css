@@ -89,14 +89,14 @@ content: url("../images/businessman.svg");
 }
 .flaticon-interview:before { content: "\f12d"; }
 .flaticon-interview-1:before { content: "\f12e"; }
-.flaticon-resume:before { content: "\f12f"; }
+.flaticon-resume:before { content:url("../images/business.svg"); }
 .flaticon-job:before { content: "\f130"; }
 .flaticon-approval:before { content: "\f131"; }
 .flaticon-conversation-1:before { content: "\f132"; 
   color:#b40d4a;}
 .flaticon-profiles:before { content:url("../images/portfolio.svg");
 color:#b40d4a;}
-.flaticon-recruitment:before { content: "\f134"; }
+.flaticon-recruitment:before { content: url("../images/recruitment.svg");}
 .flaticon-contract:before { content:url("../images/curriculum.svg");  }
 .flaticon-certificate:before { content: "\f136"; }
 .flaticon-curriculum:before { content: "\f137"; }

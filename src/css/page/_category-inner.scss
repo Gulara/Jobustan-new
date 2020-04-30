@@ -73,6 +73,7 @@
         border: 1px solid #f0f0f0;
         overflow-y: scroll;
         max-height: 100vh;
+        margin-bottom: 100px;
 
         /* width */
         &::-webkit-scrollbar {
@@ -760,7 +761,7 @@ $textColor: #1E2330;
     }
 }
 
-.owl-carousel .owl-stage-outer {
+.owl-carousel-category-inner .owl-stage-outer {
 
     overflow: visible;
 

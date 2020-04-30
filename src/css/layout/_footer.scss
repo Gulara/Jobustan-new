@@ -2,9 +2,7 @@
   background-color: #F4F4F4;
   font-size: 16px;
 
-  @include respond(main-img-resp-1) {
-    display: none;
-  }
+  
   &__without-container{
     padding: 0 20px;
   }
@@ -59,7 +57,11 @@
     text-transform: uppercase;
   }
 }
-
+.footer-large{
+  @include respond(main-img-resp-1) {
+    display: none;
+  }
+}
 .footer-phone{
   background-color: #F4F4F4;
   font-size: 16px;
