@@ -8,7 +8,7 @@
     // It has the name attribute "registration"
     $(".post-a-job-form").validate({
         // Specify validation rules
-      //   ignore: [],
+        ignore: [],
         debug: false,
         rules: {
             // The key name on the left side is the name attribute
@@ -55,6 +55,14 @@
 
                 minlength: 1,
             },
+            post_editor:{
+                required: function() 
+               {
+                CKEDITOR.instances. post_editor.updateElement();
+               },
+
+                minlength:10
+           }
        
           //   post_editor: {
           //       required: true,

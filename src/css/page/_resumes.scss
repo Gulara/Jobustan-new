@@ -13,6 +13,10 @@
     font-size: 15px;
     overflow: hidden;
     margin-bottom: 100px;
+    @include respond(phone) {
+        margin-bottom: 40px;
+       
+        }
     &__col-table{
         margin-left: 20px;
         width: 97.5%;
@@ -48,6 +52,10 @@
         display: flex;
         flex-wrap: wrap;
         margin-left: 20px;
+        @include respond(phone) {
+          margin-left: 0;
+        //   padding-left: 10px;
+        }
 
        
     }
@@ -68,6 +76,9 @@
         border: 1px solid #ccc;
         font-size: 15px;
         font-weight: normal;
+        @include respond(phone) {
+            width: 150px ;
+        }
     }
 }
 .owl-carousel-category {
@@ -80,8 +91,20 @@
 }
 .owl-carousel-searchFilter {
     .owl-item{
+        @include respond(main-img-resp-2) {
+            width: 300px !important;
+        }
         @include respond(main-img-resp-1) {
             width: 250px !important;
+        }
+        @include respond(tab-port) {
+            width: 300px !important;
+        }
+        @include respond(phone-land) {
+            width: 288px !important;
+        }
+        @include respond(phone) {
+            width: 238px !important;
         }
     }
 }

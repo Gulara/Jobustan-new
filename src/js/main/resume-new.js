@@ -816,28 +816,28 @@ $(document).ready(function () {
 
 
 // CK EDITOR START
-$(document).ready(function () {
-    CKEDITOR.replace('post_editor', {
-        skin: 'moono',
-        enterMode: CKEDITOR.ENTER_BR,
-        shiftEnterMode: CKEDITOR.ENTER_P,
-        toolbar: [{
-                name: 'basicstyles',
-                groups: ['basicstyles'],
-                items: ['Bold', 'Italic', 'BulletedList']
-            },
+// $(document).ready(function () {
+//     CKEDITOR.replace('post_editor', {
+//         skin: 'moono',
+//         enterMode: CKEDITOR.ENTER_BR,
+//         shiftEnterMode: CKEDITOR.ENTER_P,
+//         toolbar: [{
+//                 name: 'basicstyles',
+//                 groups: ['basicstyles'],
+//                 items: ['Bold', 'Italic', 'BulletedList']
+//             },
 
 
 
 
 
 
-        ],
+//         ],
 
-    });
+//     });
 
 
-});
+// });
 // CK EDITOR END
 
 //////////SELECT

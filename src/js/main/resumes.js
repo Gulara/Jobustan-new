@@ -78,7 +78,7 @@ $(".search-table").on("keyup", function () {
   });
 });
 
-// OWL CAROUSEL START
+// OWL CAROUSEL CATEGORY START
 $(document).ready(function () {
   $(".owl-carousel-category").owlCarousel({
     loop: true,
@@ -112,25 +112,30 @@ $(document).ready(function () {
   });
   $(".owl-carousel-searchFilter").owlCarousel({
     loop: false,
+    nav: false,
     margin: 0,
     dots: false,
     responsiveClass: true,
     responsive: {
       0: {
         items: 1,
-        nav: true
+       
       },
       400: {
         items: 1,
-        nav: false
+       
       },
       600: {
-        items: 3,
+        items: 2,
      
       },
-      800: {
-        items: 4,
-        nav: false
+      860: {
+        items: 3,
+       
+      },
+      1000: {
+        items: 3,
+       
       },
       1200: {
         items: 5,
@@ -141,131 +146,7 @@ $(document).ready(function () {
     }
   });
 });
-// CATEGORY ITEM
-$(document).ready(function () {
-  $(".owl-carousel-category-item").owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: false,
-    nav: false,
-    // responsiveClass:true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true
-      },
-      600: {
-        items: 3,
-        nav: false
-      },
-      1000: {
-        items: 12,
-        nav: true,
-        loop: false
-      }
-    }
-  });
-});
-// FOW WHO ITEM
-$(document).ready(function () {
-  $(".owl-carousel-forwho-item").owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: false,
-    nav: false,
-    // responsiveClass:true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true
-      },
-      600: {
-        items: 3,
-        nav: false
-      },
-      1000: {
-        items: 12,
-        nav: true,
-        loop: false
-      }
-    }
-  });
-});
-// ADDITION ITEM
-$(document).ready(function () {
-  $(".owl-carousel-addition-item").owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: false,
-    nav: false,
-    // responsiveClass:true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true
-      },
-      600: {
-        items: 3,
-        nav: false
-      },
-      1000: {
-        items: 12,
-        nav: true,
-        loop: false
-      }
-    }
-  });
-});
-// HEIGHT ITEM
-$(document).ready(function () {
-  $(".owl-carousel-height-item").owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: false,
-    nav: false,
-    // responsiveClass:true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true
-      },
-      600: {
-        items: 3,
-        nav: false
-      },
-      1000: {
-        items: 12,
-        nav: true,
-        loop: false
-      }
-    }
-  });
-});
-// WIDTH ITEM
-$(document).ready(function () {
-  $(".owl-carousel-width-item").owlCarousel({
-    loop: true,
-    margin: 10,
-    dots: false,
-    nav: false,
-    // responsiveClass:true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true
-      },
-      600: {
-        items: 3,
-        nav: false
-      },
-      1000: {
-        items: 12,
-        nav: true,
-        loop: false
-      }
-    }
-  });
-});
+
 // OWL CAROUSEL END
 //  NUMBER OF CHECKED
 $(document).ready(function () {

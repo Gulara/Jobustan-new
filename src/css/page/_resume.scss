@@ -6,60 +6,69 @@
   border-radius: 5px;
   border-top: 3px solid $color-primary-dark;
   margin-bottom: 100px;
+  @include respond(phone) {
+  margin-bottom: 40px;
+ 
+  }
+
   &__customRadio {
-		input[type="radio"] {
-			position: absolute;
-			left: -9999px;
+    input[type="radio"] {
+      position: absolute;
+      left: -9999px;
 
 
-			&+label {
-				position: relative;
-				padding: 3px 0 0 40px;
-				cursor: pointer
-			}
+      &+label {
+        position: relative;
+        padding: 3px 0 0 40px;
+        cursor: pointer
+      }
 
-			&+label:before {
-				content: '';
-				background: #fff;
-				border: 2px solid $color-primary-dark;
-				height: 25px;
-				width: 25px;
-				border-radius: 50%;
-				position: absolute;
-				top: 0;
-				left: 0
-			}
+      &+label:before {
+        content: '';
+        background: #fff;
+        border: 2px solid $color-primary-dark;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0
+      }
 
-			&+label:after {
-				content: '';
-				background: $color-primary-dark;
-				width: 15px;
-				height: 15px;
-				border-radius: 50%;
-				position: absolute;
-				top: 5px;
-				left: 5px;
-				opacity: 0;
-				transform: scale(2);
-				transition: transform 0.3s linear, opacity 0.3s linear
-			}
+      &+label:after {
+        content: '';
+        background: $color-primary-dark;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+        transform: scale(2);
+        transition: transform 0.3s linear, opacity 0.3s linear
+      }
 
-			&:checked+label:after {
-				opacity: 1;
-				transform: scale(1)
-			}
-		}
-	}
-  &__custom-label{
+      &:checked+label:after {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+  }
+
+  &__custom-label {
     display: block;
     margin: 15px 0;
     cursor: pointer;
     font-size: 1.2em;
     width: max-content;
+   
   }
-  &__custom-input{
+
+  &__custom-input {
     display: none;
-    & + span:before {
+
+    &+span:before {
       content: "\f096";
       display: inline-block;
       margin-right: 5px;
@@ -68,19 +77,25 @@
       width: 1em;
       font-size: 30px;
       vertical-align: -10%;
-     
+
+      @include respond(sm) {
+margin-right: 0;
+  }
+
     }
-    &:checked + span:before {
+
+    &:checked+span:before {
       content: "\f14a";
       color: $color-primary-dark;
       animation: pop 180ms ease-in;
     }
-    &:checked + span{
+
+    &:checked+span {
       color: $color-primary-dark;
     }
-    
+
   }
- 
+
 
   &__custom-checkbox {
     width: 30px;
@@ -96,11 +111,17 @@
       font-size: 20px;
     }
   }
+  &__custom-span{
+    @include respond(sm) {
+      font-size: 14px;
+      }
+  }
 
   &__Present {
     display: none;
   }
-  &__radio-group{
+
+  &__radio-group {
     display: none;
   }
 
@@ -146,6 +167,44 @@
       border: 1px solid $color-primary-dark;
       border-radius: 10px;
       margin: 20px 0;
+
+      @include respond(sm) {
+        padding: 2rem .7rem 2rem .7rem;
+
+      }
+   
+
+      &--flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+
+        @include respond(main-img-resp-2) {
+          flex-direction: column;
+          width: 100%;
+
+        }
+
+        @include respond(main-img-resp) {
+          flex-direction: column;
+          width: 100%;
+
+        }
+
+        @include respond(main-img-resp-1) {
+          flex-direction: column;
+          width: 100%;
+
+        }
+
+        @include respond(phone) {
+          flex-direction: column;
+          width: 100%;
+
+        }
+      }
     }
 
     &--top {
@@ -237,12 +296,13 @@
       }
     }
   }
-  
+
 
   &__form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+
 
     &--div {
       display: flex;
@@ -267,16 +327,29 @@
       background: #fff;
       color: $color-primary-dark;
       cursor: pointer;
-
+margin: 5px;
       font-weight: bold;
       width: max-content;
-      display: inline-block !important;
-      margin-bottom: 20px;
+      display: flex;
+        justify-content: center;
+        align-items: center;
+
+      @include respond(phone) {
+        width: 100%;
+     
+      }
+     
     }
 
     &__all {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+
+      &::after {
+        content: "";
+        flex: auto;
+    }
     }
   }
 
@@ -576,6 +649,16 @@
 
       &-input {
         width: 200px;
+        @include respond(main-img-resp) {
+         width: 120px;
+        }
+        @include respond(main-img-resp-1) {
+         width: 120px;
+        }
+        @include respond(sm) {
+          width: 80px;
+         }
+        
       }
     }
   }
@@ -898,6 +981,17 @@
     border: 1px solid #f0f0f0;
     border-left: 1px solid transparent;
     transition: 0.3s all ease-in-out;
+    @include respond(main-img-resp) {
+      width: 120px;
+      left: 120px;
+     }
+    @include respond(main-img-resp-1) {
+      width: 105px;
+      left: 120px;
+     }
+     @include respond(sm) {
+      left: 80px;
+     }
 
     input:focus+label {
       background: #def;
@@ -923,6 +1017,12 @@
       cursor: pointer;
       position: relative;
       transition: 0.3s color ease-in-out;
+      @include respond(main-img-resp) {
+    padding-left: 5px;
+       }
+      @include respond(main-img-resp-1) {
+       padding-left: 5px;
+       }
 
       &:nth-child(2) {
         margin-top: 40px;
@@ -982,6 +1082,17 @@
 
   &__dropdown-salary-type {
     left: 350px;
+    @include respond(main-img-resp) {
+     
+      left: 240px;
+     }
+    @include respond(main-img-resp-1) {
+     
+      left: 200px;
+     }
+     @include respond(sm) {
+      left: 160px;
+     }
   }
 }
 
@@ -1413,17 +1524,21 @@
 
   width: 120px;
   position: relative;
-  background: #fff ;
-  &::before{
+  background: #fff;
+  @include respond(sm) {
+   width: 90px;
+  }
+
+  &::before {
     display: inline-block;
     position: absolute;
     font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
     font-size: 25px;
     color: $color-primary-dark;
-      content: '\f2f9';
-      right:10px;
-      top: 9px;
-  
+    content: '\f2f9';
+    right: 10px;
+    top: 9px;
+
   }
 }
 
@@ -1446,13 +1561,13 @@
   padding: 5px;
 
 
-  option{
+  option {
     padding: 20px !important;
     background-color: #fff;
     cursor: pointer;
 
     &:hover {
-     background: $color-primary-dark !important;
+      background: $color-primary-dark !important;
     }
   }
 }
@@ -1463,10 +1578,29 @@
   0% {
     transform: scale(0);
   }
+
   90% {
     transform: scale(1.4);
   }
+
   100% {
     transform: scale(1);
+  }
+}
+
+.switch-currently {
+  width: 35%;
+
+  @include respond(sm) {
+    width: 180px;
+   }
+}
+.dropdown-desired-money{
+  
+
+  @include respond(main-img-resp-1) {
+
+    width: 80px;
+
   }
 }

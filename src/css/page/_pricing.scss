@@ -238,7 +238,6 @@ margin: 20px auto;
 	padding-right: 80px;
 	text-align: right;
 	font-size: 24px;
-	font-family: 'Raleway', Helvetica, Arial, Lucida, sans-serif;
 	color: #555555;
 	line-height: 1.5;
 	font-weight: 700;
@@ -392,7 +391,6 @@ margin: 20px auto;
 }
 
 #pricing-container {
-	font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	max-width: 1080px;
 	margin: 0 auto 50px;
@@ -412,7 +410,6 @@ margin: 20px auto;
 
 #pricing-container .price-card {
 	background-color: white;
-	font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
 	display: block;
 	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 	transition: all 0.25s;
@@ -443,7 +440,6 @@ margin: 20px auto;
 	padding: 0;
 	font-size: 28px;
 	color: $color-white;
-	font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
 	font-weight: 700;
 }
 
@@ -470,12 +466,19 @@ margin: 20px auto;
 
 .without-dollar-icon {
 	&::before {
-		content: none !important;
-
+		content: "max" !important;
+		font-size: 12px!important;
+		display: inline-block!important;
+		color: grey!important;
+		top: 0 !important;
 	}
 
 	&::after {
-		content: "job postings/month" !important;
+		content: "job postings" !important;
+		font-size: 12px;
+	display: inline-block;
+	margin-left: 5px !important;
+	color: grey;
 	}
 }
 
@@ -519,7 +522,7 @@ margin: 20px auto;
 #pricing-container .price-card--cta--button.btn {
 	min-width: 20px;
 	display: block;
-	max-width: 210px;
+	max-width: 270px;
 	margin: 0 auto;
 	font-size: 20px;
 	background-color: $color-primary-dark;
@@ -635,6 +638,10 @@ margin: 20px auto;
 
 #pricing-container .only-yearly.if-monthly .only-yearly--text {
 	display: block;
+}
+
+.only-yearly--text--number {
+	font-size: 48px !important;
 }
 
 /* - - - - - - - - - Switch Section - - - */
@@ -1001,7 +1008,7 @@ margin: 20px auto;
 
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
-	font-family: "Helvetica Neue", sans-serif;
+
 	line-height: 1.1em;
 }
 
