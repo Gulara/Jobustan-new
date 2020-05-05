@@ -91,7 +91,12 @@
                         <tr>
                             <tbody>
                                 <td class="company filter-td" data-company="Alfreds"><a href="" target="_blank">
-                                        Alfreds<i class="fas fa-edit ml-3"></i></a></td>
+                                        Alfreds<i class="fas fa-edit ml-3"></i></a>
+                                        <button type="button" class="btn resumes__premium-btn" data-toggle="modal" data-target="#resumesPremiumModal">
+                                            <i class="far fa-gem"></i>
+                                            Elanı Premium et
+                                          </button>
+                                    </td>
 
 
 
@@ -175,7 +180,68 @@
         </div>
     </div>
 
+<!-- Modal -->
+<div class="modal fade resumes__modal" id="resumesPremiumModal" tabindex="-1" role="dialog" aria-labelledby="resumesPremiumModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title resumes__modal__title" id="premiumModalLabel">Premium et</h5>
+                <button type="button" class="close resumes__modal__close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>Sizin elan saytın ana səhifəsində xüsusi ayrılmış blokda görünəcək və aktivlik müddətinin
+                    sonunadək orada qalacaq.</div>
+                <div class="resumes__payment__div">
+                    <div class="resumes__customRadio  ">
+                        <div class="text-center my-2">Xidmət müddətini seçin :</div>
+                        <div class="col-12">
+                            <div class="row">
 
+                                <input type="radio" name="resumesServicesTime" id="dreamweaver" checked>
+                                <label for="dreamweaver">5 gün / 15 AZN</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="resumesServicesTime" id="sublime">
+                                <label for="sublime">15 gün / 30 AZN</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resumes__customRadio  ">
+                        <div class="text-center my-2">Ödəniş üsulunu seçin :</div>
+                        <div class="col-12">
+                            <div class="row">
+
+                                <input type="radio" name="resumesPaymentMethods" id="bankcard" checked>
+                                <label for="bankcard">Bank Kartı</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="resumesPaymentMethods" id="pulpal">
+                                <label for="pulpal">PulPal</label>
+                            </div>
+                            <div class="row">
+                                <input type="radio" name="resumesPaymentMethods" id="portmanat">
+                                <label for="portmanat">Portmanat</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="modal-footer resumes__modal-footer">
+
+                <button type="button" class="btn bg-red w-100  resumes__modal__btn-pay">Ödə</button>
+                <div class="resumes__modal-footer__text">"Ödə" düyməsini sıxmaqla siz Jobustan-ın <a
+                        href="#">İstifadəçi razılaşmasını</a> və <a href="#">Qaydalarını</a> qəbul etdiyinizi
+                    təsdiqləmiş olursunuz.</div>
+            </div>
+        </div>
+    </div>
+  </div>
 
     //= template/footer-without-container.html
 
@@ -195,8 +261,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">

@@ -12,7 +12,7 @@
 
         .owl-item {
             @include respond(phone) {
-                width: 360px !important;
+                // width: 360px !important;
           
               }
           
@@ -42,6 +42,7 @@
 
         @include respond(phone) {
           width: 290px;
+        //   width: 180px;
     
         }
 
