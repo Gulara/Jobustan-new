@@ -7,6 +7,10 @@
     border-top: 3px solid $color-primary-dark;
     margin-bottom: 140px;
     margin-top: 60px;
+    @include respond(phone) {
+        margin-bottom: 70px;
+       
+        }
     &__title {
         font-size: 11px;
         margin: 10px 0;

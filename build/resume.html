@@ -34,6 +34,7 @@ integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeV
 <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css">
    <!-- NEW LINKS -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css">
    <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" />
@@ -357,7 +358,9 @@ header -->
                                         <div class="form-group d-flex w-100 align-items-center">
 
                                             <span class="label-text mr-3">I currently study here</span>
-                                            <div class="switch-block switch w-25">
+                                                <!-- NEW CHANGING START -->
+                                            <div class="switch-block switch  switch-currently">
+                                                    <!-- NEW CHANGING END-->
                                                 <label class="switch-light switch-candy">
                                                     <input type="checkbox" class="checkboxEducationTime" value="" />
                                                     <span>
@@ -499,7 +502,9 @@ header -->
                                         <div class="form-group d-flex w-100 align-items-center">
 
                                             <span class="label-text mr-3">I currently work here</span>
-                                            <div class="switch-block switch w-25">
+                                            <!-- NEW CHANGING START -->
+                                            <div class="switch-block switch switch-currently">
+                                                    <!-- NEW CHANGING END -->
                                                 <label class="switch-light switch-candy">
                                                     <input type="checkbox" class="checkboxExperienceTime" value="" />
                                                     <span>
@@ -557,9 +562,11 @@ header -->
                         <div class="resume__div--Language">
                             <div class="resume__div--item resume__div--item-Language">
                                 <div class="resume__div--top">
+<!--  NEW CHANGING START -->
+                                    <div id="searchfield" class="searchfield flex-wrap">
+                                       <div class="resume__div--item--flex">
 
-                                    <div id="searchfield" class="searchfield">
-                                        <div>
+                                   
                                             <label class="mr-2" for="resumeLang">Language:</label>
                                             <div>
                                                 <input name="resumeLangName" list="resumeLangName" value=""
@@ -574,7 +581,9 @@ header -->
                                                 </datalist>
                                                 <input type="hidden" name="" class="hidden-resumeLangName" value>
                                             </div>
-                                            <label class="mx-2 m-t-10"> Level: </label>
+                                        </div>
+                                        <div class="resume__div--item--flex">
+                                            <label class="mx-2 m-t-10 "> Level: </label>
                                             <div>
                                                 <input list="resumeLangLevel" class="resume__input w-100">
                                                 <datalist id="resumeLangLevel">
@@ -590,6 +599,7 @@ header -->
                                             <input type="hidden" name="" class="hidden-resumeLangLevel" value>
                                         </div>
                                     </div>
+                                    <!--  NEW CHANGING END -->
                                 </div>
                               
                                 <div class="resume--remove-btn"><i class="fas fa-times"></i></div>
@@ -603,8 +613,9 @@ header -->
                                 <label>Add a new skill</label>
                                 <span class="mb-2">e.g. Microsoft Office</span>
                                 <div class="resume__div--top">
-                                    <div id="searchfield" class="searchfield">
-
+                                       <!--  NEW CHANGING START -->
+                                    <div id="searchfield" class="searchfield flex-wrap">
+                                        <div class="resume__div--item--flex">
                                         <label class="mr-2" for="resumeInputSkills">Skills:</label>
                                         <div>
                                             <input list="skillsName" class="resume__input w-100">
@@ -619,6 +630,8 @@ header -->
                                             </datalist>
                                             <input type="hidden" name="" class="hidden-skillsName" value>
                                         </div>
+                                        </div>
+                                        <div class="resume__div--item--flex">
                                         <label class="mx-2 m-t-10"> Level:
                                         </label>
                                         <div>
@@ -634,8 +647,9 @@ header -->
                                             </datalist>
                                             <input type="hidden" name="" class="hidden-skillsLevel" value>
                                         </div>
-
+</div>
                                     </div>
+                                       <!--  NEW CHANGING END -->
                                 </div>
                               
                                 <!-- SKILLS REMOVE BTN -->
@@ -764,7 +778,7 @@ header -->
                                 <div class="mb-3">Your Age:</div>
 
                                 <div class="resume__div--top">
-                                    <div>
+                                    <div class="my-1">
                                         <input list="resumeAgeDay" placeholder="Day" class="resume__input w-100">
                                         <datalist id="resumeAgeDay">
                                             <option>01</option>
@@ -790,7 +804,7 @@ header -->
 
                                         </datalist>
                                     </div>
-                                    <div>
+                                    <div class="my-1">
                                         <input list="resumeAgeMonth" placeholder="Month" class="resume__input w-100">
                                         <datalist id="resumeAgeMonth">
                                             <option>January</option>
@@ -809,7 +823,7 @@ header -->
 
                                         </datalist>
                                     </div>
-                                    <div>
+                                    <div class="my-1">
                                         <input list="resumeAgeYear" placeholder="Year" class="resume__input w-100">
                                         <datalist id="resumeAgeYear">
                                             <option>1980</option>
@@ -847,20 +861,21 @@ header -->
                             <div class="resume__div--item resume__div--item-Awards">
                                 <div class="mb-3">Your Awards:</div>
                                 <div class="resume__div--top">
-                                    <div>
+                                    <!-- NEW CHANGING START -->
+                                    <div class="my-1">
                                         <input name="awardsName" list="awardsName" value="" class="resume__input w-100">
                                         <datalist id="awardsName">
-                                            <option data-value="1" value="1 School Name"></option>
-                                            <option data-value="2" value="2 School Name "></option>
-                                            <option data-value="3" value="3 School Name"></option>
-                                            <option data-value="4" value="4 School Name"></option>
-                                            <option data-value="5" value="5 School Name"></option>
-                                            <option data-value="6" value="6 School Name"></option>
+                                            <option data-value="1" value="1 Awards Name"></option>
+                                            <option data-value="2" value="2 Awards Name "></option>
+                                            <option data-value="3" value="3 Awards Name"></option>
+                                            <option data-value="4" value="4 Awards Name"></option>
+                                            <option data-value="5" value="5 Awards Name"></option>
+                                            <option data-value="6" value="6 Awards Name"></option>
                                         </datalist>
                                         <input type="hidden" name="" class="hidden-awardsName" value>
                                     </div>
 
-                                    <div>
+                                    <div class="my-1">
                                         <input list="resumeAgeMonth" placeholder="Month" class="resume__input w-100">
                                         <datalist id="resumeAgeMonth">
                                             <option>January</option>
@@ -879,7 +894,7 @@ header -->
 
                                         </datalist>
                                     </div>
-                                    <div>
+                                    <div class="my-1">
                                         <input list="resumeAgeYear" placeholder="Year" class="resume__input w-100">
                                         <datalist id="resumeAgeYear">
                                             <option>1980</option>
@@ -907,6 +922,7 @@ header -->
 
                                         </datalist>
                                     </div>
+                                    <!-- NEW CHANGING END -->
                                 </div>
 
 
@@ -1188,7 +1204,7 @@ header -->
 
                                 </div>
                             </div>
-                            <button type="submit" class="btn red-btn mt-5">Submit</button>
+                            <button type="submit" class="btn red-btn mt-5 p-0">Submit</button>
                         </form>
 
                     </div>

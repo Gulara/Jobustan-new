@@ -1,12 +1,15 @@
 //= template/head.html
+
 <body style="background-color: #fafafa;">
 
 
     //= template/header-with-container.html
     <div class="container">
         <div class="pricing__announcement">
-            <h4 class="pricing__announcement__heading">Aşağıdakı paketlərdən birini seçə və yaxud Elanınızı Premium edərək Ana səhifədə görünərək daha çox namizədə çata bilərsiniz.</h4>
-            <p class="pricing__announcement__paragraph">Sizin elanınız yoxlamaya göndərildi. Elanınız bütün qaydalara uyğun olarsa,
+            <h4 class="pricing__announcement__heading">Aşağıdakı paketlərdən birini seçə və yaxud Elanınızı Premium
+                edərək Ana səhifədə görünərək daha çox namizədə çata bilərsiniz.</h4>
+            <p class="pricing__announcement__paragraph">Sizin elanınız yoxlamaya göndərildi. Elanınız bütün qaydalara
+                uyğun olarsa,
                 bir iş saatı ərzində sayta yerləşdiriləcək.</p>
         </div>
         <section id="pricing-container">
@@ -20,11 +23,11 @@
                 </label>
                 <span class="switch-label switch-label-yearly active">Yearly <span class="save-money">Save
                         10%</span></span>
-            
+
                 <div class="save-money--mobile">Save 10% on Yearly Plans</div>
 
             </div>
-           
+
 
             <div id="pricing-cards">
                 <!-- =========================== -->
@@ -34,13 +37,15 @@
 
                     <div class="price-card--header">
                         <h4>Basic</h4>
-                
-                    </div>
 
+                    </div>
+                   
                     <div class="price-card--price">
                         <div class="price-card--price-text only-yearly">
-                            <div class="price-card--price-number odometer without-dollar-icon">3</div>
-                            <div class="only-yearly--text"><span>Max 12 job postings</span></div>
+                             <!-- NEW CHANGING START -->
+                            <div class="price-card--price-number odometer without-dollar-icon">12 job postings </div>
+                            <div class="only-yearly--text"><span> <span class="only-yearly--text--number">3 </span> job postings/month</span></div>
+                             <!-- NEW CHANGING END -->
                         </div>
                         <div class="price-card--price-conditions">
                             <div>Billed Annually</div>
@@ -49,11 +54,11 @@
                     </div>
 
                     <div class="price-card--cta">
-                     
-                        <a href="#" class="btn price-card--cta--button" data-toggle="modal"
-                            data-target="#premiumModal">
+ <!-- NEW CHANGING START -->
+                        <a href="#" class="btn price-card--cta--button" data-toggle="modal" data-target="#premiumModal"> <i class="far fa-gem"></i>
                             Elanı Premium et
                         </a>
+                          <!-- NEW CHANGING END -->
                     </div>
 
 
@@ -168,7 +173,7 @@
 
                     <div class="price-card--header">
                         <h4>Pro</h4>
-               
+
                     </div>
 
                     <div class="price-card--price">
@@ -289,7 +294,7 @@
 
                     <div class="price-card--header">
                         <h4>Enterprise</h4>
-                      
+
                     </div>
                     <div class="price-card--hero-text">
                         Most Popular Plan
@@ -418,10 +423,10 @@
             <a href="#" class="btn border-red pricing__btn pricing__btn--all-company">All company jobs</a>
         </div>
     </div>
-    
+
     <!-- Modal -->
-    <div class="modal fade pricing__modal" id="premiumModal" tabindex="-1" role="dialog" aria-labelledby="premiumModalLabel"
-        aria-hidden="true">
+    <div class="modal fade pricing__modal" id="premiumModal" tabindex="-1" role="dialog"
+        aria-labelledby="premiumModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -445,7 +450,7 @@
                                 <div class="row">
                                     <input type="radio" name="pricingServicesTime" id="sublime">
                                     <label for="sublime">15 gün / 30 AZN</label>
-                                 </div>
+                                </div>
                             </div>
                         </div>
                         <div class="pricing__customRadio  ">
@@ -458,24 +463,26 @@
                                 </div>
                                 <div class="row">
                                     <input type="radio" name="pricingPaymentMethods" id="pulpal">
-                                    <label for="pulpal">PulPal</label> 
+                                    <label for="pulpal">PulPal</label>
                                 </div>
                                 <div class="row">
                                     <input type="radio" name="pricingPaymentMethods" id="portmanat">
-                                    <label for="portmanat">Portmanat</label> 
+                                    <label for="portmanat">Portmanat</label>
                                 </div>
                             </div>
                         </div>
 
-                  
+
 
 
                     </div>
                 </div>
                 <div class="modal-footer pricing__modal-footer">
-              
+
                     <button type="button" class="btn bg-red w-100  pricing__modal__btn-pay">Ödə</button>
-                    <div class="pricing__modal-footer__text">"Ödə" düyməsini sıxmaqla siz Jobustan-ın <a href="#">İstifadəçi razılaşmasını</a> və <a href="#">Qaydalarını</a>  qəbul etdiyinizi təsdiqləmiş olursunuz.</div>
+                    <div class="pricing__modal-footer__text">"Ödə" düyməsini sıxmaqla siz Jobustan-ın <a
+                            href="#">İstifadəçi razılaşmasını</a> və <a href="#">Qaydalarını</a> qəbul etdiyinizi
+                        təsdiqləmiş olursunuz.</div>
                 </div>
             </div>
         </div>
@@ -512,7 +519,7 @@
     <script src="js/pricing.js"></script>
 
 
-    
+
 
 </body>
 

@@ -6,6 +6,10 @@
     border-radius: 5px;
     border-top: 3px solid $color-primary-dark;
     margin-bottom: 100px;
+    @include respond(phone) {
+        margin-bottom: 40px;
+       
+        }
     &__title {
         font-size: 11px;
         margin: 10px 0;
@@ -124,7 +128,7 @@
                 margin-right: 5px;
             }
 
-            &:nth-last-child(n+3) {
+            &:nth-last-child(n+2) {
                 @include respond(phone) {
 
                     margin: 0;
@@ -137,7 +141,7 @@
             }
 
             @include respond(phone) {
-                width: 49%;
+                width: 100%;
                 margin: 0;
 
 
@@ -519,6 +523,11 @@
 
             &-input {
                 width: 200px;
+                @include respond(phone) {
+                
+                    width: 160px;
+          
+                  }
             }
         }
     }
@@ -1980,6 +1989,11 @@ input.priceSlider {
     border: 1px solid #f0f0f0;
     border-left: 1px solid transparent;
     transition: .3s all ease-in-out;
+    @include respond(phone) {
+                
+        left: 160px;
+
+      }
 
     input:focus+label {
         background: #def;
