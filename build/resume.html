@@ -333,10 +333,10 @@ header -->
                                                     class="cus_selt sel_txt resume-education-from-month_txt">Month</span>
                                                 <select class="styled sel_val resume-education-from-month_val">
 
-                                                    <option>January</option>
-                                                    <option>February</option>
-                                                    <option>March</option>
-                                                    <option>April</option>
+                                                    <option data-id="1">January</option>
+                                                    <option data-id="2">February</option>
+                                                    <option data-id="3">March</option>
+                                                    <option data-id="4">April</option>
 
                                                 </select>
                                             </div>
@@ -378,10 +378,10 @@ header -->
                                                     class="cus_selt sel_txt resume-education-to-month_txt">Month</span>
                                                 <select class="styled sel_val resume-education-to-month_val">
 
-                                                    <option>January</option>
-                                                    <option>February</option>
-                                                    <option>March</option>
-                                                    <option>April</option>
+                                                    <option data-id="1">January</option>
+                                                    <option data-id="2">February</option>
+                                                    <option data-id="3">March</option>
+                                                    <option data-id="4">April</option>
 
                                                 </select>
                                             </div>
@@ -478,16 +478,15 @@ header -->
                                                     class="cus_selt sel_txt resume-experience-from-month_txt">Month</span>
                                                 <select class="styled sel_val resume-experience-from-month_val">
 
-                                                    <option>January</option>
-                                                    <option>February</option>
-                                                    <option>March</option>
-                                                    <option>April</option>
+                                                    <option data-id="1">January</option>
+                                                    <option data-id="2">February</option>
+                                                    <option data-id="3">March</option>
+                                                    <option data-id="4">April</option>
 
                                                 </select>
                                             </div>
                                             <div class="sel_container">
-                                                <span
-                                                    class="cus_selt sel_txt resume-experience-from-year_txt">Year</span>
+                                                <span class="cus_selt sel_txt resume-experience-from-year_txt">Year</span>
                                                 <select class="styled sel_val resume-experience-from-year_val">
                                                     <option>2000</option>
                                                     <option>2010</option>
@@ -522,10 +521,10 @@ header -->
                                                     class="cus_selt sel_txt resume-experience-to-month_txt">Month</span>
                                                 <select class="styled sel_val resume-experience-to-month_val">
 
-                                                    <option>January</option>
-                                                    <option>February</option>
-                                                    <option>March</option>
-                                                    <option>April</option>
+                                                    <option data-id="1">January</option>
+                                                    <option data-id="2">February</option>
+                                                    <option data-id="3">March</option>
+                                                    <option data-id="4">April</option>
 
                                                 </select>
                                             </div>
@@ -579,13 +578,16 @@ header -->
                                                     <option data-value="5" value="5 Language Name"></option>
                                                     <option data-value="6" value="6 Language Name"></option>
                                                 </datalist>
+                                                <!-- yerini deyisdim -->
                                                 <input type="hidden" name="" class="hidden-resumeLangName" value>
+                                                <!--  -->
                                             </div>
+                                            <!-- burdaydi -->
                                         </div>
                                         <div class="resume__div--item--flex">
                                             <label class="mx-2 m-t-10 "> Level: </label>
                                             <div>
-                                                <input list="resumeLangLevel" class="resume__input w-100">
+                                                <input  name="resumeLangLevel" list="resumeLangLevel" class="resume__input w-100">
                                                 <datalist id="resumeLangLevel">
                                                     <option data-value="Beginner" value="Beginner"></option>
                                                     <option data-value="Elementary" value="Elementary"></option>
@@ -595,8 +597,9 @@ header -->
                                                     <option data-value="Advanced" value="Advanced"></option>
                                                     <option data-value="Proficient" value="Proficient"></option>
                                                 </datalist>
+                                                <input type="hidden" name="" class="hidden-resumeLangLevel" value>
                                             </div>
-                                            <input type="hidden" name="" class="hidden-resumeLangLevel" value>
+                                           
                                         </div>
                                     </div>
                                     <!--  NEW CHANGING END -->
@@ -805,23 +808,26 @@ header -->
                                         </datalist>
                                     </div>
                                     <div class="my-1">
+                                        <!-- BU HISSENI DEYISDIM VE SONUNCU INPUTU YENI ELAVE ELEDIM-->
                                         <input list="resumeAgeMonth" placeholder="Month" class="resume__input w-100">
                                         <datalist id="resumeAgeMonth">
-                                            <option>January</option>
-                                            <option>February</option>
-                                            <option>March</option>
-                                            <option>April</option>
-                                            <option>May</option>
-                                            <option>June</option>
-                                            <option>July</option>
-                                            <option>August</option>
-                                            <option>September</option>
-                                            <option>Octember</option>
-                                            <option>November</option>
-                                            <option>December</option>
-
-
+                                            <option  data-value="1" value="January"></option>
+                                            <option  data-value="2" value="February"></option>
+                                            <option  data-value="3" value="March"></option>
+                                            <option  data-value="4" value="April"></option>
+                                            <option  data-value="5" value="May"></option>
+                                            <option  data-value="6" value="June"></option>
+                                            <option  data-value="7" value="July"></option>
+                                            <option  data-value="8" value="August"></option>
+                                            <option  data-value="9" value="September"></option>
+                                            <option  data-value="10" value="Octember"></option>
+                                            <option  data-value="11" value="November"></option>
+                                            <option  data-value="12" value="December"></option>
                                         </datalist>
+                                        
+                                        
+                                        <input type="hidden" name="" class="hidden-resumeAgeMonth" value>
+                                        <!--  -->
                                     </div>
                                     <div class="my-1">
                                         <input list="resumeAgeYear" placeholder="Year" class="resume__input w-100">

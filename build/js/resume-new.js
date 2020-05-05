@@ -4,7 +4,7 @@ $(document).ready(function () {
         // access properties using this keyword
         if ( this.checked ) {
             $(".resume__radio-group").slideDown();
-           
+
         } else {
             // Returns false if not checked
             $(".resume__radio-group").slideUp();
@@ -57,7 +57,7 @@ $(document).ready(function () {
         });
     }
 
- 
+
     // ///////////////
     // DESIRED SALARY START
     // DROPDOWN MONEY
@@ -138,12 +138,15 @@ $(document).ready(function () {
     $(document).ready(function () {
         $('#resumeWorkExperience').click(function () {
 
+            let randomClass = Math.floor(Math.random() * 100000);
 
+            $("div.resume__div--WorkExperience .resume__div--item-WorkExperience").addClass(' experience-' + randomClass);
             let divExperience = $('.resume__div--WorkExperience').html();
-
+            $("div.resume__div--WorkExperience .resume__div--item-WorkExperience").removeClass(' experience-' + randomClass);
             let limitExperience = document.querySelectorAll('.resume__div--item-WorkExperience').length;
 
             if (limitExperience < 5) {
+
                 $('.resume__div__WorkExperience').append(divExperience);
                 $("input[list=experienceJobTitle]").focusout(function () {
                     let value = $(this).val();
@@ -172,20 +175,19 @@ $(document).ready(function () {
                         $(this).siblings(".hidden-experienceJobCity").val(value)
                     }
                 });
-
-
-
-
                 //EXPERIENCE  CHECKBOX START
                 $('.checkboxExperienceTime').click(function () {
                     if ($(this).prop("checked") == true) {
                         $(this).attr("value", "No");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideUp();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideDown();
+                        $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-month_val').attr("value", "");
+                        $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-year_val').attr("value", "");
                     } else if ($(this).prop("checked") == false) {
                         $(this).attr("value", "Yes");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-month_txt').text("Month");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-year_txt').text("Year");
+                     
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideDown();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideUp();
 
@@ -195,6 +197,8 @@ $(document).ready(function () {
                 $(".resume-experience-from-month_val").change(function () {
                     var option = $(this).find('option:selected').val();
                     $(this).prev('.resume-experience-from-month_txt').text(option);
+                    var optionId = $(this).find('option:selected').attr("data-id");
+                    $(this).attr("value", optionId);
                 });
                 $(".resume-experience-from-year_val").change(function () {
                     var option = $(this).find('option:selected').val();
@@ -204,51 +208,28 @@ $(document).ready(function () {
 
                 $(".resume-experience-to-month_val").change(function () {
                     var option = $(this).find('option:selected').val();
+                
                     $(this).prev('.resume-experience-to-month_txt').text(option);
+                    var optionId = $(this).find('option:selected').attr("data-id");
+                    $(this).attr("value", optionId);
                 });
                 $(".resume-experience-to-year_val").change(function () {
                     var option = $(this).find('option:selected').val();
+               
                     $(this).prev('.resume-experience-to-year_txt').text(option);
+               
                 });
-                //EXPERIENCE CHECKBOX END
 
-                // $(".jobTimePeriod").click(function (e) {
-                //     console.log($(this).parent().siblings(".resume__Present"));
-                //     $(this).parent().siblings(".resume__form-group--right").slideToggle();
-                //     $(this).parent().siblings(".resume__Present").slideToggle();
-                //     $(this).find(".fa-check").toggleClass('d-inline');
+                $("div.experience-"+randomClass+' input.hidden-experienceJobTitle').attr('name', 'experience[position]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' input.hidden-experienceJobCompany').attr('name', 'experience[company]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' input.hidden-experienceJobCity').attr('name', 'experience[city]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' select.resume-experience-from-month_val').attr('name', 'experience[from_month]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' select.resume-experience-from-year_val').attr('name', 'experience[from_year]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' input.checkboxExperienceTime').attr('name', 'experience[still_work]['+limitExperience+"]");
 
-
-                //     // $('.resume-job-to-month > .list > .item').removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Month' + '<i class="zmdi zmdi-chevron-down"></i>');
-                //     // $('.resume-job-to-year > .list > .item').removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Year' + '<i class="zmdi zmdi-chevron-down"></i>');
-                //     $(this).parent().siblings('.resume__form-group--right').children('.resume-job-to-month > .list > .item').removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Month' + '<i class="zmdi zmdi-chevron-down"></i>');
-                //     $(this).parent().siblings('.resume__form-group--right').children('.resume-job-to-year > .list > .item').removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Year' + '<i class="zmdi zmdi-chevron-down"></i>');
-                //     // if ($(".fa-check").hasClass("d-inline")) {
-                //     //     alert("hi")
-                //     //   }
-
-                //     e.preventDefault();
-
-                //     // alert("hi");
-                // });
-
-
-                //  CK EDITOR
-                // CKEDITOR.replace('resume-job-editor', {
-                //     skin: 'moono',
-                //     enterMode: CKEDITOR.ENTER_BR,
-                //     shiftEnterMode: CKEDITOR.ENTER_P,
-                //     toolbar: [
-
-
-                //         {
-                //             name: 'paragraph',
-                //             groups: ['list', 'indent'],
-                //             items: ['NumberedList', 'BulletedList']
-                //         },
-
-                //     ],
-                // });
+                $("div.experience-"+randomClass+' select.resume-experience-to-month_val').attr('name', 'experience[to_month]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' select.resume-experience-to-year_val').attr('name', 'experience[to_year]['+limitExperience+"]");
+                $("div.experience-"+randomClass+' textarea.resume-job-editor').attr('name', 'experience[description]['+limitExperience+"]");
 
             }
 
@@ -269,7 +250,17 @@ $(document).ready(function () {
     // EDUCATION START
     $(document).ready(function () {
         $('#resumeEducation').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $("div.resume__div--Education .resume__div--item-Education").addClass('education-' + randomClass);
+
+
             let divEducation = $('.resume__div--Education').html()
+
+
+            $("div.resume__div--Education .resume__div--item-Education").removeClass('education-' + randomClass);
+
+
             let limitEducation = document.querySelectorAll('.resume__div--item-Education').length;
 
             if (limitEducation < 5) {
@@ -375,39 +366,29 @@ $(document).ready(function () {
                 // CITY EDUCATION SELECT END
 
 
-
-
-                ///
-                // $(document).on('click', '.educationTimePeriod', function (e) {
-                //     // $(this).hide(); // hides only the element that was clicked with the class .the-class 
-                //     $(this).parent().siblings(".resume__form-group--right").slideToggle();
-                //     $(this).parent().siblings(".resume__Present").slideToggle();
-                //     $(this).find(".fa-check").toggleClass('d-inline');
-                //     $('.resume-education-to-month > .list > .item').removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Month' + '<i class="zmdi zmdi-chevron-down"></i>');
-                //     $('.resume-education-to-year > .list > .item').removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Year' + '<i class="zmdi zmdi-chevron-down"></i>');
-
-                //     e.preventDefault();
-                // });
                 //EDUCATION  CHECKBOX START
                 $('.checkboxEducationTime').click(function () {
                     if ($(this).prop("checked") == true) {
                         $(this).attr("value", "No");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideUp();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideDown();
+                        $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-education-to-month_val').attr("value", "");
+                        $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-education-to-year_val').attr("value", "");
                     } else if ($(this).prop("checked") == false) {
                         $(this).attr("value", "Yes");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-education-to-month_txt').text("Month");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-education-to-year_txt').text("Year");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideDown();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideUp();
-                        // $(this).parent().parent().parent().siblings(".resume__form-group--right").children('.resume-education-to-month').children().children().removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Month' + '<i class="zmdi zmdi-chevron-down"></i>')
-                        // $(this).parent().parent().parent().siblings(".resume__form-group--right").children('.resume-education-to-year').children().children().removeClass('selected').parent().parent().removeClass('open').children('.caption').html('Year' + '<i class="zmdi zmdi-chevron-down"></i>')
+                      
 
                     }
                 });
                 $(".resume-education-from-month_val").change(function () {
                     var option = $(this).find('option:selected').val();
                     $(this).prev('.resume-education-from-month_txt').text(option);
+                    var optionId = $(this).find('option:selected').attr("data-id");
+                    $(this).attr("value", optionId);
                 });
                 $(".resume-education-from-year_val").change(function () {
                     var option = $(this).find('option:selected').val();
@@ -418,11 +399,27 @@ $(document).ready(function () {
                 $(".resume-education-to-month_val").change(function () {
                     var option = $(this).find('option:selected').val();
                     $(this).prev('.resume-education-to-month_txt').text(option);
+                    var optionId = $(this).find('option:selected').attr("data-id");
+                    $(this).attr("value", optionId);
                 });
                 $(".resume-education-to-year_val").change(function () {
                     var option = $(this).find('option:selected').val();
                     $(this).prev('.resume-education-to-year_txt').text(option);
                 });
+
+
+
+                $("div.education-"+randomClass+' input.hidden-levelOfEducation').attr('name', 'education[edu_level]['+limitEducation+"]");
+                $("div.education-"+randomClass+' input.hidden-educationSchool').attr('name', 'education[school]['+limitEducation+"]");
+                $("div.education-"+randomClass+' input.hidden-fieldOfStudy').attr('name', 'education[edu_field]['+limitEducation+"]");
+                $("div.education-"+randomClass+' input.hidden-educationCity').attr('name', 'education[city]['+limitEducation+"]");
+                $("div.education-"+randomClass+' select.resume-education-from-month_val').attr('name', 'education[from_month]['+limitEducation+"]");
+                $("div.education-"+randomClass+' select.resume-education-from-year_val').attr('name', 'education[from_year]['+limitEducation+"]");
+                $("div.education-"+randomClass+' input.checkboxExperienceTime').attr('name', 'education[still_work]['+limitEducation+"]");
+
+                $("div.education-"+randomClass+' select.resume-education-to-month_val').attr('name', 'education[to_month]['+limitEducation+"]");
+                $("div.education-"+randomClass+' select.resume-education-to-year_val').attr('name', 'education[to_year]['+limitEducation+"]");
+
 
 
             }
@@ -447,7 +444,16 @@ $(document).ready(function () {
     // LANGUAGE START
     $(document).ready(function () {
         $('#resumeLanguage').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $("div.resume__div--Language .resume__div--item-Language").addClass('lang-' + randomClass);
+
+
             let divLanguage = $('.resume__div--Language').html();
+
+
+            $("div.resume__div--Language .resume__div--item-Language").removeClass('lang-' + randomClass);
+
             let limitLanguage = document.querySelectorAll('.resume__div--item-Language').length;
             if (limitLanguage < 5) {
                 $('.resume__div__Language').append(divLanguage);
@@ -473,6 +479,10 @@ $(document).ready(function () {
                         $(this).siblings(".hidden-resumeLangLevel").val(value)
                     }
                 });
+                $("div.lang-"+randomClass+' input.hidden-resumeLangName').attr('name', 'lang[name]['+limitLanguage+"]");
+                $("div.lang-"+randomClass+' input.hidden-resumeLangLevel').attr('name', 'lang[level]['+limitLanguage+"]");
+
+
                 // LANG LEVEL DATALIST END
             }
 
@@ -493,7 +503,18 @@ $(document).ready(function () {
     // SKILLS START
     $(document).ready(function () {
         $('#resumeSkills').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $("div.resume__div--Skills .resume__div--item-Skills").addClass('skill-' + randomClass);
+
+
             let divSkills = $('.resume__div--Skills').html();
+
+
+            $("div.resume__div--Skills .resume__div--item-Skills").removeClass('skill-' + randomClass);
+
+
+
             let limitSkills = document.querySelectorAll('.resume__div--item-Skills').length;
             if (limitSkills < 5) {
                 $('.resume__div__skills').append(divSkills);
@@ -518,6 +539,10 @@ $(document).ready(function () {
                         $(this).siblings(".hidden-skillsLevel").val(value)
                     }
                 });
+
+                $("div.skill-"+randomClass+' input.hidden-skillsName').attr('name', 'skill[name]['+limitSkills+"]");
+                $("div.skill-"+randomClass+' input.hidden-skillsLevel').attr('name', 'skill[level]['+limitSkills+"]");
+
                 // SKILLS LEVEL DATALIST END
             }
 
@@ -600,7 +625,17 @@ $(document).ready(function () {
     // LICENSE START
     $(document).ready(function () {
         $('#resumeLicense').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $("div.resume__div--License .resume__div--item-License").addClass('license-' + randomClass);
+
+
             let divLicense = $('.resume__div--License').html();
+
+
+            $("div.resume__div--License .resume__div--item-License").removeClass('license-' + randomClass);
+
+
             let limitLicense = document.querySelectorAll('.resume__div--item-License').length;
             if (limitLicense < 5) {
                 $('.resume__form-group__div').append(divLicense);
@@ -613,6 +648,9 @@ $(document).ready(function () {
                         $(this).siblings(".hidden-licenseName").val(value)
                     }
                 });
+
+                $("div.license-"+randomClass+' input.hidden-licenseName').attr('name', 'license[name]['+limitLicense+"]");
+
             }
 
 
@@ -670,7 +708,7 @@ $(document).ready(function () {
             $('.checkboxAddMilitary').click(function () {
                 if ($(this).prop("checked") == true) {
                     $(this).attr("value", "No");
-                  
+
                     $(".resume__addMilitary__list").slideDown();
                      $(".resume__addMilitary__list").css({
                         "display": "flex"
@@ -705,10 +743,34 @@ $(document).ready(function () {
     // AWARD START
     $(document).ready(function () {
         $('#resumeAwards').click(function () {
+            let randomClass = Math.floor(Math.random() * 100000);
+
+            $("div.resume__div--Awards .resume__div--item-Awards").addClass('award-' + randomClass);
+
+
             let divAwards = $('.resume__div--Awards').html();
+
+
+            $("div.resume__div--Awards .resume__div--item-Awards").removeClass('award-' + randomClass);
+
             let limitAwards = document.querySelectorAll('.resume__div--item-Awards').length;
             if (limitAwards < 5) {
                 $('.resume__form-group__div').append(divAwards);
+                $("input[list=awardsName]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal = $('#awardsName [value="' + value + '"]').data('value')
+            
+                    $(this).siblings(".hidden-awardsName").val(dataVal);
+                    if ($(this).siblings(".hidden-awardsName").val() === "") {
+                        $(this).siblings(".hidden-awardsName").val(value)
+                    }
+                });
+
+
+                $("div.award-"+randomClass+' input.hidden-awardsName').attr('name', 'award[name]['+limitAwards+"]");
+                $("div.award-"+randomClass+' input[list="resumeAgeMonth"]').attr('name', 'award[month]['+limitAwards+"]");
+                $("div.award-"+randomClass+' input[list="resumeAgeYear"]').attr('name', 'award[year]['+limitAwards+"]");
+
             }
 
 
@@ -795,6 +857,15 @@ $(document).ready(function () {
             $(this).addClass("disabledbutton");
             if (limitAge < 2) {
                 $('.resume__form-group__div').append(divAge);
+                $("input[list=resumeAgeMonth]").focusout(function () {
+                    let value = $(this).val();
+                    let dataVal = $('#resumeAgeMonth [value="' + value + '"]').data('value')
+            
+                    $(this).siblings(".hidden-resumeAgeMonth").val(dataVal);
+                    if ($(this).siblings(".hidden-resumeAgeMonth").val() === "") {
+                        $(this).siblings(".hidden-resumeAgeMonth").val(value)
+                    }
+                });
 
             }
 
@@ -816,28 +887,28 @@ $(document).ready(function () {
 
 
 // CK EDITOR START
-// $(document).ready(function () {
-//     CKEDITOR.replace('post_editor', {
-//         skin: 'moono',
-//         enterMode: CKEDITOR.ENTER_BR,
-//         shiftEnterMode: CKEDITOR.ENTER_P,
-//         toolbar: [{
-//                 name: 'basicstyles',
-//                 groups: ['basicstyles'],
-//                 items: ['Bold', 'Italic', 'BulletedList']
-//             },
+$(document).ready(function () {
+    CKEDITOR.replace('post_editor', {
+        skin: 'moono',
+        enterMode: CKEDITOR.ENTER_BR,
+        shiftEnterMode: CKEDITOR.ENTER_P,
+        toolbar: [{
+                name: 'basicstyles',
+                groups: ['basicstyles'],
+                items: ['Bold', 'Italic', 'BulletedList']
+            },
 
 
 
 
 
 
-//         ],
+        ],
 
-//     });
+    });
 
 
-// });
+});
 // CK EDITOR END
 
 //////////SELECT
