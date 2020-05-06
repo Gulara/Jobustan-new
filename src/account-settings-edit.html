@@ -25,14 +25,14 @@ header -->
                             <!-- Password -->
                             <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-lastname">Password</label>
-                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-password" placeholder="**********"
-                                    name="password">  <i class="fas fa-eye ml-3 text-red account-settings-edit__show-password "></i>
+                                <input id="password-field" type="password" class="account-settings-edit__input" id="account-settings-edit-password"  value="12354657" name="password">  
+                                 <i toggle="#password-field"  class="fas fa-eye ml-3 text-red account-settings-edit__show-password  toggle-password"></i>
                             </div>
                               <!-- Password -->
                               <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-lastname">Confirm Password</label>
-                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-confirm-password" placeholder="**********"
-                                    name="confirmpassword"> <i class="fas fa-eye ml-3 text-red account-settings-edit__show-password "></i>
+                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-confirm-password"  value="12354657"  name="confirmpassword"> 
+                                <i  toggle="#account-settings-edit-confirm-password"  class="fas fa-eye ml-3 text-red account-settings-edit__show-password   toggle-confirm-password"></i>
                             </div>
                             <button type="submit" class="btn account-settings-edit__submit-btn">Submit</button>
                         </form>
@@ -86,6 +86,7 @@ header -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/password-account-settings.js"></script>
     <script src="js/validation-account-settings-edit.js"></script>
 
 </body>

@@ -1,0 +1,65 @@
+.company-roles {
+    border: 2px solid #fafafa;
+    background-color: #fff;
+    padding: 2rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border-top: 3px solid $color-primary-dark;
+    margin-bottom: 100px;
+
+    &__assign {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+
+        &--btn {
+            background-color: $color-primary-dark;
+            color: #fff;
+            margin-left: 10px;
+            border: 1px solid $color-primary-dark;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &__heading {
+        margin: 20px 0 10px 0;
+    }
+
+    &__admin,
+    &__editor,
+    &__analyst {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-gray-light-1;
+        &__img{
+            width: 80px;
+            height: auto;
+        }
+        &__name-group{
+            margin-left: 10px;
+        }
+        &__name{
+            font-weight: bold;
+        }
+    }
+
+    &__dropdown-menu{
+        font-size: 14px;
+    }
+    &__dropdown-toggle{
+        &:hover {
+            color: #fff;
+        }
+    }
+    
+
+}
+#companyRolesEmail-error{
+    width: 100% !important;
+    display: block !important;
+}

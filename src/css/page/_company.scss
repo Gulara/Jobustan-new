@@ -1,0 +1,36 @@
+
+.company-section {
+    margin-bottom: 140px;
+    margin-top: 60px;
+}
+.company {
+    &__navbar{
+        
+        font-size: 16px;
+        
+        &__category {
+            background-color: $color-primary-dark;
+            color: #fff;
+            padding: 10px;
+            .owl-nav {
+                // display: none;
+            }
+        }
+        &__item {
+            margin: 10px 0;
+            line-height: 20px;
+            .owl-nav {
+                // display: none;
+            }
+        }
+    }
+    &__select{
+        height: 50px !important;
+    }
+    &__date{
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+}
+
+

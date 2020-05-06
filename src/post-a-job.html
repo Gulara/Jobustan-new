@@ -1,4 +1,5 @@
 //= template/head.html
+
 <body style="background-color: #fafafa;">
 
 
@@ -12,38 +13,43 @@
                     <div class="qualification__div--example">
                         <div class="qualification__div--qualificationExperience">
                             <div class="qualification__div--item   qualification__div--item-Experience">
-                                <div class="qualification__div--top">
-                                    <span class="mr-2">Minimum of </span>
-                                    <div>
-                                        <input name="experienceYears" list="experienceYears"
-                                            placeholder="Start typing..." value="">
-                                        <datalist id="experienceYears">
-                                            <option data-value="1" value="1 year"></option>
-                                            <option data-value="2" value="2 years "></option>
-                                            <option data-value="3" value="3 years"></option>
-                                            <option data-value="4" value="4 years"></option>
-                                            <option data-value="5" value="5 years"></option>
-                                            <option data-value="6" value="6 years"></option>
-                                        </datalist>
-                                        <input type="hidden" name="" class="hidden-experienceYears" value>
-                                    </div>
 
-                                    <span class="mx-2"> of </span>
-                                    <div>
-                                        <input name="experienceName" list="experienceName" placeholder="Start typing..."
-                                            value="">
-                                        <datalist id="experienceName">
-                                            <option data-value="1" value="1 Name"></option>
-                                            <option data-value="2" value="2 Name "></option>
-                                            <option data-value="3" value="3 Name"></option>
-                                            <option data-value="4" value="4 Name"></option>
-                                            <option data-value="5" value="5 Name"></option>
-                                            <option data-value="6" value="6 Name"></option>
-                                        </datalist>
-                                        <input type="hidden" name="" class="hidden-experienceName" value>
+                                <div class="qualification__div--top ">
+                                    <!-- BURADA DEYISIKLIK VAR -->
+                                    <div class="qualification__div__flex">
+                                        <span class="mr-2">Minimum of </span>
+                                        <div>
+                                            <input name="experienceYears" list="experienceYears"
+                                                placeholder="Start typing..." value="">
+                                            <datalist id="experienceYears">
+                                                <option data-value="1" value="1 year"></option>
+                                                <option data-value="2" value="2 years "></option>
+                                                <option data-value="3" value="3 years"></option>
+                                                <option data-value="4" value="4 years"></option>
+                                                <option data-value="5" value="5 years"></option>
+                                                <option data-value="6" value="6 years"></option>
+                                            </datalist>
+                                            <input type="hidden" name="" class="hidden-experienceYears" value>
+                                        </div>
+                                        <span class="mx-2"> of </span>
                                     </div>
+                                    <div class="qualification__div__flex">
+                                        <div>
+                                            <input name="experienceName" list="experienceName"
+                                                placeholder="Start typing..." value="">
+                                            <datalist id="experienceName">
+                                                <option data-value="1" value="1 Name"></option>
+                                                <option data-value="2" value="2 Name "></option>
+                                                <option data-value="3" value="3 Name"></option>
+                                                <option data-value="4" value="4 Name"></option>
+                                                <option data-value="5" value="5 Name"></option>
+                                                <option data-value="6" value="6 Name"></option>
+                                            </datalist>
+                                            <input type="hidden" name="" class="hidden-experienceName" value>
+                                        </div>
 
-                                    <span class="mx-2 mt-phone"> experience </span>
+                                        <span class="mx-2 mt-phone"> experience </span>
+                                    </div>
                                 </div>
                                 <div class="qualification__div--bottom">
                                     <div class="switch-block">
@@ -65,6 +71,7 @@
                         <div class="qualification__div--qualificationEducation">
                             <div class="qualification__div--item qualification__div--item-Education">
                                 <div class="qualification__div--top justify-content-start">
+
                                     <span class="mr-2">Minimum level of education: </span>
                                     <div>
                                         <input list="educationLevel" placeholder="Start typing...">
@@ -97,7 +104,8 @@
                         <div class="qualification__div--qualificationLanguage">
                             <div class="qualification__div--item qualification__div--item-Language">
                                 <div class="qualification__div--top">
-                                    <div id="searchfield" class="searchfield">
+                                    <!-- BURADA DEYISIKLIK VAR -->
+                                    <div class="qualification__div__flex">
 
                                         <label class="mr-2" for="qualificationLang">Language:</label>
                                         <div>
@@ -114,8 +122,9 @@
 
                                             <input type="hidden" name="" class="hidden-languageName" value>
                                         </div>
-
-                                        <label class="mx-2 m-t-10"> Level: </label>
+                                    </div>
+                                    <div class="qualification__div__flex">
+                                        <label class="mr-2 m-t-10"> Level: </label>
                                         <div>
                                             <input list="languageLevel" placeholder="Start typing...">
                                             <datalist id="languageLevel">
@@ -133,6 +142,7 @@
 
 
                                     </div>
+                                    <!--  -->
                                 </div>
                                 <div class="qualification__div--bottom">
                                     <div class="switch-block">
@@ -334,7 +344,8 @@
                         <div class="qualification__div--qualificationSkills">
                             <div class="qualification__div--item qualification__div--item-Skills">
                                 <div class="qualification__div--top">
-                                    <div id="searchfield" class="searchfield">
+                                    <!-- BURADA DEYISIKLIK VAR -->
+                                    <div class="qualification__div__flex">
                                         <label class="mr-2" for="qualificationInputSkills">Skills:</label>
                                         <div>
                                             <input list="skillsName" placeholder="Start typing...">
@@ -349,8 +360,9 @@
                                             </datalist>
                                             <input type="hidden" name="" class="hidden-skillsName" value>
                                         </div>
-
-                                        <label class="mx-2 m-t-10"> Level:
+                                    </div>
+                                    <div class="qualification__div__flex">
+                                        <label class="mr-2 m-t-10"> Level:
                                         </label>
                                         <div>
                                             <input list="skillsLevel" placeholder="Start typing...">
@@ -368,6 +380,7 @@
 
 
                                     </div>
+                                    <!--  -->
                                 </div>
                                 <div class="qualification__div--bottom">
                                     <div class="switch-block">
@@ -422,309 +435,328 @@
                         <div class="qualification__div--qualificationAge">
                             <div class="qualification__div--item qualification__div--item-Age">
                                 <div class="qualification__div--top">
-                                    <div id="searchfield" class="searchfield">
+                                    <!-- BURADA DEYISIKLIK VAR -->
+                                    <div class="qualification__div__flex">
 
-                                        <div class="d-flex  w-100 justify-content-between  align-items-center mr-5 ">
-                                            <label class="mx-2 m-t-10"> Min: </label>
-                                            <div>
-                                                <input list="minAgeLevel" placeholder="Start typing min age">
-                                                <datalist id="minAgeLevel">
-                                                    <option data-value="18" value="18"></option>
-                                                    <option data-value="20" value="20"></option>
-                                                    <option data-value="22" value="22"></option>
-                                                    <option data-value="25" value="25"></option>
 
-                                                </datalist>
-                                                <input type="hidden" name="" class="hidden-minAgeLevel" value>
-                                            </div>
+                                        <label class="mr-2 m-t-10"> Min: </label>
+                                        <div>
+                                            <input list="minAgeLevel" placeholder="Start typing min age">
+                                            <datalist id="minAgeLevel">
+                                                <option data-value="18" value="18"></option>
+                                                <option data-value="20" value="20"></option>
+                                                <option data-value="22" value="22"></option>
+                                                <option data-value="25" value="25"></option>
 
-                                        </div>
-                                        <div class="d-flex  w-100 justify-content-between align-items-center">
-                                            <label class="mx-2 m-t-10"> Max: </label>
-                                            <div>
-                                                <input list="maxAgeLevel" placeholder="Start typing max age">
-                                                <datalist id="maxAgeLevel">
-                                                    <option data-value="30" value="30"></option>
-                                                    <option data-value="40" value="40"></option>
-                                                    <option data-value="50" value="50"></option>
-                                                    <option data-value="60" value="60"></option>
-
-                                                </datalist>
-                                                <input type="hidden" name="" class="hidden-maxAgeLevel" value>
-                                            </div>
-
+                                            </datalist>
+                                            <input type="hidden" name="" class="hidden-minAgeLevel" value>
                                         </div>
 
                                     </div>
-                                </div>
-                                <div class="qualification__div--bottom">
-                                    <div class="switch-block">
-                                        <label class="switch-light switch-candy">
-                                            <input type="checkbox" class="checkboxAge" />
-                                            <span>
-                                                <span>Preffered</span>
-                                                <span>Required</span>
-                                                <a></a>
-                                            </span>
-                                        </label>
+                                    <div class="qualification__div__flex">
+                                        <label class="mr-2 m-t-10"> Max: </label>
+                                        <div>
+                                            <input list="maxAgeLevel" placeholder="Start typing max age">
+                                            <datalist id="maxAgeLevel">
+                                                <option data-value="30" value="30"></option>
+                                                <option data-value="40" value="40"></option>
+                                                <option data-value="50" value="50"></option>
+                                                <option data-value="60" value="60"></option>
+
+                                            </datalist>
+                                            <input type="hidden" name="" class="hidden-maxAgeLevel" value>
+                                        </div>
+
                                     </div>
+
                                 </div>
-                                <div class="qualification--remove-btn"><i class="fas fa-times"></i></div>
+                            </div>
+                            <div class="qualification__div--bottom">
+                                <div class="switch-block">
+                                    <label class="switch-light switch-candy">
+                                        <input type="checkbox" class="checkboxAge" />
+                                        <span>
+                                            <span>Preffered</span>
+                                            <span>Required</span>
+                                            <a></a>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="qualification--remove-btn"><i class="fas fa-times"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- QUALIFICATION HIDDEN ITEMS END -->
+                <form class="post-a-job-form">
+                    <div class="qualification__title">Post a job</div>
+                    <h2 class="qualification__h2">Applicant Qualifications</h2>
+                    <div class="qualification__job">
+                        <div class="form-group qualification__form-group">
+                            <label for="qualification-company-name">Your Company Name</label>
+                            <div>
+                                <input name="companyName" list="companyName" value=""
+                                    class="qualification__input w-100">
+                                <datalist id="companyName">
+                                    <option data-value="1" value="1 Name"></option>
+                                    <option data-value="2" value="2 Name "></option>
+                                    <option data-value="3" value="3 Name"></option>
+                                    <option data-value="4" value="4 Name"></option>
+                                    <option data-value="5" value="5 Name"></option>
+                                    <option data-value="6" value="6 Name"></option>
+                                </datalist>
+                                <input type="hidden" name="" class="hidden-companyName" value>
+                            </div>
+
+                        </div>
+                        <div class="form-group qualification__form-group">
+                            <label for="qualification-user-name">Your Name</label>
+                            <input type="text" name="post_yourName" class="qualification__input"
+                                id="qualification-user-name">
+                        </div>
+                        <div class="form-group qualification__form-group">
+                            <label for="qualification-phone-number">Phone Number</label>
+                            <input type="number" name="post_phoneNumber" class="qualification__input"
+                                id="qualification-phone-number">
+                        </div>
+
+                        <div class="form-group qualification__form-group">
+                            <label for="qualification-location">Job Title</label>
+                            <div>
+                                <input name="jobTitle" list="jobTitle" value="" class="qualification__input w-100">
+                                <datalist id="jobTitle">
+                                    <option data-value="1" value="1 Job Title"></option>
+                                    <option data-value="2" value="2 Job Title "></option>
+                                    <option data-value="3" value="3 Job Title"></option>
+                                    <option data-value="4" value="4 Job Title"></option>
+                                    <option data-value="5" value="5 Job Title"></option>
+                                    <option data-value="6" value="6 Job Title"></option>
+                                </datalist>
+                                <input type="hidden" name="" class="hidden-jobTitle" value>
+                            </div>
+                        </div>
+
+                        <div class="form-group qualification__form-group">
+                            <label for="qualification-location">Location</label>
+                            <div>
+                                <input name="locationName" list="locationName" placeholder="City or postal code"
+                                    value="" class="qualification__input w-100">
+                                <datalist id="locationName">
+                                    <option data-value="1" value="1 Name"></option>
+                                    <option data-value="2" value="2 Name "></option>
+                                    <option data-value="3" value="3 Name"></option>
+                                    <option data-value="4" value="4 Name"></option>
+                                    <option data-value="5" value="5 Name"></option>
+                                    <option data-value="6" value="6 Name"></option>
+                                </datalist>
+                                <input type="hidden" name="" class="hidden-locationName" value>
+                            </div>
+                        </div>
+                        <div class="qualification__language">
+                            <div class="qualification__language-div"> <span> Job posting will be displayed in:
+                                    <span>English</span> </span> <span> - </span> <a href="#"
+                                    class="qualification__language--change">Change <i class="fas fa-pen"></i></a>
+                            </div>
+                            <!-- BURADA DEYISIKLIK VAR -->
+                            <div class="form-group qualification__form-group qualification__language__div">
+                                <label> What language will your job posting be displayed in ?</label>
+                                <div>
+                                    <input name="qualificationChangeLanguage" list="qualificationChangeLanguage"
+                                        placeholder="City or postal code" value="" class="qualification__input w-100">
+                                    <datalist id="qualificationChangeLanguage">
+                                        <option data-value="1" value="1 Language"></option>
+                                        <option data-value="2" value="2 Language "></option>
+                                        <option data-value="3" value="3 Language"></option>
+                                        <option data-value="4" value="4 Language"></option>
+                                        <option data-value="5" value="5 Language"></option>
+                                        <option data-value="6" value="6 Language"></option>
+                                    </datalist>
+                                    <input type="hidden" name="" class="hidden-qualificationChangeLanguage" value>
+                                </div>
+
+                            </div>
+                            <!--  -->
+                        </div>
+
+
+                    </div>
+                    <div class="qualification__job-type">
+                        <label>What type of job is it ?</label>
+                        <label for="subjects" id="subject_error"></label>
+                        <div class="qualification__list">
+                            <div class="qualification__list--item qualification__list--item form-check">
+                                <input class="qualification__list__input form-check-input" type="checkbox"
+                                    name="jobTypeCheckboxes[]" id="qualification-full-time" value="jobtype1" />
+                                <label class="qualification__list__label form-check-label "
+                                    for="qualification-full-time"><i
+                                        class="fas fa-check qualification__list__label-check"></i><span>Full-time</span>
+                                </label>
+                            </div>
+                            <div class="qualification__list--item form-check">
+                                <input class="qualification__list__input form-check-input" type="checkbox"
+                                    name="jobTypeCheckboxes[]" id="qualification-part-time" value="jobtype2" />
+                                <label class="qualification__list__label form-check-label "
+                                    for="qualification-part-time"><i
+                                        class="fas fa-check qualification__list__label-check"></i><span>Part-time</span>
+                                </label>
+                            </div>
+                            <div class="qualification__list--item form-check">
+                                <input class="qualification__list__input form-check-input" type="checkbox"
+                                    name="jobTypeCheckboxes[]" id="qualification-temporary" value="jobtype3" />
+                                <label class="qualification__list__label form-check-label "
+                                    for="qualification-temporary"><i
+                                        class="fas fa-check qualification__list__label-check"></i><span>Temporary</span>
+                                </label>
+                            </div>
+                            <div class="qualification__list--item form-check">
+                                <input class="qualification__list__input form-check-input" type="checkbox"
+                                    name="jobTypeCheckboxes[]" id="qualification-contract" value="jobtype4" />
+                                <label class="qualification__list__label form-check-label "
+                                    for="qualification-contract"><i
+                                        class="fas fa-check qualification__list__label-check"></i><span>Contract</span>
+                                </label>
+                            </div>
+                            <div class="qualification__list--item form-check">
+                                <input class="qualification__list__input form-check-input" type="checkbox"
+                                    name="jobTypeCheckboxes[]" id="qualification-internship" value="jobtype5" />
+                                <label class="qualification__list__label form-check-label "
+                                    for="qualification-internship"><i
+                                        class="fas fa-check qualification__list__label-check"></i><span>Internship</span>
+                                </label>
+                            </div>
+                            <div class="qualification__list--item form-check">
+                                <input class="qualification__list__input form-check-input" type="checkbox"
+                                    name="jobTypeCheckboxes[]" id="qualification-commission" value="jobtype6" />
+                                <label class="qualification__list__label form-check-label "
+                                    for="qualification-commission"><i
+                                        class="fas fa-check qualification__list__label-check"></i><span>Commission</span>
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <!-- QUALIFICATION HIDDEN ITEMS END -->
-                    <form class="post-a-job-form">
-                        <div class="qualification__title">Post a job</div>
-                        <h2 class="qualification__h2">Applicant Qualifications</h2>
-                        <div class="qualification__job">
-                            <div class="form-group qualification__form-group">
-                                <label for="qualification-company-name">Your Company Name</label>
-                                <div>
-                                    <input name="companyName" list="companyName" value=""
-                                        class="qualification__input w-100">
-                                    <datalist id="companyName">
-                                        <option data-value="1" value="1 Name"></option>
-                                        <option data-value="2" value="2 Name "></option>
-                                        <option data-value="3" value="3 Name"></option>
-                                        <option data-value="4" value="4 Name"></option>
-                                        <option data-value="5" value="5 Name"></option>
-                                        <option data-value="6" value="6 Name"></option>
-                                    </datalist>
-                                    <input type="hidden" name="" class="hidden-companyName" value>
-                                </div>
-
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <div class="qualification__salary__list">
+                            <div class="qualification__salary__list--item form-check">
+                                <input class="qualification__salary__list__input form-check-input" type="radio"
+                                    name="salary-type" id="qualification-salary-constant"
+                                    data-item-id="qualification-salary-type" checked />
+                                <label class="qualification__salary__list__label form-check-label "
+                                    for="qualification-salary-constant">Constant</label>
                             </div>
-                            <div class="form-group qualification__form-group">
-                                <label for="qualification-user-name">Your Name</label>
-                                <input type="text" name="post_yourName" class="qualification__input"
-                                    id="qualification-user-name">
+                            <div class="qualification__salary__list--item form-check">
+                                <input class="qualification__salary__list__input form-check-input" type="radio"
+                                    name="salary-type" id="qualification-salary-changeable"
+                                    data-item-id="qualification-salary-type" />
+                                <label class="qualification__salary__list__label form-check-label "
+                                    for="qualification-salary-changeable">Changeable</label>
                             </div>
-                            <div class="form-group qualification__form-group">
-                                <label for="qualification-phone-number">Phone Number</label>
-                                <input type="number" name="post_phoneNumber" class="qualification__input"
-                                    id="qualification-phone-number">
+                            <div class="qualification__salary__list--item form-check">
+                                <input class="qualification__salary__list__input form-check-input" type="radio"
+                                    name="salary-type" id="qualification-salary-agreement"
+                                    data-item-id="qualification-salary-type" />
+                                <label class="qualification__salary__list__label form-check-label "
+                                    for="qualification-salary-agreement">With Agreement</label>
                             </div>
 
-                            <div class="form-group qualification__form-group">
-                                <label for="qualification-location">Job Title</label>
-                                <div>
-                                    <input name="jobTitle" list="jobTitle" value="" class="qualification__input w-100">
-                                    <datalist id="jobTitle">
-                                        <option data-value="1" value="1 Job Title"></option>
-                                        <option data-value="2" value="2 Job Title "></option>
-                                        <option data-value="3" value="3 Job Title"></option>
-                                        <option data-value="4" value="4 Job Title"></option>
-                                        <option data-value="5" value="5 Job Title"></option>
-                                        <option data-value="6" value="6 Job Title"></option>
-                                    </datalist>
-                                    <input type="hidden" name="" class="hidden-jobTitle" value>
-                                </div>
+                        </div>
+                        <div class="style-2 qualification__salary">
+                            <div class="qualification__salary--constant-div">
+                                <input type="text"
+                                    class="qualification__salary--input qualification__salary--constant-input"
+                                    placeholder="Əmək haqqı" name="post_constSalary">
+                                <span class="dropdown-money">
+                                    <input type="radio" name="sortType" value="azn" checked="checked"
+                                        id="sort-relevance"><label for="sort-relevance">Azn</label>
+                                    <input type="radio" name="sortType" value="dollar" id="sort-best"><label
+                                        for="sort-best">Dollar</label>
+                                    <input type="radio" name="sortType" value="euro" id="sort-low"><label
+                                        for="sort-low">Euro</label>
+
+                                </span>
                             </div>
-                          
-                            <div class="form-group qualification__form-group">
-                                <label for="qualification-location">Location</label>
-                                <div>
-                                    <input name="locationName" list="locationName" placeholder="City or postal code"
-                                        value="" class="qualification__input w-100">
-                                    <datalist id="locationName">
-                                        <option data-value="1" value="1 Name"></option>
-                                        <option data-value="2" value="2 Name "></option>
-                                        <option data-value="3" value="3 Name"></option>
-                                        <option data-value="4" value="4 Name"></option>
-                                        <option data-value="5" value="5 Name"></option>
-                                        <option data-value="6" value="6 Name"></option>
-                                    </datalist>
-                                    <input type="hidden" name="" class="hidden-locationName" value>
-                                </div>
-                            </div>
-                            <div class="qualification__language">
-                                <div class="qualification__language-div"> <span> Job posting will be displayed in:
-                                        <span>English</span> </span> <span> - </span> <a href="#"
-                                        class="qualification__language--change">Change <i class="fas fa-pen"></i></a>
-                                </div>
+                            <input type="hidden" class="hidden-salary-type" value="">
+
+
+                            <div class="qualification__salary--changeable-div">
+                                <input type="text"
+                                    class="qualification__salary--input  qualification__salary--input-min qualification__salary--changeable-input"
+                                    placeholder="Minimum əmək haqqı" name="post_minSalary">
+
+                                <input type="text"
+                                    class="qualification__salary--input qualification__salary--input-max qualification__salary--changeable-input"
+                                    placeholder="Maksimum əmək haqqı" name="post_maxSalary">
+                                <span class="dropdown-money-max">
+                                    <input type="radio" name="maxSalary" value="azn" checked="checked"
+                                        id="max-azn"><label for="max-azn">Azn</label>
+                                    <input type="radio" name="maxSalary" value="dollar" id="max-dollar"><label
+                                        for="max-dollar">Dollar</label>
+                                    <input type="radio" name="maxSalary" value="euro" id="max-euro"><label
+                                        for="max-euro">Euro</label>
+
+                                </span>
 
                             </div>
+
 
 
                         </div>
-                        <div class="qualification__job-type">
-                            <label>What type of job is it ?</label>
-                            <label for="subjects" id="subject_error"></label>
-                            <div class="qualification__list">
-                                <div class="qualification__list--item qualification__list--item form-check">
-                                    <input class="qualification__list__input form-check-input" type="checkbox"
-                                        name="jobTypeCheckboxes[]" id="qualification-full-time" value="jobtype1" />
-                                    <label class="qualification__list__label form-check-label "
-                                        for="qualification-full-time"><i
-                                            class="fas fa-check qualification__list__label-check"></i><span>Full-time</span>
-                                    </label>
-                                </div>
-                                <div class="qualification__list--item form-check">
-                                    <input class="qualification__list__input form-check-input" type="checkbox"
-                                        name="jobTypeCheckboxes[]" id="qualification-part-time" value="jobtype2" />
-                                    <label class="qualification__list__label form-check-label "
-                                        for="qualification-part-time"><i
-                                            class="fas fa-check qualification__list__label-check"></i><span>Part-time</span>
-                                    </label>
-                                </div>
-                                <div class="qualification__list--item form-check">
-                                    <input class="qualification__list__input form-check-input" type="checkbox"
-                                        name="jobTypeCheckboxes[]" id="qualification-temporary" value="jobtype3" />
-                                    <label class="qualification__list__label form-check-label "
-                                        for="qualification-temporary"><i
-                                            class="fas fa-check qualification__list__label-check"></i><span>Temporary</span>
-                                    </label>
-                                </div>
-                                <div class="qualification__list--item form-check">
-                                    <input class="qualification__list__input form-check-input" type="checkbox"
-                                        name="jobTypeCheckboxes[]" id="qualification-contract" value="jobtype4" />
-                                    <label class="qualification__list__label form-check-label "
-                                        for="qualification-contract"><i
-                                            class="fas fa-check qualification__list__label-check"></i><span>Contract</span>
-                                    </label>
-                                </div>
-                                <div class="qualification__list--item form-check">
-                                    <input class="qualification__list__input form-check-input" type="checkbox"
-                                        name="jobTypeCheckboxes[]" id="qualification-internship" value="jobtype5" />
-                                    <label class="qualification__list__label form-check-label "
-                                        for="qualification-internship"><i
-                                            class="fas fa-check qualification__list__label-check"></i><span>Internship</span>
-                                    </label>
-                                </div>
-                                <div class="qualification__list--item form-check">
-                                    <input class="qualification__list__input form-check-input" type="checkbox"
-                                        name="jobTypeCheckboxes[]" id="qualification-commission" value="jobtype6" />
-                                    <label class="qualification__list__label form-check-label "
-                                        for="qualification-commission"><i
-                                            class="fas fa-check qualification__list__label-check"></i><span>Commission</span>
-                                    </label>
-                                </div>
-                            </div>
+                    </div>
+                    <h3 class="qualification__h3">Applicant Qualifications</h3>
+                    <p class="qualification__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                        quasi
+                        consectetur odit, voluptatibus aliquid earum ducimus cum quam dolorum expedita accusamus
+                        reprehenderit in ipsa, facilis placeat nisi quas commodi eius.</p>
+
+                    <div class="qualification__div">
+
+                        <div class="qualification__div--qualificationGenderNew"></div>
+                    </div>
+
+
+                    <!-- QUALIFICATION BUTTONS -->
+                    <div class="qualification__questions">
+                        <div class="qualification__questions--item " id="qualificationExperience">
+                            <span>+ Experience</span>
                         </div>
-                        <div class="form-group">
-                            <label>Salary</label>
-                            <div class="qualification__salary__list">
-                                <div class="qualification__salary__list--item form-check">
-                                    <input class="qualification__salary__list__input form-check-input" type="radio"
-                                        name="salary-type" id="qualification-salary-constant"
-                                        data-item-id="qualification-salary-type" checked />
-                                    <label class="qualification__salary__list__label form-check-label "
-                                        for="qualification-salary-constant">Constant</label>
-                                </div>
-                                <div class="qualification__salary__list--item form-check">
-                                    <input class="qualification__salary__list__input form-check-input" type="radio"
-                                        name="salary-type" id="qualification-salary-changeable"
-                                        data-item-id="qualification-salary-type" />
-                                    <label class="qualification__salary__list__label form-check-label "
-                                        for="qualification-salary-changeable">Changeable</label>
-                                </div>
-                                <div class="qualification__salary__list--item form-check">
-                                    <input class="qualification__salary__list__input form-check-input" type="radio"
-                                        name="salary-type" id="qualification-salary-agreement"
-                                        data-item-id="qualification-salary-type" />
-                                    <label class="qualification__salary__list__label form-check-label "
-                                        for="qualification-salary-agreement">With Agreement</label>
-                                </div>
-
-                            </div>
-                            <div class="style-2 qualification__salary">
-                                <div class="qualification__salary--constant-div">
-                                    <input type="text"
-                                        class="qualification__salary--input qualification__salary--constant-input"
-                                        placeholder="Əmək haqqı" name="post_constSalary">
-                                    <span class="dropdown-money">
-                                        <input type="radio" name="sortType" value="azn" checked="checked"
-                                            id="sort-relevance"><label for="sort-relevance">Azn</label>
-                                        <input type="radio" name="sortType" value="dollar" id="sort-best"><label
-                                            for="sort-best">Dollar</label>
-                                        <input type="radio" name="sortType" value="euro" id="sort-low"><label
-                                            for="sort-low">Euro</label>
-
-                                    </span>
-                                </div>
-                                <input type="hidden" class="hidden-salary-type" value="">
-
-
-                                <div class="qualification__salary--changeable-div">
-                                    <input type="text"
-                                        class="qualification__salary--input  qualification__salary--input-min qualification__salary--changeable-input"
-                                        placeholder="Minimum əmək haqqı" name="post_minSalary">
-
-                                    <input type="text"
-                                        class="qualification__salary--input qualification__salary--input-max qualification__salary--changeable-input"
-                                        placeholder="Maksimum əmək haqqı" name="post_maxSalary">
-                                    <span class="dropdown-money-max">
-                                        <input type="radio" name="maxSalary" value="azn" checked="checked"
-                                            id="max-azn"><label for="max-azn">Azn</label>
-                                        <input type="radio" name="maxSalary" value="dollar" id="max-dollar"><label
-                                            for="max-dollar">Dollar</label>
-                                        <input type="radio" name="maxSalary" value="euro" id="max-euro"><label
-                                            for="max-euro">Euro</label>
-
-                                    </span>
-
-                                </div>
-
-
-
-                            </div>
+                        <div class="qualification__questions--item" id="qualificationEducation">
+                            <span>+ Education</span>
                         </div>
-                        <h3 class="qualification__h3">Applicant Qualifications</h3>
-                        <p class="qualification__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                            quasi
-                            consectetur odit, voluptatibus aliquid earum ducimus cum quam dolorum expedita accusamus
-                            reprehenderit in ipsa, facilis placeat nisi quas commodi eius.</p>
-
-                        <div class="qualification__div">
-
-                            <div class="qualification__div--qualificationGenderNew"></div>
+                        <div class="qualification__questions--item" id="qualificationLanguage">
+                            <span>+ Language</span>
                         </div>
-
-
-                        <!-- QUALIFICATION BUTTONS -->
-                        <div class="qualification__questions">
-                            <div class="qualification__questions--item " id="qualificationExperience">
-                                <span>+ Experience</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationEducation">
-                                <span>+ Education</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationLanguage">
-                                <span>+ Language</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationLicense">
-                                <span>+ License</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationWorkingDays">
-                                <span>+ Working Days</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationBenefits">
-                                <span>+ Benefits</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationSkills">
-                                <span>+ Skills</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationGender">
-                                <span>+ Gender</span>
-                            </div>
-                            <div class="qualification__questions--item" id="qualificationAge">
-                                <span>+ Age</span>
-                            </div>
+                        <div class="qualification__questions--item" id="qualificationLicense">
+                            <span>+ License</span>
                         </div>
-                        <h3 class="qualification__h3">Job Description</h3>
-                        <p class="qualification__p">Lorem ipsum dolor sit amet consectetur adipisicing elit .</p>
-                        <div>
-                            <textarea id="post_editor" cols="30" rows="10" name="post_editor"></textarea>
-
+                        <div class="qualification__questions--item" id="qualificationWorkingDays">
+                            <span>+ Working Days</span>
                         </div>
-<!-- NEW CHANGING START -->
-                        <button type="submit" class="btn red-btn mt-5 p-0">Submit</button>
-                        <!-- NEW CHANGING END -->
-                    </form>
-                </div>
+                        <div class="qualification__questions--item" id="qualificationBenefits">
+                            <span>+ Benefits</span>
+                        </div>
+                        <div class="qualification__questions--item" id="qualificationSkills">
+                            <span>+ Skills</span>
+                        </div>
+                        <div class="qualification__questions--item" id="qualificationGender">
+                            <span>+ Gender</span>
+                        </div>
+                        <div class="qualification__questions--item" id="qualificationAge">
+                            <span>+ Age</span>
+                        </div>
+                    </div>
+                    <h3 class="qualification__h3">Job Description</h3>
+                    <p class="qualification__p">Lorem ipsum dolor sit amet consectetur adipisicing elit .</p>
+                    <div>
+                        <textarea id="post_editor" cols="30" rows="10" name="post_editor"></textarea>
+
+                    </div>
+                    <!-- NEW CHANGING START -->
+                    <button type="submit" class="btn red-btn mt-5 p-0">Submit</button>
+                    <!-- NEW CHANGING END -->
+                </form>
             </div>
         </div>
+    </div>
     </div>
 
     //= template/footer-with-container.html
@@ -758,7 +790,7 @@
     <script src="js/post-a-job-new.js"></script>
     <script src="js/validation-post-a-job.js"></script>
 
-  
+
 
 </body>
 

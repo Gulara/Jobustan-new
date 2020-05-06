@@ -16,6 +16,29 @@ $(document).ready(function () {
     $(".category-inner__remove-btn").click(function () {
         $(this).parent().remove()
     });
+    $(".category-inner__share").click(function () {
+        $(this).css({
+            "display": "none"
+        })
+        $(".category-inner__share-group").css({
+            "border": "2px solid #efefef"
+        })
+        $(".rounded-social-buttons").toggleClass("d-flex");
+        // $(".rounded-social-buttons").css({
+
+        //     "display": "flex"
+        // })
+    });
+
+
+    //This toggles the class of active to expose social
+$(".social-share").click(function(){
+    $(this).toggleClass("active");
+   });
+   //This gets rid of the link text on the social icons
+   $('.on-page ul a').each(function() {
+       $(this).text('');
+   });
 
 });
 
@@ -689,3 +712,16 @@ $(document).ready(function () {
     });
 
 }(window.jQuery);
+
+
+
+
+
+
+
+
+
+
+//////
+/////////
+/////////
