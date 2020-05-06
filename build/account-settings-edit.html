@@ -17,6 +17,11 @@
   <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
   <link rel="stylesheet" href="theme/css/owl-carousel-owl.carousel.min.css">
   <link rel="stylesheet" href="theme/css/magnific-popup-magnific-popup.css"><!-- Template Style -->
+  <!-- CSS Global Compulsory (Do not remove)-->
+  <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+  <link rel="stylesheet" href="css/datetimepicker-datetimepicker.min.css">
+  <link rel="stylesheet" href="css/select2-select2.css"><!-- Template Style -->
+
   
 <!-- MY LINKS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
@@ -38,6 +43,9 @@ integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeV
      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css">
    <link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
+   <link rel="stylesheet" href="https://foliotek.github.io/Croppie/croppie.css">
+   
 
   <link rel="stylesheet" href="theme/css/css-style.css">
   <link rel="stylesheet" href="css/main/main.css">
@@ -256,14 +264,14 @@ header -->
                             <!-- Password -->
                             <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-lastname">Password</label>
-                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-password" placeholder="**********"
-                                    name="password">  <i class="fas fa-eye ml-3 text-red account-settings-edit__show-password "></i>
+                                <input id="password-field" type="password" class="account-settings-edit__input" id="account-settings-edit-password"  value="12354657" name="password">  
+                                 <i toggle="#password-field"  class="fas fa-eye ml-3 text-red account-settings-edit__show-password  toggle-password"></i>
                             </div>
                               <!-- Password -->
                               <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-lastname">Confirm Password</label>
-                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-confirm-password" placeholder="**********"
-                                    name="confirmpassword"> <i class="fas fa-eye ml-3 text-red account-settings-edit__show-password "></i>
+                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-confirm-password"  value="12354657"  name="confirmpassword"> 
+                                <i  toggle="#account-settings-edit-confirm-password"  class="fas fa-eye ml-3 text-red account-settings-edit__show-password   toggle-confirm-password"></i>
                             </div>
                             <button type="submit" class="btn account-settings-edit__submit-btn">Submit</button>
                         </form>
@@ -673,6 +681,7 @@ header -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/password-account-settings.js"></script>
     <script src="js/validation-account-settings-edit.js"></script>
 
 </body>

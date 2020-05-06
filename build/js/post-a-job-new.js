@@ -36,6 +36,16 @@ $(document).ready(function () {
         }
     });
 
+    $("input[list=qualificationChangeLanguage]").focusout(function () {
+        let value = $(this).val();
+        let dataVal =$('#qualificationChangeLanguage [value="' + value + '"]').data('value')
+        console.log(dataVal);
+        $(this).siblings(".hidden-qualificationChangeLanguage").val(dataVal);
+        if($(this).siblings(".hidden-qualificationChangeLanguage").val() === "") {
+            $(this).siblings(".hidden-qualificationChangeLanguage").val(value)
+        }
+    });
+
 
     $('.iq-salaryLevel ').select2();
 
@@ -116,12 +126,11 @@ $(document).ready(function () {
         e.preventDefault();
         $('.qualification__language-div').css({
             'display': 'none'
-        })
+        });
+        $('.qualification__language__div').css({
+            'display': 'block'
+        });
         // if (maxAppend >= 10) return;
-
-        var changeLanguageInput = $(
-            " <div class='form-group qualification__form-group'> <label for='qualification-change-language'> What language will your job posting be displayed in ?</label><input type='text' name='post_changeLanguage' class='qualification__input' id='qualification-change-language'></div>");
-        maxAppend++;
 
         $(".qualification__language").append(changeLanguageInput);
         // AUTOCOMPLETE START
