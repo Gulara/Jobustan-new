@@ -1,5 +1,92 @@
 .category-inner {
     overflow-x: hidden;
+    &__share-btn{
+        margin-left: 10px;
+     width: 200px;
+     height: 40px;
+position: relative;
+     
+           
+        
+        
+        @include respond(tab-land) {
+            order: 2;
+            flex: 1 0 100%;
+            margin-top: 10px;
+            // width: 100%;
+            margin-left: 0;
+        }
+        .webSocialList {
+            min-width: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            // transform: translate(-50%, -50%);
+            height: 40px;
+          
+            border: 1px solid $color-gray-light-2;
+           
+            list-style-type: none;
+            background-color: #fff;
+            border-radius: 20px;
+            padding-left: 0;
+            margin-bottom: 0;
+        
+        
+            li {
+                width: 40px;
+                height: 40px;
+                margin: 0 5px;
+            
+                float: left;
+                line-height: 40px;
+                color: #74b6e8;
+                overflow: hidden;
+                cursor: pointer;
+        
+                &:last-of-type {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                    &:hover i {
+                        color: #3a7eb1;
+                    }
+                }
+        
+                &:last-of-type i {
+                    font-size: 25px;
+                }
+        
+                &:hover {
+                    color: #3a7eb1;
+                }
+        
+                i {
+                    font-size: 25px;
+                    vertical-align: middle;
+                    margin: 0 5px;
+                }
+        
+                a {
+                    text-decoration: none;
+                    color: #74b6e8;
+        
+                    &:hover {
+                        color: #3a7eb1;
+                    }
+        
+                    &:visited {
+                        text-decoration: underline;
+                    }
+                }
+        
+            }
+        }
+    }
 
     &__share {
         transition: all 0.5s ease;
@@ -954,3 +1041,9 @@ $textColor: #1E2330;
 //////////
 /////////
 //////////
+////
+/////
+///////
+//////
+
+

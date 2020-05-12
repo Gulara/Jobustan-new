@@ -281,10 +281,10 @@
 }
 .owl-carousel-searchFilter {
     .owl-item{
-        @include respond(main-img-resp-2) {
-            width: 300px !important;
-        }
-        @include respond(main-img-resp-1) {
+        // @include respond(main-img-resp-2) {
+        //     width: 300px !important;
+        // }
+        @include respond(ipad-pro) {
             width: 250px !important;
         }
         @include respond(tab-port) {
