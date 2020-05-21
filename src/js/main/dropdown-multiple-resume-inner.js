@@ -3,6 +3,38 @@
 // ALL JOB TYPES START
 
 
+// NEW NEW NEW job types resume START
+function setJobTypesValues(){
+    vals1 = $('.mutliSelect-job-types-resume input[type="checkbox"]:checked')
+    .map(function () {
+        return this.value;
+    })
+    .get()
+    .join(',');
+    $('.hidden-multiple-job-types-resume').val(vals1);
+}
+function setJobTimeValues(){
+    vals2 = $('.mutliSelect-posted-time-resume input[type="checkbox"]:checked').map(function () {
+        return this.value;
+    }).get().join(',');
+    $('.hidden-multiple-posted-time-resume').val(vals2);
+
+}
+function setJobLocationValues(){
+    vals3 = $('.mutliSelect-location-resume input[type="checkbox"]:checked').map(function () {
+        return this.value;
+    }).get().join(',');
+    $('.hidden-multiple-location-resume').val(vals3);
+}
+function setJobMoreValues(){
+    vals4 = $('.mutliSelect-more-resume input[type="checkbox"]:checked').map(function () {
+        return this.value;
+    }).get().join(',');
+    $('.hidden-multiple-more').val(vals4);
+}
+
+// NEW NEW NEW job types resume END
+
 $(".dropdown-multiple-job-types-resume dt a").on('click', function () {
     $(".dropdown-multiple-job-types-resume dd ul").slideToggle('fast');
 });
@@ -100,28 +132,16 @@ $('.mutliSelect-more-resume input[type="checkbox"]').on('click', function () {
 //MORE END
 
 
-//  NEW NEW NEW   ALL INPUTS
+//  NEW NEW NEW   ALL INPUTS START
 
 $('input[type="checkbox"]').on('change', function () {
-    vals1 = $('.mutliSelect-job-types-resume input[type="checkbox"]:checked').map(function () {
-        return this.value;
-    }).get().join(',');
-    $('.hidden-multiple-job-types-resume').val(vals1);
+    setJobTypesValues();
+    setJobTimeValues();
+    setJobLocationValues();
+    setJobMoreValues()
+    
 
-    vals2 = $('.mutliSelect-posted-time-resume input[type="checkbox"]:checked').map(function () {
-        return this.value;
-    }).get().join(',');
-    $('.hidden-multiple-posted-time-resume').val(vals2);
-
-    vals3 = $('.mutliSelect-location-resume input[type="checkbox"]:checked').map(function () {
-        return this.value;
-    }).get().join(',');
-    $('.hidden-multiple-location-resume').val(vals3);
-
-    vals4 = $('.mutliSelect-more-resume input[type="checkbox"]:checked').map(function () {
-        return this.value;
-    }).get().join(',');
-    $('.hidden-multiple-more').val(vals4);
+   
 
     let outerDiv = $('<div></div>')
     let dataId = $(this).attr("data-id");
@@ -140,16 +160,18 @@ $('input[type="checkbox"]').on('change', function () {
         $(".resume-inner__all-categories--container").append(outerDiv);
         $(".resume-inner__remove-btn").click(function () {
             $(this).parent().remove()
-            // removeDataId = $(this).siblings().attr("data-id")
-            // inputDataId = $("document").find("input").attr("data-id")
-            // console.log(inputDataId)
-        //   console.log($(this).siblings().attr("data-id"))
-            // $('.mutliSelect').find('input:contains("' + $(this).siblings().attr("data-id")+ '")').prop("checked",false);
-            $('.multiSelect').find('input:contains("' + $(this).siblings().attr("data-id")+ '")').prop('checked', false)
-            // console.log($('.multiSelect').find('input[type=checkbox]').attr($(this).siblings().attr("data-id")).prop("checked",false))
-            // console.log($(this).siblings().attr("data-id"));
-            console.log($('document').find('input:contains("' + $(this).siblings().attr("data-id")+ '")').prop("checked",false));
-            // console.log( $('.multiSelect').find('input:contains("' + $(this).siblings().attr("data-id")+ '")').prop("checked",false))
+
+            //console.log(this)
+
+
+             removeDataId = $(this).siblings().attr("data-id")
+
+             $(`[data-id='${removeDataId}']`).prop("checked",false);
+             setJobTypesValues();
+             setJobTimeValues();
+             setJobLocationValues();
+             setJobMoreValues()
+    
 
         });
     } else {
