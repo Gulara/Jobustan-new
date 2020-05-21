@@ -25,7 +25,7 @@ $(document).ready(function () {
         $.each($(':radio[customRadioJobLocation="' + customRadioJobLocation + '"]'), function () {
 
             $(this).val(val++);
-             $(this).attr('chk', '0');
+            $(this).attr('chk', '0');
             $(this).on("click", function (event) {
                 SetRadioButtonChkProperty($(this).val(), customRadioJobLocation);
                 let checkedSiblings = $(this).parent().siblings();
@@ -187,7 +187,7 @@ $(document).ready(function () {
                         $(this).attr("value", "Yes");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-month_txt').text("Month");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-experience-to-year_txt').text("Year");
-                     
+
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideDown();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideUp();
 
@@ -208,16 +208,16 @@ $(document).ready(function () {
 
                 $(".resume-experience-to-month_val").change(function () {
                     var option = $(this).find('option:selected').val();
-                
+
                     $(this).prev('.resume-experience-to-month_txt').text(option);
                     var optionId = $(this).find('option:selected').attr("data-id");
                     $(this).attr("value", optionId);
                 });
                 $(".resume-experience-to-year_val").change(function () {
                     var option = $(this).find('option:selected').val();
-               
+
                     $(this).prev('.resume-experience-to-year_txt').text(option);
-               
+
                 });
 
                 $("div.experience-"+randomClass+' input.hidden-experienceJobTitle').attr('name', 'experience[position]['+limitExperience+"]");
@@ -380,7 +380,7 @@ $(document).ready(function () {
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").children().children('.resume-education-to-year_txt').text("Year");
                         $(this).parent().parent().parent().siblings(".resume__form-group--right").slideDown();
                         $(this).parent().parent().parent().siblings(".resume__Present").slideUp();
-                      
+
 
                     }
                 });
@@ -419,6 +419,8 @@ $(document).ready(function () {
 
                 $("div.education-"+randomClass+' select.resume-education-to-month_val').attr('name', 'education[to_month]['+limitEducation+"]");
                 $("div.education-"+randomClass+' select.resume-education-to-year_val').attr('name', 'education[to_year]['+limitEducation+"]");
+
+                $("div.education-"+randomClass+' input.checkboxEducationTime').attr('name', 'education[still_student]['+limitEducation+"]");
 
 
 
@@ -710,7 +712,7 @@ $(document).ready(function () {
                     $(this).attr("value", "No");
 
                     $(".resume__addMilitary__list").slideDown();
-                     $(".resume__addMilitary__list").css({
+                    $(".resume__addMilitary__list").css({
                         "display": "flex"
                     })
                     // console.log("Required is checked.");
@@ -759,7 +761,7 @@ $(document).ready(function () {
                 $("input[list=awardsName]").focusout(function () {
                     let value = $(this).val();
                     let dataVal = $('#awardsName [value="' + value + '"]').data('value')
-            
+
                     $(this).siblings(".hidden-awardsName").val(dataVal);
                     if ($(this).siblings(".hidden-awardsName").val() === "") {
                         $(this).siblings(".hidden-awardsName").val(value)
@@ -860,7 +862,7 @@ $(document).ready(function () {
                 $("input[list=resumeAgeMonth]").focusout(function () {
                     let value = $(this).val();
                     let dataVal = $('#resumeAgeMonth [value="' + value + '"]').data('value')
-            
+
                     $(this).siblings(".hidden-resumeAgeMonth").val(dataVal);
                     if ($(this).siblings(".hidden-resumeAgeMonth").val() === "") {
                         $(this).siblings(".hidden-resumeAgeMonth").val(value)
@@ -893,10 +895,10 @@ $(document).ready(function () {
         enterMode: CKEDITOR.ENTER_BR,
         shiftEnterMode: CKEDITOR.ENTER_P,
         toolbar: [{
-                name: 'basicstyles',
-                groups: ['basicstyles'],
-                items: ['Bold', 'Italic', 'BulletedList']
-            },
+            name: 'basicstyles',
+            groups: ['basicstyles'],
+            items: ['Bold', 'Italic', 'BulletedList']
+        },
 
 
 
