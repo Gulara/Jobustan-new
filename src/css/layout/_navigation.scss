@@ -1,5 +1,6 @@
 .mynavbar {
     padding-bottom: 0;
+    margin-bottom: 0;
 
     @include respond(lg) {
         display: none;
@@ -15,6 +16,10 @@
     &__navbar-brand {
       padding: 0;
       margin-bottom: 5px;
+      margin-bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &__heart-group {
