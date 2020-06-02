@@ -782,6 +782,8 @@ footer */
   -webkit-border-radius: 20px;
      -moz-border-radius: 20px;
           border-radius: 20px; }
+  .red-btn:hover {
+    color: #fff; }
 
 .bg-red {
   background-color: #b40d4a;
