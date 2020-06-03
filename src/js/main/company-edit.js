@@ -22,7 +22,7 @@ $(".company-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
 						$uploadCrop = $('#company-edit-upload-demo').croppie({
 							viewport: {
 								width: 200,
-								height: 100,
+								height: 200,
 							},
 							enforceBoundary: false,
 							enableExif: true
@@ -42,7 +42,7 @@ $(".company-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
 							$uploadCrop.croppie('result', {
 								type: 'base64',
 								format: 'jpeg',
-								size: {width: 1600, height: 200}
+								size: {width: 200, height: 200}
 							}).then(function (resp) {
 								$('#item-img-output').attr('src', resp);
 								$('#cropImagePop').modal('hide');

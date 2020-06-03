@@ -8148,6 +8148,9 @@ label.error {
 .lead {
   font-size: 14px; }
 
+.feature-info-bg-border {
+  border: 2px solid #b40d4a; }
+
 .pricing__customRadio input[type="radio"] {
   position: absolute;
   left: -9999px; }
@@ -9612,6 +9615,96 @@ label.error {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 16px; }
+  .account-settings-edit__img-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.account-edit-section {
+  margin-top: 60px;
+  margin-bottom: 140px; }
+
+.account-edit__navbar {
+  font-size: 16px; }
+  .account-edit__navbar__category {
+    background-color: #b40d4a;
+    color: #fff;
+    padding: 10px; }
+  .account-edit__navbar__item {
+    margin: 10px 0;
+    line-height: 20px; }
+
+.account-edit__select {
+  height: 50px !important; }
+
+.account-edit__date {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-wrap: nowrap !important;
+      -ms-flex-wrap: nowrap !important;
+          flex-wrap: nowrap !important; }
+
+.account-edit-cabinet {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  background-color: #b40d4a;
+  width: 200px;
+  margin: 10px 0 30px 0;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  cursor: pointer; }
+
+.account-edit-cabinet .account-edit-input-file {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: auto;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  cursor: pointer; }
+
+#account-edit-upload-demo {
+  width: 250px;
+  height: 250px;
+  padding-bottom: 25px; }
+
+.account-edit-cabinet-figcaption {
+  bottom: 0;
+  color: #fff;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#account-item-img-output {
+  width: 200px;
+  height: 200px; }
 
 .company-section {
   margin-bottom: 140px;
@@ -9672,7 +9765,7 @@ label.error {
   cursor: pointer;
   position: relative;
   background-color: #b40d4a;
-  width: 170px;
+  width: 200px;
   margin: 10px 0 30px 0;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
@@ -9716,8 +9809,11 @@ label.error {
           align-items: center; }
 
 #item-img-output {
-  width: 1600px;
+  width: 200px;
   height: 200px; }
+
+#cropImageBtn:hover {
+  background-color: #b40d4a; }
 
 .company-roles {
   border: 2px solid #fafafa;

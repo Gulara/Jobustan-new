@@ -1,5 +1,5 @@
 // Start upload preview image
-$(".company-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
+$(".account-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
 						var $uploadCrop,
 						tempFilename,
 						rawImg,
@@ -8,7 +8,7 @@ $(".company-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
 				 			if (input.files && input.files[0]) {
 				              var reader = new FileReader();
 					            reader.onload = function (e) {
-									$('.company-edit-upload-demo').addClass('ready');
+									$('.account-edit-upload-demo').addClass('ready');
 									$('#cropImagePop').modal('show');
 						            rawImg = e.target.result;
 					            }
@@ -19,7 +19,7 @@ $(".company-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
 						    }
 						}
 
-						$uploadCrop = $('#company-edit-upload-demo').croppie({
+						$uploadCrop = $('#account-edit-upload-demo').croppie({
 							viewport: {
 								width: 200,
 								height: 200,
@@ -44,7 +44,7 @@ $(".company-edit-gambar").attr("src", "../build/theme/images/bg-cover-bg.png");
 								format: 'jpeg',
 								size: {width: 200, height: 200}
 							}).then(function (resp) {
-								$('#item-img-output').attr('src', resp);
+								$('#account-item-img-output').attr('src', resp);
 								$('#cropImagePop').modal('hide');
 							});
 						});

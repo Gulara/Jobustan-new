@@ -1,38 +1,56 @@
 //= template/head.html
 
 <body style="background-color: #fafafa;">
-  <!--=================================
+    <!--=================================
 header -->
-//= template/header-with-container.html
-  <!--=================================
+    //= template/header-with-container.html
+    <!--=================================
 header -->
     <div class="container">
         <div class="row">
             <div class="col-md-6 mx-auto my-5">
                 <div class="account-settings-edit">
-                    <h2 class="account-settings-edit__h2"><span class="mr-auto"> Account Settings </span> <button
-                            class="btn myBtn account-settings-edit__btn">Edit Info</button></h2>
+                    <div class="account-settings-edit__img-group">
+                        <div>
+                            <img src="" class="account-edit-gambar img-responsive img-thumbnail" id="account-item-img-output" />
+                            <label class="account-edit-cabinet center-block">
+                                <figure class="account-edit-cabinet-figure">
+                                  
+                                    <figcaption class="account-edit-cabinet-figcaption ">Upload Cover Photo</figcaption>
+                                </figure>
+                                <input type="file" class="item-img file center-block account-edit-input-file" name="file_photo" placeholder="Upload Cover Photo" />
+                            </label>
+                        </div>
+                    </div>
+                  
+                    <h2 class="account-settings-edit__h2"><span class="mr-auto"> Account Settings </span>
+                        <button class="btn myBtn account-settings-edit__btn">Edit Info</button>
+                    </h2>
                     <div class="account-settings-edit__job">
 
                         <form action="" class="form">
                             <!-- Email Adress -->
                             <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-firstname">Email Address</label>
-                                <input type="email" class="account-settings-edit__input" id="account-settings-edit-email"
-                                    name="email" placeholder="aaaa@gmail.com">
+                                <input type="email" class="account-settings-edit__input"
+                                    id="account-settings-edit-email" name="email" placeholder="aaaa@gmail.com">
 
                             </div>
                             <!-- Password -->
                             <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-lastname">Password</label>
-                                <input id="password-field" type="password" class="account-settings-edit__input" id="account-settings-edit-password"  value="12354657" name="password">  
-                                 <i toggle="#password-field"  class="fas fa-eye ml-3 text-red account-settings-edit__show-password  toggle-password"></i>
+                                <input id="password-field" type="password" class="account-settings-edit__input"
+                                    id="account-settings-edit-password" value="12354657" name="password">
+                                <i toggle="#password-field"
+                                    class="fas fa-eye ml-3 text-red account-settings-edit__show-password  toggle-password"></i>
                             </div>
-                              <!-- Password -->
-                              <div class="form-group account-settings-edit__form-group">
+                            <!-- Password -->
+                            <div class="form-group account-settings-edit__form-group">
                                 <label for="account-settings-edit-lastname">Confirm Password</label>
-                                <input type="password" class="account-settings-edit__input" id="account-settings-edit-confirm-password"  value="12354657"  name="confirmpassword"> 
-                                <i  toggle="#account-settings-edit-confirm-password"  class="fas fa-eye ml-3 text-red account-settings-edit__show-password   toggle-confirm-password"></i>
+                                <input type="password" class="account-settings-edit__input"
+                                    id="account-settings-edit-confirm-password" value="12354657" name="confirmpassword">
+                                <i toggle="#account-settings-edit-confirm-password"
+                                    class="fas fa-eye ml-3 text-red account-settings-edit__show-password   toggle-confirm-password"></i>
                             </div>
                             <button type="submit" class="btn account-settings-edit__submit-btn">Submit</button>
                         </form>
@@ -48,7 +66,26 @@ header -->
         </div>
     </div>
 
-
+    <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <?=multiLanguage( "Edit Foto" , "Edit Photo" )?></h4>
+            </div>
+            <div class="modal-body">
+                <div id="account-edit-upload-demo" class="center-block"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -81,6 +118,8 @@ header -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.js"></script>
     <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
+<!-- Crop -->
+    <script src="https://foliotek.github.io/Croppie/croppie.js"></script>
 
     <!-- VALIDATE -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
@@ -88,6 +127,7 @@ header -->
     <script src="js/footer.js"></script>
     <script src="js/password-account-settings.js"></script>
     <script src="js/validation-account-settings-edit.js"></script>
+    <script src="js/account-settings-edit.js"></script>
 
 </body>
 

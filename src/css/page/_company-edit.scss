@@ -38,7 +38,7 @@
     cursor: pointer;
     position: relative;
     background-color: $color-primary-dark;
-    width: 170px;
+    width: 200px;
     margin: 10px 0 30px 0;
     border-radius: 5px;
     cursor: pointer;
@@ -73,6 +73,12 @@
   
 }
 #item-img-output{
-    width: 1600px;
+    width: 200px;
     height: 200px;
+}
+
+#cropImageBtn{
+    &:hover{
+        background-color: $color-primary-dark;
+    }
 }
